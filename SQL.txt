@@ -1,0 +1,117 @@
+
+SQL Installation guide
+--------------------------------
+https://www.youtube.com/watch?v=YSOY_NyOg40
+
+
+SQL Server connection using cmd
+-----------------------------------------------
+->open bin path of mysql server folder -> copy the path
+-> open cmd -> cd C:\Program Files\MySQL\MySQL Server 8.0\bin  -> press enter
+-> use command mysql -u root -p  ->C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p -> press enter
+-> now enter your root password : Enter password: **********    -> press enter
+-> you are connencted to mysql : start writing queries -> mysql>
+
+
+SQL
+------
+-> SQL  stands for Structured Query Language.
+-> SQL become standard of ANSI/ developed in 1986.
+-> It is used to perform operations on databases such as Create, Insert, Delete, etc.
+-> SQL is a query langauge, it is not a database system.
+-> SQL is case-insensitive.
+
+DataTypes in SQL
+------------------------
+1. string
+2. number
+3. date
+
+
+String
+---------
+-> char( 1 - 255)
+-> varchar(1 - 65535)
+-> text(1 - 255)
+-> mediumtext(1 - 16777215)
+
+
+Number
+------------
+-> bit(1 - 64)
+-> int / integer(-2147483648 to 2147483647)
+-> float(size, p) -> p(0 to 24)
+-> double(size,p) -> p(25 to 35)
+-> bool  -> 0 / 1 => true / false
+
+Date
+-------
+-> yyyy-mm-dd format ('1000-01-01' to '9999-12-31')  
+
+
+Create database
+----------------------
+syntax : create database database_name;
+
+Ex : create database room_no;
+
+
+Drop Database
+----------------------
+syntax : drop database database_name;
+
+Ex : drop database room_no;
+
+
+
+Alter / rename Database
+----------------------------------
+syntax : alter database old_dbname modify name = new_dbname;
+
+Ex : alter database room_no modify name = room_212
+
+
+
+Create Table
+------------------
+Syntax : create table table_name(column1 datatype, column2 datatype)
+
+Ex : create table room_mem(id int, name char(50), age int)
+
+
+Drop Table
+---------------
+Syntax : drop table table_name
+
+Ex : drop table room_mem
+
+
+Delete table
+------------------
+Syntax : delete from table_name[where conditions]
+
+
+Ex : delete from room_mem[where id = 31241]
+
+
+rename table
+------------------
+Syntax : rename old_tablename to new_tablename
+
+Ex : rename room_mem to room_members
+
+
+
+Insert into table
+-----------------------
+Syntax  : insert into table_name(attribute1, attribute2,....)values(attribute1_value,.....)
+
+Ex : insert into room_members(id, name, age)values(30959, "kalyan" 19, 31090, "sai", 19);
+
+
+Select statement
+------------------------
+Syntax : select attribute_name from table_name;
+                                           or
+Syntax : select * from table_name where[condition];
+

@@ -1,0 +1,3729 @@
+                                                                           JAVA  FULL  STACK  DEVELOPMENT
+                                                                           ----------------------------------------------
+
+Course Code: 21TS3108A
+L - T - P - S: 0 - 0 - 2 - 4
+Credits: 6
+Course Coordinator: R. M. Balajee
+
+
+Syllabus
+----------
+
+Co - 1
+-------
+-> Introduction to Full Stack
+-> Introduction to  Maven
+-> Java Persistance API
+-> Concept of ORM
+
+-> Hibernate   
+           - Architecture
+           - HQL
+           - HCQL 
+           - Inheritance Mapping
+         
+-> Spring Framework
+               -  Architecture
+               - Dependency Injection (DI)
+               - Inversion of Control (IOC)
+               - Primitive and non primitive datatypes
+               - Autowiring using DI and IOC
+               - Spring DAO using JDBC
+               - Spring DAO using Hibernate
+               - Spring MVC with hibernate
+               - Spring MVC pagination
+
+
+
+Co - 2
+-------
+-> Spring Boot
+         - Introduction
+         - Dependenccy Injection(DI)
+         - Inversion of control (IOC)
+         - Spring Boot MVC
+         - Spring Boot with Rest Controller
+         - Spring Boot with DAO
+         - Spring Boot with RestFull web services
+         - Spring Cloud
+
+-> Microservices    
+            - Architecture
+            - UI integration with microservices
+            - microservices with spring cloud
+            - JWT (JSON Web Token - Spring Security)
+
+
+MOOC' S
+-----------
+-> Udemy
+
+
+Evaluation Plan
+--------------------
+-> Internal Evaluation: 60M
+           - Formative: 30
+                - continuous lab evaluation: 5
+                - continuous skill evaluation: 5
+                - ALM: 10
+                - Hackathon: 10
+
+          - Summative : 30
+                -  In Sem Lab Exam: 20
+                - Mooc' s certification: 10
+
+
+-> External Evaluation: 40M        
+            - End Sem Lab Exam: 20
+            - End Sem Project: 20
+
+
+Softwares
+-------------
+-> JDK 1.8 / JDK 17
+-> Eclipse 23 for Enterprise Developers
+-> mysql
+-> oracle
+-> Apache  Tomcat  Server
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                               Co - 1
+                                                                                               -------
+
+Introduction to Full Stack
+---------------------------------
+-> Full stack web development refers to the development of the front end and back end portions of web application.
+-> Full stack devlopers have a ability to design the compelete web application and web sites. They are one who work on front end,backend,connectivity and debbugging of web application.
+-> Full stack = Front end + back end
+
+
+Introduction to Maven:
+-----------------------------
+-> Maven is a very popular open source tool build by apache group to build web applications.
+-> In normal project, if you want to work on any third apps / or api applications then you need to download the respective jar files and make all these jars filesa are associated to your project manually. Whereas in the case of maven project you define all the third party appps are api applications/ api applications under dependencies in pom file.
+
+
+Java persistance API:
+--------------------------
+
+EJB: 
+-----
+EJB stands for Enterprise Java Bean.
+EJB is an architecture which helps us to design or build a web application.
+EJB is all about understanding three different beans.
+They are:
+i)Session Bean(It maintains a data)
+ii)Entity Bean(It stores the data or it persiste a data)
+    Entity bean was replaced by JPA from versiion 2.1
+iii) Message Driven Bean.(Message Passing between app)
+
+
+
+JPA:
+-----
+It is used to persist data 
+This api acts as a bridge between java object oriented domain and RDBMS.
+The first version of JPA is 1.0 which is released into the market in the year 
+The latest version of jpa is 3.1
+
+
+Note:
+API is a collection of packages where every package have many number of classes and interfaces.
+
+
+ORM
+------
+ORM stands for Object Relational Database 
+It is capable of handling different operations on a dtabaselike update, delete, create, insert.
+It is a functionality which is used to develop and maintain a 
+
+              (ORM tool)
+Java object-----------------> Database(coloum name)
+
+
+Some of the popular framework tool are
+1.Hibernate.
+2 ORMLite
+3 ibatis
+4.TopLink etc
+
+
+
+
+Hibernate: 
+-------------
+Hibernate is a java framework on ORM Tool which was designed by Gavin King in   2001.
+It is a framework that simplifies the java application to interact with a database.
+It is a open source, lightweight and works based on object relational mapping.
+
+The advantages of hibernate are 
+  i) Open source and lightweight
+  ii) Fast performance
+  iii) Database independent query.
+  iv) Automatic table creation
+  v) Exception Handling.
+  
+
+
+Hibernate Architecture :
+------------------------------
+
+It includes many objects such as session factory,Transaction factory, configuration factory,Persistent factory.
+
+
+1.Java Application
+2.Hibernate Framework.
+3.Backend Layer
+4.Database Layer
+
+
+Note:
+------
+Advantages of Hibernate which are listed before are the disadvantages of JDBC.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Hibernate Example:
+-------------------------
+Note
+------
+Every hibernate application must have the folloing files:
+       - POJO Class
+       - Configuration file    (properties of a database)
+       - Mapping file     (JO  -> Database -> Table)
+       - Logic file    
+
+
+POJO Class
+--------------
+-> POJO stands for Plain Old Java Object.
+-> It is also called as Bean class / entity class.
+-> A Class will be called as a POJO Class if it generates getters and setters method for all data members that you define.
+ 
+Syntax 
+---------
+Class Class_Name{
+         access_specifier datatype datamember;
+         access_specifier datatype datamember;
+
+         -> generate setter and getter methods
+}
+
+
+Example
+-----------
+Class Student{
+   private int id;
+   private String name;
+
+    getID( ){
+
+   }
+  
+  setID( ){
+
+  }
+
+}
+
+
+
+Configuration File
+-----------------------
+-> Configuration file is loaded into hibernate application during the run time of the project.
+-> Configuration file must contain the following information:
+           - Connection Properties
+           - Hibernate Properties
+           - Mapping file Configuration
+-> The number of Configuration files must be equal to the number of databases you want to work with.
+-> The purpose of Configuration file is to define the properties of a database.
+-> Configuration file can be defined in two ways:
+        - either in xml (preferable)
+        - or in annotation
+-> The configuration file has to be denoted using the following notation   -> hibernate.cfg.xml
+ 
+
+Syntax
+---------
+<hibernate-configuration>
+<session-factory>
+
+<! Connection Properties>
+<property name="connection.driver_class">
+Load Driver
+</property>
+<property name="connection.url">
+DB URL
+</property>
+<property name="connection.username">
+username
+</property>
+<property name="connection.password">
+password
+</property>
+
+<! Hibernate properties>
+<property name="show_sql">
+true / false
+</property>
+<property name="dialect">
+Database name
+</property>
+<property name="hbm2ddl.auto">
+create
+</property>
+
+<! Mapping File information>
+<mapping resource="filename1.hbm.xml"/>
+<mapping resource="filename2.hbm.xml"/>
+  .
+  .
+
+
+</session-factory>
+ </hibernate-configuration>
+
+
+
+Example
+-----------
+<hibernate-configuration>
+<session-factory>
+
+<! Connection Properties>
+<property name="connection.driver_class">
+com.mysql.cj.jdbc.Driver
+</property>
+<property name="connection.url">
+jdbc:mysql://localhost:3306/klu
+</property>
+<property name="connection.username">
+root
+</property>
+<property name="connection.password">
+Kalyan959@
+</property>
+
+<! Hibernate properties>
+<property name="show_sql">
+true
+</property>
+<property name="dialect">
+org.hibernate.dialect.MySQLDialect
+</property>
+<property name="hbm2ddl.auto">
+create
+</property>
+
+<! Mapping File information>
+<mapping resource="student1.hbm.xml"/>
+<mapping resource="student2.hbm.xml"/>
+</session-factory>
+ </hibernate-configuration>
+
+
+
+Mapping File
+----------------
+-> It is a part of hibernate application.
+-> Every ORM needs to have this file.
+-> It is a mechanism of placing an object properties(java application) to the specific column of a table(db).
+-> Mapping file can be impemented either in XML or in Annotation(XML is preferable).
+-> This mapping file contains 
+       - how a mapping can be done from a pojo class to a table name and from class variables to column name.
+          POJO Class  -> Table name
+
+               var1  -> col name
+                var2 -> col name
+
+-> while creating a  mapping  file, we can create one or more mapping files based on requirements.
+-> Every object will have the following properties :
+       - Identity (Object Name)
+       - State (Object Value)
+       - Behaviour (Object Methods) 
+
+
+Syntax
+---------
+<hibernate-mapping>
+<class name="POJO Class_name" table="TABLE_NAME">
+<id name="var_name" column="column_name"/>
+<property name="var_name" column="column_name"/>
+</class>
+</hibernate-mapping>
+
+
+Example
+----------
+<hibernate-mapping>
+<class name="Student" table="student_details">
+<id name="id" column="sid"/>
+<property name="name" column="sname"/>
+</class>
+</hibernate-mapping>
+
+
+
+Logic File
+------------
+-> This is a file where the program logic has to be defined.
+
+
+Hibernate Example Skeleton
+------------------------------------
+-> create a maven project
+-> change the properties from 1.7 to 1.8 in pom.xml
+-> Go to maven repository and add all necessary APIs (<dependencies>)
+               - MySQL Connector/J               -> latest version
+               - Hibernate Core Relocation  -> version -> 5.4.6
+               - Hibernate EntityManager Relocation ->  5.4.6
+-> Update the maven project
+-> crete new resources folder to add cfg file and hbm file  --> src -> main -> right click -> new folder -> resources
+-> create POJO class (Student.java)  
+-> create configuration file(hibernate.cfg.xml)  in resources folder
+             - add dtd files -> search hibernate dtd in chrome -> go to hibernate official page to get (https://hibernate.org/dtd/) 
+             - download hibernate-configuration-3.0.dtd -> open with notepad ->  Add the complete <!DOCTYPE - hibernate ..................> in the created file (hibernate.cfg.xml).
+-> create mapping file(file_name.hbm.xml) in resources folder
+             - add dtd files -> search hibernate dtd in chrome -> go to hibernate official page to get (https://hibernate.org/dtd/) 
+             - download hibernate-mapping-3.0.dtd -> open with notepad ->  Add the complete <!DOCTYPE - hibernate ..................> in the created file (file_name.hbm.xml). 
+-> create a file where logic has to be written(Test.java)
+-> Run the application.
+              - right click on logic file -> run as -> 1 run on java application.
+
+
+Dependencies
+------------------
+mysql
+hibernate (5.4.6.final)
+hibernate entity manager(5.4.6.final)
+mapping file dtd(3.0)
+configuration file(3.0)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example - 1 (Hibernate Application)
+----------------
+
+POJO class(Student)
+--------------
+Class Student{
+   private int id;
+   private String name;
+
+    getID( ){
+
+   }
+  
+  setID( ){
+
+  }
+
+}
+
+
+
+
+Configuration file
+----------------------
+<hibernate-configuration>
+<session-factory>
+
+<! Connection Properties>
+<property name="connection.driver_class">
+com.mysql.cj.jdbc.Driver
+</property>
+<property name="connection.url">
+jdbc:mysql://localhost:3306/klu
+</property>
+<property name="connection.username">
+root
+</property>
+<property name="connection.password">
+Kalyan959@
+</property>
+
+<! Hibernate properties>
+<property name="show_sql">
+true
+</property>
+<property name="dialect">
+org.hibernate.dialect.MySQLDialect
+</property>
+<property name="hbm2ddl.auto">
+create
+</property>
+
+<! Mapping File information>
+<mapping resource="student.hbm.xml"/>
+</session-factory>
+ </hibernate-configuration>
+
+
+
+mapping file(student.hbm.xml) 
+----------------------------------------
+<hibernate-mapping>
+<class name="com.JFSD.HibernateCRUD.Student" table="student_details">
+<id name="id" column="sid"/>
+<property name="name" column="sname"/>
+</class>
+</hibernate-mapping>
+
+
+
+logic file(StoreData.java)
+--------------------------------
+Configuration cfg = new Configuration();
+cfg.configure("hibernate.cfg.xml");
+SessionFactory sf = cfg.buildSessionFactory();
+Session s = sf.openSession();
+Transaction t = s.beginTransaction();
+Student stu = new Student();
+stu.setId(959);
+stu.setName("kalyan");
+s.save(stu);
+t.commit();
+s.close();
+sf.close();
+System.out.println("Inserted successfully");
+
+
+
+
+Example2 ( Hiberante application - retrive)
+------------------------------------------------------
+
+POJO class (Student.java)
+---------------------------------
+Same as previous 
+
+
+Configuration file(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous
+
+
+Mapping file(student.hbm.xml)
+----------------------------------------- 
+same as previous
+
+
+Logic file(Retrive.java)
+-----------------------------
+Configuration cfg = new Configuration();
+cfg.configure("hibernate.cfg.xml");
+SessionFactory sf = cfg.buildSessionFactory();
+Session s = sf.openSession();
+Transaction t = s.beginTransaction();
+Student stu = s.get(Student.class, 101);
+System.out.println(stu.getName());
+
+
+
+Example - 3(hibernate applictaion - update)
+--------------------------------------------------------
+
+POJO class (Student.java)
+---------------------------------
+Same as previous one
+
+
+Configuration file(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous one
+
+
+Mapping file(student.hbm.xml)
+----------------------------------------- 
+Same as previous one
+
+
+Logic file(Update.java)
+-----------------------------
+Configuration cfg = new Configuration();
+cfg.configure("hibernate.cfg.xml");
+SessionFactory sf = cfg.buildSessionFactory();
+Session s = sf.openSession();
+Student stu = s.get(Student.class, 101);
+stu.setName("QWERTY");
+s.save(stu);
+t.commit();
+S.O.P("Success");
+s.close();
+sf.close();
+
+
+
+
+Example-4 (Hibernate - delete)
+---------------------------------------
+POJO class (Student.java)
+---------------------------------
+Same as previous one
+
+
+Configuration file(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous one
+
+
+Mapping file(student.hbm.xml)
+----------------------------------------- 
+Same as previous one
+
+
+Logic file(Delete.java)
+-----------------------------
+Configuration cfg = new Configuration();
+cfg.configure("hibernate.cfg.xml");
+SessionFactory sf = cfg.buildSessionFactory();
+Session s = sf.openSession();
+Student stu = s.get(Student.class, 102);
+s.delete(stu);
+t.commit();
+S.O.P("Success");
+s.close();
+sf.close();
+
+
+
+
+Example - 5 (Hibernate Application - CRUD)
+--------------------------------------------------------
+POJO class (Student.java)
+---------------------------------
+Same as previous one
+
+
+Configuration file(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous one
+
+
+Mapping file(student.hbm.xml)
+----------------------------------------- 
+Same as previous one
+
+
+Logic file(Test.java)
+-----------------------------
+Configuration cfg = new Configuration();
+cfg.configure("hibernate.cfg.xml");
+SessionFactory sf = cfg.buildSessionFactory();
+Session s = sf.openSession();
+Student stu = new Student();
+stu.setId(959);
+stu.setName("kalyan");
+stu.setId(976);
+stu.setName("faizaan");
+System.out.println("Successfully Inserted");
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example: Hibernate CRUD Operations
+-------------------------------------------------
+
+Bean Class (Student.java)
+---------------------------------
+package com.JFSD.hibernateExamples;
+
+public class Student {
+	
+     private int id;
+     private String name;
+     
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+     
+     
+}
+
+
+
+Configuration file (hibernate.cfg.xml)
+-----------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+	<hibernate-configuration>
+	<session-factory>
+	
+	<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+	<property name="connection.url">jdbc:mysql://localhost:3306/jfsdhibernate</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">Kalyan959@</property>
+	
+	<property name="show_sql">true</property>
+	<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+	<property name="hbm2ddl.auto">update</property>
+	
+	
+	<mapping resource="student.hbm.xml"></mapping>
+	
+	</session-factory>
+	</hibernate-configuration>
+
+
+
+
+Mapping file (student.hbm.xml)
+----------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="com.JFSD.hibernateExamples.Student" table="student_details">
+    <id name="id" column="stu_id"></id>
+    <property name="name" column="stu_name"></property>
+    </class>
+    </hibernate-mapping>
+
+
+
+Logic file (HibernateCRUD.java)
+----------------------------------------
+package com.JFSD.hibernateExamples;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateCRUD {
+	
+	public static void main(String args[]) {
+		
+	Configuration cfg = new Configuration();
+	cfg.configure("hibernate.cfg.xml");
+	SessionFactory sf = cfg.buildSessionFactory();
+	Session s = sf.openSession();
+	Transaction t = s.beginTransaction();
+	
+//	Insertion of records
+//	Student stu = new Student();
+//	stu.setId(30959);
+//	stu.setName("kalyan");
+//	stu.setId(31090);
+//	stu.setName("sai");
+	
+	
+//	Retrieval of records
+//	Student stu = s.get(Student.class, 30959);
+//	System.out.println(stu.getName());
+//	s.save(stu);
+	
+	
+//	updation of records
+//	Student stu = s.get(Student.class, 30959);
+//	stu.setName("venkat Kalyan");
+//	s.save(stu);
+//  System.out.println("Updated successfully");
+	
+//	Deletion of records
+//	Student stu = s.get(Student.class, 30959);
+//	s.delete(stu);
+//	System.out.println("Deleted successfully");
+	
+	t.commit();
+	s.close();
+	sf.close();
+	
+//	All the crud opeartions are executed successfully in the above code
+	
+	
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                                     Dt : 26-07-23
+                                                                                                                                                                                                     ---------------
+HQL
+-----
+-> HQL stands for Hibernate Query Language.
+-> HQL is database independent query language.
+-> HQL is same as SQL, the only difference is SQL depends on a table whereas HQL depends on a class (POJO class).
+-> To work with HQL we need to use query interface.
+
+Query Interface
+--------------------
+-> It is an Object Oriented representation of Hibernate Query.
+-> The object of a Query Interface can be obtained by calling createQuery( ) method to the session object.
+
+Syntax
+---------
+Query OBJECT_NAME = SESSION_OBJECT_NAME.createQuery("HQL Queries")
+
+Ex
+---
+Query q = s.createQuery("HQL Queries")
+
+-> The methods of Query interface are:
+            - executeUpdate( )
+            - list( )
+            - setFirstResult( )
+            - setMaxResult( )
+            - setParameter( )
+
+
+HQL Example1 (To retrive all records using  foreach)
+-------------------------------------------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+same as previous example
+
+
+Configuration file (hiberbate.cfg.xml)
+-----------------------------------------------
+same as previous
+
+
+Mapping file (student.hbm.xml)
+----------------------------------------
+same as previous
+
+
+Logic File (HQLRetriveAll.java)
+---------------------------------------
+package com.JFSD.hibernateExamples;
+
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+public class HQLRetriveAll {
+	
+	public static void main(String args[]) {
+		
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		String query = "from Student";
+		Query q = s.createQuery(query);
+		List<Student> ll = q.list();
+		for(Student s1: ll)
+			System.out.println(s1.getId()+" "+s1.getName());
+		
+//		sf.close();
+//		s.close();
+//		t.commit();
+	}
+
+}
+
+
+
+
+HQL Example2 (To retrive all records iterative method)
+----------------------------------------------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+same as previous
+
+Cnfiguration file(hibernate.cfg.xml)
+----------------------------------------------
+same as previous
+
+Mapping file(student.hbm.xml)
+----------------------------------------
+same as previous
+
+Logic File(HQLRetriveAll.java)
+---------------------------------------
+package com.JFSD.hibernateExamples;
+
+import java.util.Iterator;
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+public class HQLRetriveAll {
+	
+	public static void main(String args[]) {
+		
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		String query = "from Student";
+		Query q = s.createQuery(query);
+		List<Student> ll = q.list();
+		
+//		Retriving using ForEach loop
+//		for(Student s1: ll)
+//			System.out.println(s1.getId()+" "+s1.getName());
+
+//		Retriving using iterator
+		Iterator itr = ll.iterator();
+		while(itr.hasNext()) {
+			Student stu = (Student)itr.next();
+			System.out.println(stu.getId()+" "+stu.getName());
+			
+		}
+//		sf.close();
+//		s.close();
+//		t.commit();
+	}
+
+}
+
+
+
+HQL Example3 (To retrive records between specific range - Pagination)
+------------------------------------------------------------------------------------------
+
+Note 
+------
+Example 1 and Example 2 are to retrive all the records 
+Example 3 is to retrive specific range.
+
+
+POJO Class(Student.java)
+---------------------------------
+Same as previous
+
+Configuration file(hibernate.cfg.xml)
+-----------------------------------------------
+Same as previous
+
+Mapping file(student.hbm.xml)
+----------------------------------------
+Same as previous
+
+Logic file (HQLRangeRetrival.java)
+--------------------------------------------
+package com.JFSD.hibernateExamples;
+
+import java.util.Iterator;
+import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+public class HQLRangeRetrival {
+
+	public static void main(String[] args) {
+
+        Configuration cfg = new Configuration();
+        cfg.configure("hibernate.cfg.xml");
+        SessionFactory sf = cfg.buildSessionFactory();
+        Session s = sf.openSession();
+        Transaction t = s.beginTransaction();
+        
+        String query = "from Student";
+        Query que = s.createQuery(query);
+        que.setFirstResult(0);
+        que.setMaxResults(2);
+        List<Student> ll = que.list();
+        Iterator itr = ll.iterator();
+        while(itr.hasNext()) {
+        	Student s1 = (Student)itr.next();
+        	System.out.println(s1.getId());
+        }
+        
+	}
+
+}
+
+
+
+
+HQL Example4(Updation)
+----------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+same as previous
+
+C0nfiguration file(hibernate.cfg.xml)
+----------------------------------------------
+same as previous
+
+Mapping file(student.hbm.xml)
+----------------------------------------
+same as previous
+
+Logic File(HQLUpdate.java)
+-------------------------------
+package com.JFSD.hibernateExamples;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+public class HQLUpdate {
+	
+	public static void main(String args[]) {
+		
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		 String X = "update Student set stu_name=:n where stu_id=:i";
+
+		    Query q = s.createQuery(X);
+		    q.setParameter("i",30976);
+		    q.setParameter("n","Pathan Faizaan");
+
+		    q.executeUpdate();
+		    
+		    System.out.println("updated");
+		
+		
+	}
+
+}
+
+
+
+
+
+HQL Example5(Deletion)
+----------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+same as previous
+
+Configuration file(hibernate.cfg.xml)
+----------------------------------------------
+same as previous
+
+Mapping file(student.hbm.xml)
+----------------------------------------
+same as previous
+
+Logic File(HQLDelete.java)
+-------------------------------
+package com.JFSD.hibernateExamples;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
+public class HQLDelete {
+
+	public static void main(String[] args) {
+	    
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		String query = "delete from Student where id = 31090";
+		Query q = s.createQuery(query);
+		q.executeUpdate();
+		System.out.println("deletion success");
+
+	}
+
+}
+
+
+                                                                                                                                                                                                      Dt : 01-08-23
+                                                                                                                                                                                                      ----------------
+
+HQL Example6 (To retrive specific columns of a record)
+----------------------------------------------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+same as previous
+
+Configuration file(hibernate.cfg.xml)
+----------------------------------------------
+same as previous
+
+Mapping file(student.hbm.xml)
+----------------------------------------
+same as previous
+
+Logic File(RetriveSpecificRecords.java)
+--------------------------------------------------
+package com.JFSD.hibernateExamples;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+import java.util.*;
+
+public class RetriveSpecificRecords {
+
+	public static void main(String[] args) {
+		
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		String query = "select id,name from Student";
+		Query q = s.createQuery(query);
+		
+		List<Student> ll = q.list();
+		Iterator itr = ll.iterator();
+		
+//		To retrive single column
+//		while(itr.hasNext()) {
+//			Object ob = (Object)itr.next();
+//			System.out.println(ob);
+//			
+//		}
+		
+//		To retrive multiple column
+		while(itr.hasNext()) {
+			Object ob[] = (Object[])itr.next();
+			System.out.println(ob[0]+" "+ob[1]);
+			
+		}
+
+	}
+
+}
+
+
+
+HQL Example7(To retrive single column)
+--------------------------------------------------
+
+POJO class(Student.java)
+---------------------------------
+same as previous
+
+
+Configuration file(hibernate.cfg.xml)
+------------------------------------------------
+same as previous
+
+
+Mapping file(student.hbm.xml)
+----------------------------------------
+same as previous
+
+
+Logic file(RetriveSingleColumn.java)
+----------------------------------------------
+package com.JFSD.hibernateExamples;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+import java.util.*;
+public class RetriveSingleColumn {
+
+	public static void main(String[] args) {
+		
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		String query = "select id from Student";
+		Query q = s.createQuery(query);
+		List<Student> ll = q.list();
+		Iterator itr = ll.iterator();
+		while(itr.hasNext()) {
+			Object ob = (Object)itr.next();
+			System.out.println(ob);
+			
+		}
+
+	}
+
+}
+
+
+
+HQL Example8 (To insert a record )
+---------------------------------------------
+
+POJO class(Student.java)
+--------------------------------
+same as previous
+
+Configuration file(hibernate.cfg.xml)
+------------------------------------------------
+same as previous
+
+Mapping file(student.hbm.xml)
+----------------------------------------
+same as previous
+
+Logic file(HQLInsert.java)
+---------------------------------
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+HCQL
+-------
+-> HCQL stands for Hibernate Criteria Query Language.
+-> It is used to fetch records with all number of columns based on a specific criteria.
+-> To implement HCQL in hibernate application we need to implement an interface called as Criteria interface.
+
+
+
+Criteria Interface
+----------------------
+-> The Criteria interface object can be obtained by calling a method called as createCriteria( ) to an Session interface object.
+
+Syntax:
+           Criteria OBJECT_NAME = SESSION_OBJECT_NAME.createCriteria( );
+
+-> The different methods of Criteria interface are:
+             - add( )
+             - addOrder( )
+             - setFirstResult( )
+             - setMaxResult( )
+             - list( )
+
+
+Restriction Class
+----------------------
+-> This class contains many methods in order to keep an restriction or criteria or condition on HQL queries.
+
+Methods of Restriction Class
+------------------------------------
+-> less than  => lt( )
+-> less than equals to  => le( )
+-> gt( )
+-> ge( )
+-> eq( )
+-> ne( )
+
+
+Order Class
+---------------
+This is the class which contains the methods either in the ascending order or descending order.
+
+Methods
+----------
+-> asc( )
+-> desc( )
+ 
+
+
+HCQL Example1 (To retrive all the records using iterator)
+------------------------------------------------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+Same as previous
+
+Configuration File(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous
+
+Mapping File(student.hbm.xml)
+-----------------------------------------
+Same as previous
+
+Logic File(HCQLRetrive.java)
+-------------------------------------
+package com.JFSD.hibernateExamples;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class HCQLRetrive {
+	
+	public static void main(String[] args) {
+	    
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		Criteria cr = s.createCriteria(Student.class);
+		List<Student> ll = cr.list();
+		Iterator itr = ll.iterator();
+		while(itr.hasNext()) {
+			Student std = (Student)itr.next();
+			System.out.println(std.getId()+" "+std.getName());
+		}
+	}
+
+}
+
+
+
+HCQL Example1 (To retrive all the records using foreach)
+------------------------------------------------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+Same as previous
+
+Configuration File(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous
+
+Mapping File(student.hbm.xml)
+-----------------------------------------
+Same as previous
+
+Logic File(HCQLRetrive.java)
+--------------------------------------
+package com.JFSD.hibernateExamples;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class HCQLRetrive {
+	
+	public static void main(String[] args) {
+	    
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		Criteria cr = s.createCriteria(Student.class);
+		List<Student> ll = cr.list();
+//		using Iterator to retrive
+//		Iterator itr = ll.iterator();
+//		while(itr.hasNext()) {
+//			Student std = (Student)itr.next();
+//			System.out.println(std.getId()+" "+std.getName());
+//		}
+		
+//		using foreach to retrive
+		for(Student s1:ll) {
+			System.out.println(s1.getId()+" "+s1.getName());
+		}
+	}
+
+}
+
+
+
+
+HCQL Example3 (To retrive specific range of records)
+-------------------------------------------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+Same as previous
+
+Configuration File(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous
+
+Mapping File(student.hbm.xml)
+-----------------------------------------
+Same as previous
+
+Logic File(HCQLRetriveSpecific.java)
+-----------------------------------------------
+package com.JFSD.hibernateExamples;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class HCQLRetriveSpecific {
+	
+	public static void main(String[] args) {
+	    
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		Criteria cr = s.createCriteria(Student.class);
+		cr.setFirstResult(0);
+		cr.setMaxResults(1);
+		
+		List<Student> ll = cr.list();
+		Iterator itr = ll.iterator();
+		while(itr.hasNext()) {
+			Student std = (Student)itr.next();
+			System.out.println(std.getId());
+		}
+		
+	}
+
+}
+
+
+
+HCQL Example4 (Restriction class)
+--------------------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+Same as previous
+
+Configuration File(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous
+
+Mapping File(student.hbm.xml)
+-----------------------------------------
+Same as previous
+
+Logic File(HCQLRestrict.java)
+--------------------------------------
+package com.JFSD.hibernateExamples;
+
+import java.util.Iterator;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Restrictions;
+import java.util.*;
+
+public class HCQLRetstriction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		Criteria cr = s.createCriteria(Student.class);
+		cr.add(Restrictions.ge("id", 30975));
+		List<Student> ll = cr.list();
+		Iterator itr = ll.iterator();
+		while(itr.hasNext()) {
+			Student std = (Student)itr.next();
+			System.out.println(std.getId());
+		}
+		
+	}
+
+}
+
+
+
+HCQL Example5 (Restriction class)
+--------------------------------------------
+
+POJO Class (Student.java)
+---------------------------------
+Same as previous
+
+Configuration File(hibernate.cfg.xml)
+------------------------------------------------
+Same as previous
+
+Mapping File(student.hbm.xml)
+-----------------------------------------
+Same as previous
+
+Logic File(HCQLOrdered.java)
+--------------------------------------
+package com.JFSD.hibernateExamples;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Order;
+
+public class HCQLOrdered {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Configuration cfg = new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		
+		Criteria cr = s.createCriteria(Student.class);
+		cr.addOrder(Order.desc("id"));
+		List<Student> ll = cr.list();
+		Iterator itr = ll.iterator();
+		while(itr.hasNext()) {
+			Student std = (Student)itr.next();
+			System.out.println(std.getId());
+		}
+	}
+	
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Inheritance Mapping
+--------------------------
+-> Inheritance refers to the 
+-> The class from which we acquire the properties is called as Base Class.
+->  The class from into which we acquire the properties is called as Derived Class.
+-> Java doesn't support multiple inheriatnce.
+
+
+Mapping
+-----------
+-> Mapping refers to the relationship between different tables and a database.
+-> The different relationships are :
+       - IS-A(Inheritance)
+       - HAS-A(Association)
+
+IS-A Mapping(Inheritance Mapping)
+---------------------------------------------
+-> There are 3 types of Inheritance Mapping, they are:
+            - Table Per Class
+            - Table Per Sub-Class
+            - Table Per Concrete Class
+
+
+
+Example
+-----------
+
+Base Class(Payment.java)
+--------------------------------
+public class  Payment{
+   int tid;
+   double amount;
+      -> generate getters and setters methods
+}
+
+
+Derived Class(Card.java)
+--------------------------------
+public class  Card{
+   String cardType;
+      -> generate getters and setters methods
+}
+
+
+Derived Class(Cheque.java)
+--------------------------------
+public class  Cheque{
+   String chequeType;
+      -> generate getters and setters methods
+}
+
+
+Configuration file(hibernate.cfg.xml)
+-----------------------------------------------
+<mapping resource = "payment.hbm.xml" />
+
+
+Mapping file(payment.hbm.xml)
+-----------------------------------------
+    <hibernate-mapping>
+    <class name="com.JFSD.hibernateExamples.Payment">
+    <id name="pid"></id>
+    <property name="amount" > </property>
+    <sub-class name="com.JFSD.hibernateExamples.Card" discriminator-value ="cc">
+    <property name="cardType" > </property>
+     </sub-class>
+
+    <sub-class name="com.JFSD.hibernateExamples.Cheque" discriminator ="cq">
+    <property name="chequeType" > </property>
+     </sub-class>
+    </class>
+    </hibernate-mapping>
+
+
+
+Logic File(TablePerClass.java)
+--------------------------------------
+
+Card c = new Card( );
+Cheque cq = new Cheque( );
+c.setPid(111);
+c.setAmount(100000);
+c.setCardType("visa");
+
+cq.setPid(222);
+cq.setAmount(50000);
+cq.setChequeType("Bussiness");
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example 2( )
+----------------
+
+Mapping file(payment.hbm.xml)
+-----------------------------------------
+
+    <hibernate-mapping>
+    <class name="com.JFSD.hibernateExamples.Payment">
+    <id name="pid"></id>
+    <property name="amount" > </property>
+    <joined-subclass name="com.JFSD.hibernateExamples.Card" discriminator-value ="cc">
+    <property name="cardType" > </property>
+     </joined-subclass>
+
+    <joined-subclass name="com.JFSD.hibernateExamples.Cheque" discriminator ="cq">
+    <property name="chequeType" > </property>
+     </joined-subclass>
+    </class>
+    </hibernate-mapping>
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example3( )
+---------------
+Mapping file(payment.hbm.xml)
+-----------------------------------------
+
+    <hibernate-mapping>
+    <class name="com.JFSD.hibernateExamples.Payment">
+    <id name="pid"></id>
+    <property name="amount" > </property>
+    <union-subclass name="com.JFSD.hibernateExamples.Card" discriminator-value ="cc">
+    <property name="cardType" > </property>
+     </union-subclass>
+
+    <union-subclass name="com.JFSD.hibernateExamples.Cheque" discriminator ="cq">
+    <property name="chequeType" > </property>
+     </union-subclass>
+    </class>
+    </hibernate-mapping>
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                        Dt: 08-08-23
+                                                                                                                                                                                        ----------------
+Spring Framework
+-----------------------
+-> Spring is  a java framework which was developed by a person called 'johnson' in the year 2003.
+-> This framework is used to build a java application from console to web.
+-> It is a light weight framework.
+-> Spring is called as MASTER framework or MOTHER framework.
+-> Spring framework comprises of several modules such as:
+                                 - IoC (Inversion of Control)
+                                 - DAO (Data Access Object)
+                                 - ORM (Object Relation Mapping) 
+                                 - MVC (Model View Controller)
+ 
+
+
+Advantages of Spring
+---------------------------
+-> Light weight
+-> Fast Performance
+-> Easy to test and maintain
+-> Loosely Coupling
+-> It provides pre-defined templates 
+
+
+
+Spring Architecture
+-------------------------
+-> The Spring Architecture consists of several modules such as IoC, DAO, AOP(Aspect - Oriented Programming), ORM, WEB-MVC, Beans, Core, etc.
+-> All this modules are grouped into Test, Core Container, Aspects, Data Access / Integration, etc.
+
+
+
+Dependency Injection & Inversion of Control
+---------------------------------------------------------
+-> This are the two design patterns which are used to remove the dependencies from the program code.
+-> This makes your code easier to test and maintain.
+
+
+
+Example (Tightly Coupled  -> Having Dependency)
+---------------------------------------------------------------
+class Address{
+
+}  
+
+class Employee {
+          Employee( ){
+           	Address add = new Address( );
+  }    
+
+}
+
+
+-> The above code is an example of having dependencies which refers to tightly coupling.
+-> Spring Framework doesn't support tightly coupling.
+-> So we need to convert tightly coupling to loosely coupling by removing the dependencies.
+
+
+Example (Loosely Coupled  -> No Dependency)
+---------------------------------------------------------------
+class Address{
+
+}  
+
+class Employee {
+          Employee(Address add ){
+           	this.add = add;
+  }    
+
+}
+ 
+
+Advantages of Dependency Injection
+-----------------------------------------------
+-> Makes the code loosely coupled.
+-> It is easier to test and maintain.
+
+
+Types of Dependency Injection
+--------------------------------------
+       - setter injection
+       - constructor injection
+
+
+-> In Spring Framework, IoC is reponsible for injecting the dependency.
+
+
+Types of IoC containers
+------------------------------
+          - BeanFactory  
+          - ApplicationContext
+
+
+
+Spring Example
+--------------------
+-> The different components of Spring framework are:
+                   - POJO Class (Bean Class)
+                   - Configuration File  --> Add Dtd(Spring Dtd)
+                   - Logic File
+-> Spring Dependencies : 
+               - Spring Beans  
+               - Spring Core
+               - Spring Context
+
+
+Example1:   Setter Injection using BeanFactory
+Example2:   Setter Injection using ApplicationContext
+Example3:   Constructor Injection using BeanFactory
+Example4:   Constructor Injection using ApplicationContext
+
+
+Setter Injection: Generate all setter and getter methods
+Constructor Injection: Using  a constructor
+
+
+BeanFactory  Syntax
+---------------------------
+Resource r = ClassPathResource("spconfig.xml");
+BeanFactory bf = new XmlBeanFactory(r);
+
+
+
+ApplicationContext  Syntax
+-----------------------------------
+ApplicationContext ac = new FileSystemXmlApplicationContext("src/applicationContext.xml") 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example1:   Setter Injection using BeanFactory
+-----------------------------------------------------------
+
+Bean class (Employee.java)
+-----------------------------------
+public class Employee{
+    int eId;
+    String eName;
+    double eSalary;
+
+   --> generate setter and getters 
+}
+
+
+Configuration File(spconfig.xml)
+-----------------------------------------
+<beans>
+<bean id = "empBean" class = "com.JFSD.SpringDemo.Employee">
+<property name = "eId" value = "30959"/>
+<property name = "eName" value = "kalyan"/>
+<property name = "eSalary" value = "1200000"/>
+</bean>
+</beans>
+
+
+Logic File(Test.java)
+-------------------------
+public class Test{
+  
+	public static void main(String args[ ]){
+		Resource r = ClassPathResource("spconfig.xml");
+                                       BeanFactory bf = new XmlBeanFactory(r);	
+	                  Object ob =  bf.getBean("empBean");
+	                 Employee e = (Employee)ob;
+                                     System.out.println(e.getEid( ));	
+	}
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example2:   Setter Injection using ApplicationContext
+--------------------------------------------------------------------
+
+Bean class(Employee.java)
+----------------------------------
+same as previous
+
+
+Configuration file(spconfig.xml)
+----------------------------------------
+same as previous
+
+
+Logic File(Test1.java)
+--------------------------
+package com.JFSD.SpringDemo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+public class Test1 {
+	
+	public static void main(String args[]) {
+		
+		ApplicationContext ac = new FileSystemXmlApplicationContext("src/main/resources/spconfig.xml");
+		Object ob = ac.getBean("empBean");
+		Employee e = (Employee) ob;
+		System.out.println(e.geteId());
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-> Alternate ways of writing Example1 & Example2
+
+Bean class(Employee.java)
+----------------------------------
+same as previous
+         &&
+void display( ){
+	System.out.println(ename);
+}
+
+
+Configuration file(spconfig.xml)
+----------------------------------------
+same as previous
+
+
+Logic File(Test.java)
+--------------------------
+public class Test{
+  
+	public static void main(String args[ ]){
+
+		ApplicationContext ac = new FileSystemXmlApplicationContext("src/applicationContext.xml");
+		Object ob = ac.getBean("empBean");
+		Employee e = (object)ob;
+		e.display( );	
+	}
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example3:   Constructor Injection using BeanFactory
+-------------------------------------------------------------------
+
+Bean class (Employee.java)
+-----------------------------------
+public class Employee{
+    int eId;
+    String eName;
+    double eSalary;
+
+   --> generate atleast one setter and getter method
+
+    public Employee(int eId,  String eName, double eSalary){
+	this.eId = eId;
+	this.eName = eName;
+	this.eSalary = eSalary;
+} 
+}
+
+
+Configuration file(spconfig.xml)
+-----------------------------------------
+<beans>
+<bean id = "empBean" class = "com.JFSD.SpringDemo.Employee">
+<constructor-arg value = "30959" type = "int"/>
+<constructor-arg value = "kalyan" type = "String"/>
+<constructor-arg value = "1400000" type = "double"/>
+</bean>
+</beans>
+
+
+-> The order of  constructor-arg should be the order of the variable declared in bean class.
+
+
+
+Logic File(Test.java)
+-------------------------
+public class Test{
+  
+	public static void main(String args[ ]){
+		Resource r = ClassPathResource("spconfig.xml");
+                                       BeanFactory bf = new XmlBeanFactory(r);	
+	                  Object ob =  bf.getBean("empBean");
+	                 Employee e = (Employee)ob;
+                                     System.out.println(e.getEid( ));	
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example4:   Constructor Injection using ApplicationContext
+---------------------------------------------------------------------------
+
+Bean class(Employee.java)
+----------------------------------
+same as previous
+
+
+Configuration file(spconfig.xml)
+----------------------------------------
+same as previous
+
+
+Logic File(Test2.java)
+--------------------------
+package com.JFSD.SpringDemo;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext ac = new FileSystemXmlApplicationContext("src/main/resources/spconfig.xml");
+		Object ob = ac.getBean("empBean");
+		Employee e = (Employee) ob;
+		System.out.println("ID is "+e.geteId());
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                                     Dt : 09-08-23
+                                                                                                                                                                                                     ----------------
+Primitive Data & Non Primitive Data
+-----------------------------------------------
+ -> What kind of data, a bean object can hold.
+                                   or
+->  What kind of data can be injected to a bean.
+-> The different types of data which can be hold by a bean object is:
+                              - primitive values (Primitive Data)
+                              - collections (Non Primitive Data)
+                              - object (Non Primitive Data)
+
+
+Primitive Data
+-------------------
+
+Primitive Values
+--------------------
+      -> Bean class
+                      -> setter injection
+
+-> The data members which we have in bean class are primitive values.
+
+
+Bean Class
+--------------
+class Employee{
+
+   int id;
+  String name;
+
+    -> generate setters and getters
+
+} 
+
+
+Configuration File(spconfig.xml)
+-----------------------------------------
+<beans>
+<bean id = "empBean" class = "com.JFSD.SpringDemo.Employee">
+<property name = "eId" value = "30959"/>
+<property name = "eName" value = "kalyan"/>
+<property name = "eSalary" value = "1200000"/>
+</bean>
+</beans>
+
+
+Logic File(Test.java)
+--------------------------
+public class Test{
+  
+	public static void main(String args[ ]){
+
+		ApplicationContext ac = new FileSystemXmlApplicationContext("src/main/resources/spconfig.xml");
+		Object ob = ac.getBean("empBean");
+		Employee e = (object)ob;
+		System.out.println(e.getEid());			
+	}
+}
+
+-> Example1 can also be example for primitive data
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Non Primitive Data
+-------------------------
+
+Collections
+--------------
+-> This can be implemented in three ways
+               - List
+               - Set
+               - Map
+
+
+List
+-----
+-> It is a collection of items.
+
+Example:
+
+Bean class (Question.java)
+---------------------------------
+public class Question{
+        int qid;
+        String qname;
+        List<String> answers;
+
+-> 1 setter or getter method (for qid)
+
+    public Question(int qid, String qname, List<String>  answers){
+	this.qid = qid;
+	this.qname = qname;
+	this.answers = answers;
+
+   }
+   public void displayAns( ){
+      System.out.println("Answers are :")
+      Iterator itr = answers.iterator( ); 
+     while(itr.hasNext( )){
+        S.o.p(itr.next( ));
+    }
+  } 
+
+}
+
+
+Configuration file(spconfig.xml)
+-----------------------------------------
+<beans>
+<bean id = "qBean" class = "com.JFSD.SpringDemo.Question">
+<constructor-arg value = "1" type = "int"/>
+<constructor-arg value = "your fav color" type = "String"/>
+<constructor-arg >
+<list>
+<value> Green </value>
+<value> Blue </value>
+<value> Red </value>
+<value> Yellow </value>
+</list>
+</constructor-arg>
+</bean>
+</beans>
+
+
+
+Logic File(Test.java)
+--------------------------
+public class Test{
+  
+	public static void main(String args[ ]){
+
+		ApplicationContext ac = new FileSystemXmlApplicationContext("src/main/resources/spconfig.xml");
+		Object ob = ac.getBean("qBean");
+		Question q = (object)ob;
+		q.displayAns( );			
+	}
+}
+
+
+
+set
+-----
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Object
+--------
+
+Example
+-----------
+
+Bean class
+--------------
+public class Book{
+	int id;
+	String author;
+	double price;
+
+        -> Setter Injection
+             (genereate setters and getters for all variables)
+}
+
+public class Library{
+	Book book;
+
+	->  (genereate setters and getters)
+
+}
+
+
+Configuration file(spconfig.xml)
+-----------------------------------------
+<beans>
+<bean id = "bookBean" class = "com.JFSD.SpringDemo.Book">
+<property name = "id" value = "1"/>
+<property name = "author" value = "kalyan"/>
+<property name = "price" value = "1200000"/>
+</bean>
+<bean id = "libBean" class = "com.JFSD.SpringDemo.Library">
+<property name = "book" ref="bookBean"/>
+</bean>
+</beans>
+
+
+Logic file(Test.java)
+--------------------------
+public class Test{
+  
+	public static void main(String args[ ]){
+
+		ApplicationContext ac = new FileSystemXmlApplicationContext("src/main/resources/spconfig.xml");
+		Object ob = ac.getBean("libBean");
+		Library lib = (Library)ob;
+		S.o.p(lib.getBook( ));			
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                 
+                                                                                                                                                                                                    Dt : 22-08-23
+                                                                                                                                                                                                    ----------------
+
+Spring with Hibernate
+----------------------------
+-> Here, we will understand integration of hibernate application with spring application.
+-> In hibernate application, we provide all the databases information in configuration file named as "hibernate.cfg.xml" 
+     but in spring with hibernate all the databases information will be provided in a file called as "applicationContext.xml".
+-> The advantage of Spring with hibernate is:
+         - Spring provide a new class named as "HibernateTemplate" which saves a lot of code.
+-> Hibernate is based on ORM, where Spring is based on DAO (Data Access Object). 
+
+
+Components of Spring Framework 
+--------------------------------------------
+-> Bean Class / Pojo Class
+-> Mapping File
+-> Create an Interface
+        - Implement Methods
+-> Create an class implements interface
+        - Add Unimplemeneted Methods
+-> Configuration File
+-> Logic File
+
+
+Example: Spring with Hibernate
+------------------------------------------
+
+Bean Class (Employee.java) 
+-----------------------------------
+package com.JFSD.SpringHibernateDemo;
+
+public class Employee {
+	
+	private int eid;
+	private String ename;
+	private double esal;
+	public int getEid() {
+		return eid;
+	}
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public double getEsal() {
+		return esal;
+	}
+	public void setEsal(double esal) {
+		this.esal = esal;
+	}
+	
+
+}
+
+Mapping File(employee.hbm.xml) 
+---------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="com.JFSD.SpringHibernateDemo.Employee">
+    <id name="eid"></id>
+    <property name="ename"></property>
+    <property name="esal"></property>    
+    </class>
+    </hibernate-mapping>
+
+
+
+Interface (EmployeeDAO.java)
+--------------------------------------
+package com.JFSD.SpringHibernateDemo;
+
+import java.util.List;
+
+public interface EmployeeDAO {
+
+	public void insertEmployee(Employee emp);
+	public void deleteEmployee(Employee emp);
+	public void updateEmployee(Employee emp);
+	public Employee findEmployee(int eid);
+	public List<Employee> getEmployees();
+}
+
+
+
+
+Implementation Class(EmployeeDAOClass.java)
+-------------------------------------------------------------
+package com.JFSD.SpringHibernateDemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.transaction.annotation.Transactional;
+
+@Transactional
+public class EmployeeDAOClass implements EmployeeDAO {
+
+	HibernateTemplate ht;
+	@Override
+	public void insertEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		ht.save(emp);
+	}
+
+	public HibernateTemplate getHt() {
+		return ht;
+	}
+
+	public void setHt(HibernateTemplate ht) {
+		this.ht = ht;
+	}
+
+	@Override
+	public void deleteEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		ht.delete(emp);
+	}
+
+	@Override
+	public void updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		ht.update(emp);
+	}
+
+	@Override
+	public Employee findEmployee(int eid) {
+		// TODO Auto-generated method stub
+		Employee emp = ht.load(Employee.class,eid);
+		return emp;
+	}
+
+	@Override
+	public List<Employee> getEmployees() {
+		List<Employee> al = new ArrayList<>();
+		al = ht.loadAll(Employee.class);
+		return al;
+	}
+
+}
+
+
+
+Configuration File(applicationContext.xml)
+--------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xmlns:tx="http://www.springframework.org/schema/tx"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+
+       http://www.springframework.org/schema/context
+
+       http://www.springframework.org/schema/context/spring-context.xsd
+
+       http://www.springframework.org/schema/tx
+
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+       
+
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"> 
+
+    <property name="driverClassName"  value="com.mysql.cj.jdbc.Driver"></property> 
+
+    <property name="url" value="jdbc:mysql://localhost:3306/employees"></property> 
+
+    <property name="username" value="root"></property> 
+
+    <property name="password" value="Kalyan959@"></property> 
+
+</bean> 
+
+
+<bean id="mysessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"> 
+
+      <property name="dataSource" ref="dataSource"></property> 
+
+         
+
+      <property name="mappingResources"> 
+
+          <list> 
+
+                 <value>employee.hbm.xml</value> 
+
+           </list> 
+
+      </property> 
+
+         
+
+   <property name="hibernateProperties"> 
+
+       <props> 
+
+           <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop> 
+
+           <prop key="hibernate.hbm2ddl.auto">update</prop> 
+
+           <prop key="hibernate.show_sql">true</prop> 
+
+        </props> 
+
+   </property> 
+
+  </bean> 
+
+ 
+
+ <bean id="ht" class="org.springframework.orm.hibernate5.HibernateTemplate">
+
+     <property name="sessionFactory" ref="mysessionFactory"></property>           
+
+ </bean> 
+
+ 
+
+ <bean id="empdao" class="com.JFSD.SpringHibernateDemo.EmployeeDAOClass">
+
+     <property name="ht" ref="ht"/>
+
+ </bean>
+
+ 
+
+ <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+
+        <property name="sessionFactory" ref="mysessionFactory"/>
+
+    </bean>
+
+ 
+
+ <tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>
+
+
+
+Logic File (Test.java)
+---------------------------
+package com.JFSD.SpringHibernateDemo;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext ac = new FileSystemXmlApplicationContext("src/main/resources/applicationContext.xml");
+		EmployeeDAO dao = (EmployeeDAO) ac.getBean("empdao");
+		
+//		insert
+//		Employee e = new Employee();
+//		e.setEid(30959);
+//		e.setEname("kalyan");
+//		e.setEsal(10000);
+//		dao.insertEmployee(e);
+		
+		
+		//update
+//		Employee e1 = new Employee( );
+//		e1.setEid(30976);
+//		e1.setEname("faizaan");
+//		e1.setEsal(30000.456);
+//		dao.updateEmployee(e1);		
+		
+//		delete
+//		deleting the record with id =  1000
+//		Employee e1 = new Employee( );
+//		e1.setEid(10000);
+//		dao.deleteEmployee(e1);		
+		
+		
+//		find single record
+//		Employee e1 = new Employee();
+//		e1 = dao.findEmployee(30959);
+//		System.out.println(e1);
+		
+//		find all records
+		List<Employee> l = dao.getEmployees( );
+		for(Employee y : l){
+			System.out.println(y.getEid( )+" "+y.getEname( )+" "+y.getEsal( ));
+		}		
+		
+	}
+
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Spring with JDBC
+-----------------------
+-> Here we understand how to implement jdbc concepts in spring framework.
+-> spring provides as  class named as JdbcTemplate to implement JDBC concepts in spring framwork.
+
+
+Example : Spring example with JDBC
+-----------------------------------------------
+
+Bean Class (Student_Details.java)
+-------------------------------------------
+package com.JFSD.SringJDBCDemo;
+
+public class Student_Details {
+	
+	private int sid;
+	private String sname;
+	private double cgpa;
+	
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public double getCgpa() {
+		return cgpa;
+	}
+	public void setCgpa(double cgpa) {
+		this.cgpa = cgpa;
+	}
+	
+	
+
+}
+
+
+
+Mapping file(student.hbm.xml)
+---------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="com.JFSD.SringJDBCDemo.Student_Details">
+    <id name="sid"></id>
+    <property name="sname"></property>
+    <property name="cgpa"></property>    
+    </class>
+    </hibernate-mapping>
+
+
+
+Interface(StudentDAO.java)
+-------------------------------------
+package com.JFSD.SringJDBCDemo;
+
+import java.util.List;
+
+
+public interface StudentDAO {
+
+	public void insertStudents(Student_Details stu);
+	public void deleteStudents(Student_Details stu);
+	public void updateStudents(Student_Details stu);
+	public Student_Details findStudents(int sid);
+	public List<Student_Details> getStudents();	
+}
+
+
+StudentMapper.java
+--------------------------
+package com.JFSD.SringJDBCDemo;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class StudentMapper implements RowMapper<Student_Details> {
+
+	@Override
+	public Student_Details mapRow(ResultSet rs, int rowNum) throws SQLException {
+		Student_Details st = new Student_Details();
+		st.setSid(rs.getInt("sid"));
+		st.setSname(rs.getString("sname"));
+		st.setCgpa(rs.getDouble("cgpa"));
+		return st;
+	}
+
+}
+
+
+
+Implementation Class(StudentDAOClass.java)
+------------------------------------------------------------
+package com.JFSD.SringJDBCDemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+
+public class StudentDAOClass implements StudentDAO {
+
+	JdbcTemplate jt;
+	
+	public JdbcTemplate getJt() {
+		return jt;
+	}
+
+	public void setJt(JdbcTemplate jt) {
+		this.jt = jt;
+	}
+
+	@Override
+	public void insertStudents(Student_Details stu) {
+		// TODO Auto-generated method
+		String query = "insert into Student_Details values('"+stu.getSid()+"','"+stu.getSname()+"','"+stu.getCgpa()+"')";
+		jt.update(query);
+	}
+
+	@Override
+	public void deleteStudents(Student_Details stu) {
+	    String query="delete from Student_Details where sid='"+stu.getSid()+"' ";  
+		jt.update(query);	
+		
+	}
+
+	@Override
+	public void updateStudents(Student_Details stu) {
+		String query = "update Student_Details set sname = '"+stu.getSname()+"' where sid = '"+stu.getSid()+"'";
+		jt.update(query);		
+		
+	}
+
+	@Override
+	public Student_Details findStudents(int sid) {
+		String query = "select * from Student_Details where sid = ?";
+  	                    Student_Details st = jt.queryForObject(query, new Object[]{sid}, new StudentMapper());
+                                       return st;
+		
+	}
+
+	@Override
+	public List<Student_Details> getStudents() {
+		String query = "SELECT * FROM Student_Details";
+        return jt.query(query, new BeanPropertyRowMapper<>(Student_Details.class));
+	}
+
+}
+
+
+
+Configuration File(applicationContext.xml)
+--------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xmlns:context="http://www.springframework.org/schema/context"
+
+	xmlns:tx="http://www.springframework.org/schema/tx"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+
+       http://www.springframework.org/schema/context
+
+       http://www.springframework.org/schema/context/spring-context.xsd
+
+       http://www.springframework.org/schema/tx
+
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver"></property>
+
+		<property name="url" value="jdbc:mysql://localhost:3306/klu"></property>
+
+		<property name="username" value="root"></property>
+
+		<property name="password" value="Kalyan959@"></property>
+
+	</bean>
+
+
+	<bean id="mysessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+
+		<property name="dataSource" ref="dataSource"></property>
+
+
+
+		<property name="mappingResources">
+
+			<list>
+
+				<value>student.hbm.xml</value>
+
+			</list>
+
+		</property>
+
+
+
+		<property name="hibernateProperties">
+
+			<props>
+
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+
+				<prop key="hibernate.show_sql">true</prop>
+
+			</props>
+
+		</property>
+
+	</bean>
+
+
+
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="dataSource" />
+	</bean>
+
+
+
+	<bean id="studao" class="com.JFSD.SringJDBCDemo.StudentDAOClass">
+
+		<property name="jt" ref="jt" />
+
+	</bean>
+
+
+</beans>
+
+
+
+Logic File (Test.java)
+---------------------------
+package com.JFSD.SringJDBCDemo;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext ac = new FileSystemXmlApplicationContext("src/main/resources/applicationContext.xml");
+		StudentDAO dao = (StudentDAO) ac.getBean("studao");
+		
+//         insert
+//        Student_Details st = new Student_Details();
+//        st.setSid(30976);
+//        st.setSname("faizaan");
+//        st.setCgpa(9.48);
+//        dao.insertStudents(st);
+
+//		updating name of id 30976
+//		Student_Details st = new Student_Details();
+//                                     st.setSid(30976);
+//                                     st.setSname("faizaan azam");
+//		dao.updateStudents(st);
+		
+//		delete
+//		deleting the record with id =  30976
+//		Student_Details st = new Student_Details();
+//		st.setSid(30976);
+//		dao.deleteStudents(st);
+		
+		
+//		find single record
+//		Student_Details st = new Student_Details();
+//		st = dao.findStudents(30959);
+//		System.out.println(st.getSname()+" "+st.getCgpa());
+		
+//		find all records
+		List<Student_Details> l = dao.getStudents();
+		for(Student_Details y : l){
+			System.out.println(y.getSid()+" "+y.getSname()+" "+y.getCgpa());
+		}		        
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                                  Dt : 29 - 08 -23
+                                                                                                                                                                                                  ------------------
+ Spring MVC-WEB
+----------------------
+-> MVC stands for Model, View and Controller.
+                  - Model          -> Business Logic (BE)
+                  - View            -> Presentation Logic (FE)
+                  - Controller  -> Interface between  Model and View
+
+-> MVC is one of the standard and popular design pattern which will be used by most of the developers to build a web application.
+-> Spring MVC is a java framework which is used to build web applications.
+-> Spring MVC includes all the basic features of core spring component like DI and IoC.
+-> Spring MVC provides an solution to use MVC design pattern in spring framework by using a new class called DispatcherServlet.
+-> DispatcherServlet is a  class that recieves an incoming request as http request and maps it to a  right resource such as Model, View and Controller. 
+
+
+   User Request                                          Server Machine                                                                    App response
+www.abhibus.com                                          AWS                                                                             Abhibus web page           
+
+
+Advantages of Spring MVC
+----------------------------------
+-> separate roles
+-> light weight
+-> rapid development       
+-> reusability of code 
+-> easy to test
+
+
+Spring MVC Architecture
+--------------------------------
+-> Refer to email for architecture diagram.
+                                 or
+-> https://www.tutorialspoint.com/spring/images/spring_dispatcherservlet.png
+-> This architecture follows sequence af an event corresponding to an http request to DispatcherServlet.
+-> After receiving an http request, DispatcherServlet consults the Handling Mapper to call the appropriate controller.
+-> The controller takes the request and calls the appropriate service methods based on using GET or POST.
+-> The DispatherServlet will take help from the view resolver to pick up the defined view from the request.
+-> Once the view is finalised, the DispatcherServlet passes the model data to the view which is finally rendered on a browser.
+
+
+Example: Spring MVC
+---------------------------
+-> create a maven project   -> quickstart -> 1.4
+-> go to properties   ->  project facets  -> convert to facet forms   -> generate web.xml
+-> Update requirements from 1.7 to 1.8
+-> Add dependencies in pom.xml
+-> update project
+-> Spring MVC
+         - spring configuration file(spring-config.xml)
+         - provide config file details in web.xml (add spring-config.xml)
+         - crete views in a folder called views
+                           - home.jsp
+                           - add.jsp 
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                                        Dt : 12-09-23
+                                                                                                                                                                                        ----------------
+                                                                                           CO - 2
+                                                                                           -------
+
+Spring Boot
+---------------
+-> It is a open source java framework used to build applications.
+-> It provides an easier and faster way to setup, configure and run both simple and web based applications.
+-> Spring Boot is a spring module that provides rapid application development feature to a spring framework.
+-> It is used to create a spring based application that you can just run as it needs a minimal spring configuartion.
+-> Spring Reprsentation image link:
+      - https://static.javatpoint.com/springboot/images/what-is-spring-boot.png
+-> Spring Boot is a combination of spring framework and embedded servers(http servers).
+
+Note
+------
+-> In spring boot there is no requirement of xml at all.
+
+
+Why Spring Boot
+---------------------
+-> The DI used in Spring Boot is same as Spring.
+-> It contains powerful database transaction management capabilities.
+-> It simplifies integrating with other java frameworks like hibernate, JPA, structs, Filters, EJB, etc.
+-> It reduces the cost and development time of building a web application.
+
+
+Feature of Spring Boot
+-----------------------------
+-> Auto-configuration: we need not to define any configurations.
+-> stand alone applications: no need to follow any traditional approach like MVC.
+-> Embedded web server support.
+-> Spring Boot starter.
+     - starter is a collection of all dependencies.
+-> Spring Boot CLI.
+-> Spring Boot Actuator which is used to manage the web application.
+-> MicroServices support.
+-> Embedded database support.
+-> Spring boot initializer.
+-> More secured compared to spring.
+-> Testing happens automatically with higher efficiency. 
+
+
+
+Advantages of Spring Boot
+-----------------------------------
+-> It offers a CLI tool for developing and testing a spring boot application.
+-> It offers number of plugins.
+-> There is no requirement of configuration file or xml file.
+-> It increases the productivity and reduces the development time.
+
+
+Version
+---------
+-> Latest version of Spring Boot is 2.o
+-> The updates of the same version compared to the previous version are:
+            - Infrastructure
+            - Spring framework 5.0.0
+
+
+Spring Boot Architecture
+-------------------------------
+-> It follows a layered arcitecture in which each layer communicates with either the above layer or below layer.
+-> Refer to diagram sent in mail or refer below link:
+          - https://static.javatpoint.com/springboot/images/spring-boot-architecture.png
+-> The Spring Boot architecture consists of the following layers:
+	- Presentation Layer   
+	- Bussiness Layer
+	- Persistence Layer
+	- Database Layer	
+
+
+Presentation Layer 
+-------------------------  
+It handles the http requests from the users and transfers the same to Bussiness Layer.
+
+Bussiness Layer
+--------------------
+It handles all the Bussiness logic of your application.
+
+Persistence Layer
+----------------------
+It handles all the storage logic of your application.
+
+Database Layer
+--------------------	
+In this layer CRUD opearations can be performed.
+
+
+Requirements of Spring Boot
+-------------------------------------
+-> Maven
+-> Java with 17 or above
+-> Spring framework 5.o
+-> Spring Tool Suite (STS)
+        - IDE / Plugin
+
+
+
+Spring Boot Project
+-------------------------
+-> we can start working with spring boot in three different ways:
+                  - Using Spring Intializr.
+                  - Using STS
+                  - Using CLI 
+
+
+Spring Boot Project using spring Intializr
+----------------------------------------------------
+-> Open the Spring Intializr using the following link:
+      - https://start.spring.io/
+-> Provide group and artifact name.
+-> Add Spring - web dependency and click on generate.
+-> Extract the downloaded zip file and extract it.
+-> Import the project folder into your IDE (Eclipse).
+-> Run the Application (Application.java) -> Run as java application
+
+
+Spring Boot Project using spring Tool suite
+-----------------------------------------------------
+-> Install STS ide and follow the process given below.
+-> create a  maven project by providin group and artifiact name.
+-> Add dependencies in pom.xml
+-> Run the application (Application.java) -> Run as java application
+
+
+Spring Boot Project using CLI
+-------------------------------------
+Open CLI and provide commands  -> it is outdated
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                              Dt : 19-09-23
+                                                                                                                                                                                              -----------------
+Example1 : To print hello in console
+-------------------------------------------
+-> Open the Spring Intializr using the following link:
+      - https://start.spring.io/
+-> Provide group and artifact name.
+-> Add Spring - web dependency and click on generate.
+-> Extract the downloaded zip file and extract it.
+-> Import the project folder into your IDE (Eclipse).
+-> Run the Application (Application.java) -> Run as java application
+-> Add the followwing changes in Application.java file :
+            src/main/java -> com.example.demo ->DemoApplication.java
+
+DemoApplication.java
+------------------------------
+@SpringBootApplication
+public class DemoApplication{
+
+    public static void main(String args[]){
+        System.out.println("Hello Spring Boot");
+      }
+    }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+        
+SpringBoot Application/Project Components
+--------------------------------------------------------
+
+application.properties
+----------------------------
+    - src/main/resources
+    - application.properties
+            -> It is a component which defines all the properties of a springBoot application
+
+Example: To change the port name
+--------------------------------------------
+-> Add the below lines in application.properties
+    spring.application.name=demo
+    server.port = 2023
+  
+
+
+Annotations
+---------------
+-> Annotation is a form of meta data that provides about a application.
+
+  
+Core Spring Annotations
+-------------------------------
+@Required
+--------------
+ -> It is method level annotation.
+ -> this annotation will be used for a particular method which is mandatory to execute.
+    
+
+@ComponentScan
+------------------------
+-> It is a class Level annotation.
+-> It is used when we want to scan a package from beans.
+  
+
+
+@Bean
+----------
+-> This is a method level annotation.
+-> It is alternative of XML <bean> tag.
+-> It tells the method to produce a bean to be managed by the spring container.
+    
+
+@Component
+------------------
+ -> It is a class level annotation.
+ -> It is used to mark a java class as a Bean.
+
+
+@Service
+------------
+-> It is a class level annotation .
+-> It is used to a class where business logic of the application is defined.
+
+
+@Repository
+----------------
+-> It is a class level annotation. 
+-> This annotation is used to a class where DAO implements.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Spring Boot Annotations
+--------------------------------
+
+@SpringBootApplication
+--------------------------------
+-> It is a class-level annotation.
+-> Starting point of your appliation.
+-> SpringBootApplication is a combination of 
+    - @EnableAutoConfiguration  
+    - @ComponentScan
+    - @Configuration
+
+
+@RestController
+---------------------
+-> It is class level annotation.
+-> It is used to implement REST services.
+
+ 
+@RequestMapping
+------------------------
+-> It is a method-level annotation.
+-> It is used for any http service request.
+
+Syntax
+---------
+-> @RequestMapping(method = RequestMethod.GET)
+
+
+@GetMapping
+-------------------
+-> It is a method level annotation.
+-> It maps an http GET request .
+
+
+@PostMapping
+--------------------
+-> It is a method level annotation.
+-> It maps http POST request.
+  
+
+@PutMapping
+------------------
+-> It maps a method level annotation
+-> It maps http PUT request
+
+
+@DeleteMapping
+----------------------
+-> It is a method level annotation
+-> It maps an http delete request 
+  
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Dependencies Management
+------------------------------------
+-> It manages all the dependencies for maven project (using SI)
+-> The dependencies will be managed in a pom.xml file
+
+
+Spring Starters
+------------------
+-> It is a collection or set of dependencies that simplifies the development of the SpringBoot application
+    a. SB starter web
+    b. SB starter parent
+    c. SB starter actuator
+    d. SB starter test
+    e. SB starter JPA 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example2: To access jsp file
+----------------------------------
+-> create a new sprinboot project using spring intializr
+
+-> Add following dependencies
+	- spring web 
+	- dev tools
+	- thymeleaf
+-> click on generate and load the dowloaded file into eclipse by extracting.
+
+-> Add the following dependency in pom.xml
+<dependency>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
+    <scope>provided</scope>
+</dependency>
+
+-> Open the Application.java to ensure it is created successfully and it looks as follows:
+package com.example.spdemo;
+
+SpdemoApplication.java
+--------------------------------
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+public class SpdemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpdemoApplication.class, args);
+	}
+
+}
+
+
+-> In the same package where Application.java exists and create a class as Rest
+
+Rest.java
+------------
+package com.example.spdemo;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class Rest {
+	
+	@GetMapping("/home")
+	public String home() {
+		return "home";
+	}
+}
+
+
+-> create a  jsp file named as  home.jsp in templates folder
+-> HTML files and jsp files in springboot application are to be created in templates folder.
+-> Images are to be placed in a static folder.
+
+home.jsp
+-----------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsp</title>
+</head>
+<body>
+<h1>Welcome</h1>
+</body>
+</html>
+
+-> Add the following changes  in application.properties file:
+
+application.properties
+----------------------------
+server.port=9000
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.jsp
+
+-> Run the SpdemoApplication.java file.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                           Dt : 26-09-23
+                                                                                                                                                                                           -----------------
+
+Example3 : To dispaly the collected data through a form
+------------------------------------------------------------------------
+
+SbjspformdemoApplication.java
+-----------------------------------------
+package com.example.sbjspformdemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SbjspformdemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SbjspformdemoApplication.class, args);
+	}
+
+}
+
+
+
+Rest.java
+------------
+package com.example.sbjspformdemo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+
+@Controller
+public class Rest {
+	
+	@GetMapping("/form")
+	public String formRender() {
+		return "form";
+	}
+	
+	@GetMapping("/formdata")
+	public String displayData(HttpServletRequest request,Model m) {
+		m.addAttribute("fn",request.getParameter("fn"));
+		m.addAttribute("ln",request.getParameter("ln"));
+		return "displaydata";
+	}
+
+}
+
+
+
+form.jsp
+----------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP FORMS</title>
+</head>
+<body>
+<form action = "formdata">
+<input type = "text" name = "fn" placeholder = "Enter Your first name"><br>
+<input type = "text" name = "ln" placeholder = "Enter your Last name"><br>
+<input type = "submit" value = "register">
+</form>
+</body>
+</html>
+
+
+
+displaydata.jsp
+-------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Your details are :</h1><br>
+First Name : [[${fn}]]
+Last Name : [[${ln}]]
+</body>
+</html>
+
+
+
+application.properties
+----------------------------
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.jsp
+
+-> Run the SbjspformdemoApplication.java file.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Spring Starters
+-------------------
+-> Spring Starter is a collection of dependencies which comes as a single unit.
+-> The different dependencies of spring starters are:
+	- SB starter web
+	- SB starter test
+	- SB starter actuator
+	- SB starter parent
+	- SB starter JPA
+	- SB  thyme-leaf
+	- SB dev tools
+	- SB security
+
+
+SB starter web
+-------------------
+-> This is a dependency which is used to build a spring boot web application.
+
+Example
+------------
+Add dependency -> spring-starter-web
+
+
+Spring Starter Test
+------------------------
+-> This is a default dependency which you have for ever spring boot application.
+
+Example
+-----------
+Default Dependency -> Spring-starter-test
+
+
+                                                                                                                                                                                     Dt: 03-10-23
+              
+                                                                                                                                                                       ---------------
+Example 6
+-------------
+To dispaly the collected data through a form using entity and model
+
+
+Entity Class (Student.java)
+----------------------------------
+
+
+Controller class (Rest.java)
+----------------------------------
+package com.example.sbjspformdemo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+
+@Controller
+public class Rest {
+	
+	@GetMapping("/form")
+	public String formRender(Model model) {
+		model.addAttribute("stud1", new Student( ));
+		return "form";
+	}
+	
+	@GetMapping("/formdata")
+	public String displayData(@ModelAttribute("stud2") Student stud2, Model model) {
+		model.addAttribute("fn",request.getParameter("fn"));
+		m.addAttribute("stud1",stud2);
+		return "displaydata";
+	}
+
+}
+
+
+form.jsp
+----------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSP FORMS</title>
+</head>
+<body>
+<form action = "formdata" th:object="${stud2}">
+<input type = "text" name = "fn" placeholder = "Enter Your first name"><br>
+<input type = "text" name = "ln" placeholder = "Enter your Last name"><br>
+<input type = "submit" value = "register">
+</form>
+</body>
+</html>
+
+
+displaydata.jsp
+-------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+[[${stud1.firstName}]]
+[[${stud1.lastName}]]
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Spring starter JPA
+-----------------------
+-> JPA stands for Java Persistence API .
+-> The purpose of this is Database Connectivity using JPA / Hibernate (JPA - CRUD).
+-> JPA / Hibernate uses JDBC concepts to communicate with database.
+-> Automatic data source configuration is an advantage of SB framework (No need of any configuration files).
+-> EntityManager is the main component / Class of SB framework to create queries.
+
+
+                                                                           JPA(CRUD)
+Java Application                                       -------------------->                                        Database
+        (SB)                                                             Hibernate                                                (mySQL)
+
+
+Note
+------
+we are going to communicate with database using CommandLineRunner not through a server.
+
+
+Example: SB Application to implement JPA-CRUD operations
+-----------------------------------------------------------------------------
+
+Application
+---------------
+-> create a new project named as spjpa using spring initializr.
+-> Add dependencies  -> Data JPA, mySQL, DevTools
+-> Generate -> Extract -> Import -> Eclipse
+
+-> application.properties :
+spring.datasource.url = jdbc:mysql://localhost:3306/klu
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=Kalyan959@
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                
+
+REST - CRUD 
+----------------
+-> REST stands for Representation State Transfer.
+-> It refers to an architectural style for designing different applications (web applications).
+-> REST is not an API, it's an architecture.
+-> When you develop RESTFUL web services in SB application, you are implemneting a REST architecture based on REST principles.
+-> This involves different HTTP methods such as GET, PUT, POST, DELETE.
+-> In this concept, we will understand different http service methods to perform crud operations on a database.
+
+
+Example : SB Apllication using REST-CRUD
+------------------------------------------------------
+
+Application
+---------------
+-> create a new project named as spjpa using spring initializr.
+-> Add dependencies  -> Data JPA, mySQL, DevTools, tymeleaf,web
+-> Generate -> Extract -> Import -> Eclipse
+-> Add manual dependencies if required here it is not required.
+-> Add the following in application.properties
+ 
+spring.datasource.url = jdbc:mysql://localhost:3306/klu
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=Kalyan959@
+spring.jpa.show-sql:true
+spring.jpa.hibernate.ddl-auto=update
+
+-> 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                                    Dt : 10-10-23
+                                                                                                                                                                                    ----------------
+Spring Boot MVC
+----------------------
+-> MVC stands for Model, View, Controller.
+-> MVC is a standard architecture or design pattern which is used to design web applications.
+-> MVC
+	- Model represents the business logic of our application
+	- View represents the presentation logic of our applications.
+	- It acts as an interface between model and view or FE and BE
+
+
+Example: SB application to perform crud operations on a db using MVC - CRUD
+-----------------------------------------------------------------------------------------------------
+
+Application
+---------------
+-> create a new project named as spjpa using spring initializr.
+-> Add dependencies  -> Data JPA, mySQL, DevTools, tymeleaf,web
+-> Generate -> Extract -> Import -> Eclipse
+-> Add manual dependencies if required here it is not required.
+-> Add the following in application.properties
+ 
+spring.datasource.url = jdbc:mysql://localhost:3306/klu
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=Kalyan959@
+spring.jpa.show-sql:true
+spring.jpa.hibernate.ddl-auto=update
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Spring Starter  Thymeleaf
+--------------------------------
+-> It is a server side java template engine which is used to create and render an html, css, js, jsp, xml files.
+-> It is integrated with the Spring Boot framework in order to represent the view of a application.
+
+
+Spring Starter Parent
+----------------------------
+-> Spring starter parent is a special dependency that provides the default configuration of our application and it provides a complete dependency tree in order to built a SB application.
+-> This dependency inherits dependency manager from "spring-boot-dependencies".
+
+
+Spring Starter Actuator
+------------------------------
+-> It is a dependency used to manage and monitor our complete SB application.
+-> This dependency is having a actuator model which consists of serveral features like health checkup, auditing jvm metrics, log information, cache statistics, etc.
+
+
+Spring Starter DevTools
+------------------------------
+-> It is a module that provides several features to improve the development of  our web application.
+-> Some of the important features provided by this dependecy are:
+		- automatic restart
+		- live reload
+		- remote update
+		- remote debugging
+		
+
+
+Spring Starter Security
+-----------------------------
+-> It is a framework which provides security to the web application which is built using SB.
+-> This framework targets on two major areas of a web application w.r.t security:
+		- authentication
+		- authorization
+
+Authentication
+-------------------
+-> It is the process of knowing and identifying the user who wants to access the web appliaction.
+
+
+Authorization
+------------------
+-> It is a process which allows user to perform different actions on a web application.
+
+-> with respect to SB the security can be done in 2 ways:
+		- Default  Security 
+		- Custom Security
+
+
+Example: SB Application to provide a basic security 
+----------------------------------------------------------------
+
+Application
+--------------
+-> create a new project named as spjpa using spring initializr.
+-> Add dependencies  -> DevTools, tymeleaf,web, spring-security
+-> Generate -> Extract -> Import -> Eclipse
+-> Add manual dependencies if required here it is not required.
+-> Extract -> Import -> eclipse -> run as java application 
+-> we can see a password in the console
+-> go to browser type localhost:8080 
+-> a default login form will appear 
+-> use "user" for name field and use password you received in console for password field.
+-> You will be logged in successfully by displaying a whiteboard error page.
+-> Refer the below github repo for all the files :
+https://github.com/R-Venkat-Kalyan/Java-Full-Stack/tree/main/sbsecurity
+
+Custom Security
+---------------------
+-> Include the following in application.properties to custom security.
+
+application.properties
+-----------------------------
+spring.security.user.name  =  JFSD
+spring.security.user.password = kalyan 
+
+
+Self learning : Spring cloud
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example: SB Application to render a registeration page when click on submit the details must save in MySQL db
+
+
+Application (sbformdatajpa)
+------------------------------------
+-> create a project named as sbformdatajpa using SI
+-> add dependencies - thymeleaf, web, devtools, jpa, MySQL
+-> generate -> export -> import in eclipse
+-> Manual dependencies -> nill
+-> add the following in application.properties
+
+application.properties
+-----------------------------
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.jsp
+spring.datasource.url = jdbc:mysql://localhost:3306/klu
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=Kalyan959@
+spring.jpa.show-sql:true
+spring.jpa.hibernate.ddl-auto=update
+
+-> Create an entity class (Employer.java)
+-> Create an interface which extends JPARepository (EmployerRepository.java)
+-> Create another interface to perform your tasks(EmployerDAO.java)
+-> Create an implementation class (EmployerDAOClass.java)
+-> Create an Controller class (Rest.java)
+-> Run the application (SbFormDataJpaApplication.java)
+-> Refer the below github repo for all the files :
+
+https://github.com/R-Venkat-Kalyan/Java-Full-Stack/tree/main/sbformdatajpa
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                          Dt: 11-10-23
+                                                                                                                                                                          ----------------
+
+MicroServices
+------------------
+-> It is a service oriented architecture.
+-> MicroServices are the smaller services that work together.
+-> MicroServices is an approach to develop a single application as a combination of smaller services.
+
+
+Features of MicroServices
+--------------------------------- 
+-> Isolated Failure.
+-> Deploy Independently.
+-> Single Responsibility Model.
+
+
+Advantages of MicroServices
+-------------------------------------
+-> Independent services.
+-> Cost scaling.
+-> Individual services can be upgraded.
+-> Dynamic scaling.
+
+
+Disadvantages
+-------------------
+-> Difficult to maintain because of larger number in services.
+
+
+Note
+------
+Spring Boot  using MicroServices (Application with many services)
+
+Create a simple MicroServices Application
+-----------------------------------------------------
+
+Application (sbmicro)
+---------------------------
+-> create a project named as sbmicro using SI
+-> add dependencies - thymeleaf, web, devtools
+-> generate -> export -> import in eclipse
+-> Manual dependencies -> nill
+-> add the following in application.properties
+	- spring.application.name=sbmicro
+	- server.port = 9065
+-> create a class for services(Services.java)
+-> create a controller class (Rest.java)
+-> Run the application (SbMicroApplication.java)
+-> verify the out after running at:
+     http://localhost:9065/range
+-> Refer the below github repo for all the files :
+https://github.com/R-Venkat-Kalyan/Java-Full-Stack/tree/main/sbmicro
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+

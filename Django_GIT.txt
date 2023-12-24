@@ -1,0 +1,17 @@
+-> create a repository in github.com in your account.
+-> enter command "git init" to intialize an empty repositroy.
+-> enter command "git status" to see the changes commited.
+-> you can see all the files dispalyed in red color as no changes are commited.
+-> enter command "git add ." to add all the files into repository.
+-> enter command "git commit -m "first commit" to save all the files.
+-> we can skip this command "git branch -M main", and the files will be added to a default master branch.
+-> enter command "git remote add origin "YOUR REPOSITORY URL" " to add all the files to your repository.
+-> enter command "git push -u origin master" to push all the files into git repository.
+
+
+
+Whenever you made any new changes after pushing
+------------------------------------------------------------------
+-> enter "git status", this will show the updated changes.
+-> enter "git add ."  to add the changes into repository.
+-> enter "git commit -m "second commit" to save all the changes.
