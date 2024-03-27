@@ -1,0 +1,20 @@
+ngrok steps
+
+open ngrok website
+-> login
+-> Cloud Edge -> Domains
+-> Side to domains there will be a small terminal symbaol.
+-> Hover on that it states start a tunnel -> click it
+-> A link will appear link this:
+	ngrok http --domain=still-mongoose-typically.ngrok-free.app 80
+-> Open ngrok .exe app and enter the above command by replacing the 80 to your web application port number.
+-> Now you will get a URL like this:
+	                Forwarding       https://still-mongoose-typically.ngrok-free.app -> http://localhost:8080 
+-> To access your web application use this URL:
+	https://still-mongoose-typically.ngrok-free.app
+
+My domain url:
+ngrok http --domain=still-mongoose-typically.ngrok-free.app 80
+
+My Deployed URL:
+https://still-mongoose-typically.ngrok-free.app/

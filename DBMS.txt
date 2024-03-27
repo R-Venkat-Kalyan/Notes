@@ -1,0 +1,77 @@
+                                                                                                DBMS
+                                                                                                --------
+Database
+------------
+-> A database is a collection of data, typically describing the activities of one or more related organizations. 
+-> For example, a university database might contain information about the following:
+	- Entities such as students, faculty, courses, and classrooms.
+	- Relationships between entities, such as students’ enrollment in courses, faculty teaching courses,
+	  and the use of rooms for courses.
+
+
+DBMS
+--------
+-> Database Mangement System (DBMS) is a software that is designed to assist in maintaining and utilizing
+    large collections of data efficiently.
+->The first general purpose DBMS was designed by Charles Bachman in 1960s which was also called as 
+    Integral data model.
+-> In 1960s, IBM developed the Information Management System(IMS) DBMS which was also called as 
+    hierarchial data model.
+-> In 1970, Edgar Codd, at IBM proposed a new model called as relational data model.
+->  The SQL query language for relational databases, developed as part of IBM’s System R project, is now the 
+     standard query language. SQL was standardized in the late 1980s, and the current standard,  SQL-92, was 
+     adopted by the American National Standards Institute (ANSI) and International Standards Organization (ISO).
+
+
+Advantages of DBMS
+---------------------------
+-> Data Indepndence
+-> Efficient data access
+-> Data integrity and security
+-> Data administration
+-> Concurrent access and data recovery
+
+
+Data Model
+---------------
+-> A data model is a collection of high-level data description constructs that hide many low-level storage details. 
+-> A DBMS allows a user to define the data to be stored in terms of a data model.
+-> Most database management systems today are based on the relational data model.
+
+
+The Relational Data Model
+----------------------------------
+A description of data in terms of a data model is called a schema. In the relational model, the schema 
+for a relation specifies its name, the name of each field (or attribute or column), and the type of each field.
+
+Ex : Students(sid: string, name: string, login: string, age: integer, cgpa: real)
+
+
+Entity
+-------
+-> An entity is an object in the real world that is distinguishable from other objects.
+-> A collection of similar entities is called as entity set.
+-> A relationship is an association among two or more entities.
+
+
+Key Points
+--------------
+-> Database design has six steps: requirements analysis, conceptual database design, logical database design, 
+    schema refinement, physical database design, and security design.
+
+-> In the ER model, a real-world object is represented as an entity. 
+-> An entity set is a collection of structurally identical entities. 
+-> Entities are described using attributes.
+-> Each entity set has a distinguished set of attributes called a key that can be used to uniquely identify each entity.
+
+-> A relationship is an association between two or more entities.
+-> A relationship set is a collection of relationships that relate entities from the same entity sets. 
+-> A relationship can also have descriptive attributes.
+
+
+Relational Models
+-----------------------
+-> An instance of a relation is a set of tuples, also called records, in which each tuple has the same number of fields 
+    as the relation schema. 
+-> A relation instance can be thought of as a table in which each tuple is a row, and all rows 
+    have the same number of fields.

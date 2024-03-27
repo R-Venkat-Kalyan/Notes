@@ -1,0 +1,848 @@
+Cloud computing
+-------------------------
+-> The on demand delivery of IT resources through internet by pay as you go pricing.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Types of clouds
+--------------------
+-> IAAS
+-> PAAS
+-> SAAS
+
+
+Infrastructure As a Service(IAAS)
+------------------------------------------
+-> This are basic building blocks of cloud information technology and provides access to networking, computers, etc.
+-> Highest level of control over IT resources.
+-> AWS is Infrastructure as service(IAAS).
+
+
+Platform As a Service(PAAS)
+------------------------------------
+-> It removes the need for managing the underlying architecture like hardware and OS.
+-> Here it allows us to focus on deployment and management.
+-> Heroku is PAAS.
+
+
+Software As a Service(SAAS)
+-------------------------------------
+-> It provides a software service that is completely managed by the service provider.
+-> Least level of control over IT resources.
+-> Gmail is SAAS.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Cloud Computing Deployment Models
+------------------------------------------------
+-> Public 
+-> Private
+-> Hybrid
+
+Public Cloud
+----------------
+-> can be accessed by everyone
+-> AWS is a public cloud.
+
+
+Private Cloud
+-----------------
+-> Single Organization uses a private cloud and it can accessed by that organization people only.
+-> KLU 
+
+
+Hybrid Cloud
+----------------
+-> combination of public and private cloud.
+-> Partial infrastructure with us and other partial with third party.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Advantages of Cloud
+---------------------------
+-> No Capex : No need to invest on architecture like servers and all without knowing how much we use (no upfront investment on infrastructure).
+-> Massive economies of scale : allows massively scaling of resources at lower cost.
+-> Stop guessing capacity.
+-> Increse speed and agility : New resources can be made available in a faster note.
+-> Stop spending money on running and maintaining data centers.
+-> Go global in minutes : our resources can be easily available to all the users.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS SERVICES 
+--------------------
+
+Amazon Ec2(Elastic compute cloud)
+------------------------------------------------------------------
+-> It is a virtual server
+-> It is used when we want to host traditional applications.
+-> It is used when we want full control to the infrastructure and resources like os.
+-> AWS by defaultly provides an instance id and we need to specify instance type and AMI.
+-> Instance type and AMI is to be specified by customer while launching an EC2.
+
+
+Multitenacy : sharing of  underlying hardware between virtual machines.
+
+-> EC2 provides complete control over the instance :
+           Ec2 configurations controls :
+                     - os (windows or linux)
+                     - webapps
+                     - third party apps
+                     - databases
+-> Ec2 follows vertical scaling i.e. we can increase or decrease the instance capacity. 
+-> Ec2 supports auto scaling.
+
+
+Different Types of Ec2 instances
+----------------------------------------
+1. General purpose
+        Balanced resources (used for web application)
+2. compute optimized
+        high performance(used for gaming)
+3. memory optimized 
+         memory optimized tasks
+4. accelerated computing
+          floating point number calculations(used for graphic design)
+5. storage optimized
+         high performance(used for locally stored data)
+
+
+Ec2 pricing
+--------------
+1. On Demand
+         -- pay for what you use (costlier)
+
+2. Savings Plans
+         -- commiting a conistent usage of computing services for 1 or 3 years.
+         -- savings upto 72 % compare to on demand
+         -- usage within the commitment is charged at savings plan.
+         -- beyond usage will be charged at on demand pricing.
+
+3. Reserved Instances 
+        -- commiting a conistent usage of computing services for 1 or 3 years.
+        -- savings upto 75 % compare to on demand.
+        -- payment : 3 ways 
+                    -- all upfront
+                    -- partial upfront
+                    -- no upfront
+
+4. Spot instances
+         -- spot instances are provided when ec2 is availbale.
+         -- savings upto 90 % compare to on demand.
+         -- AWS can take back the resource when they need by providing a 2 minute time after notifying.
+         -- interruptions are available.
+
+5. Dedicated hosts 
+       -- dedicated to you only.
+       -- no one else will share the same host.
+
+
+AMI
+-----
+Amazon Machine Images are templates that are used to create an EC2 instance.
+
+
+EC2 Instance Store
+------------------------
+It provides temporary block storage for our instances which are stored on hard disks attatched to computer.
+
+
+EC2 Tags 
+-----------
+A tag is a label that we can assign to our resource which consists of a key(name) and an optional value.
+Tagging is the way of attaching metadata to EC2 instance.
+
+
+Security Group
+------------------
+A Security group is a set of firewall rules that control traffic to the instance.
+It is mostly related to network security like port, traffic, protocols, etc.
+
+
+ELB
+-----
+Elastic load balancer(ELB ) is used to balance / distribute the traffic.
+It is regional.
+
+-> ELB and auto scaling are tow different services.
+
+
+Amazon SQS(Simple Queue Service)
+---------------------------------------------------
+-> It is used to send, store, and recieve messages through software componenets at any volume.
+
+Amazon SNS (Simple Notification Service)
+-----------------------------------------------------
+-> It is a publish / subscribe service used to send notifications.
+
+
+AWS Lambda
+------------------
+-> It is a serverless compute model.
+-> allows you to upload your code in a lambda function.
+-> it takes care of runing your code and it runs within 15 mins.
+-> it is used when we want to host short running applications.
+-> it is used when we dont want to acces the underlying controls such as os, etc.
+
+
+
+AWS Containers
+----------------------
+Containers provide you a standard way to package your application's  code and dependencies into a single object.
+
+             Container Management Systems 
+                                   - ECS
+                                   - EKS
+
+ECS
+-----
+Elastic Container Services uses docker tool to manage containers.
+Docker is a software to develop, test, and deploy your software.
+completely taken care by aws members.
+
+
+EKS
+-----
+Elastic Kubernetees Service uses kubernetee tool to manage containers.
+Kuberneete is a software to develop, test, and deploy your software.
+completely taken care by aws members.
+
+
+ECR
+-----
+Elastic container registry is used to store and retrive docker images.
+
+
+AWS Fargate
+-----------------
+AWS Fargate is a serverless compute engine for containers. 
+It works with both Amazon ECS and Amazon EKS. 
+
+
+
+AWS Elastic BeanStalk
+------------------------------
+-> It is used to provision a service and then it deploys, manages and scales automatically for us.
+-> Here all are taken care by aws so that we can focus on our application code.
+
+
+AWS LightSail
+-------------------
+-> It is a cloud platform for a simpe web application.
+-> we use it when we launch a web application in a straight forward way i.e directly.
+
+
+AWS Batch
+--------------
+-> It is used when we run thousands of batches of workloads and we need to run them reliably.
+
+
+AWS Outpost
+-----------------
+-> It is used when we want to run aws services on our on-premise data center.
+
+
+Vmware Aws on cloud
+----------------------------
+-> It is used when we have an on-premise server virtualization platform that we want to migrate to AWS.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Aws regions
+----------------
+AWS region is a physical geographical area with one or more Availability zones.
+Regions are available all over the world.
+Regions are group of data centers which are used for fault tolerance whenever one region fails .
+31 total regions
+
+Four key factors to choose a reason :
+              - compliance                    - boundary regions where data and users reside.
+              - proximity                       - closeness to the customer base.
+              - feature availibity        - required features available in the region or not.
+              - pricing                            - price that we need to pay.
+            
+
+
+Aws Availability Zones
+----------------------------
+Each region has mutiple availablility zones.
+An Availability Zone consists of one or more data centers.
+99 total availability zones.
+Each availability zone is placed 10 miles away to ensure disaster management.
+When we launch Ec2 instances we launch in different available zones.
+
+
+Amazon cloudfront
+---------------------------
+It is a service that hepls in delivering of data, video, api, and applications to customers around the world.
+It uses edge locations to deliver with low latency  and high speed.
+
+
+Edge locations
+--------------------
+Edge locations are different from Aws regions.
+They run cloud front and DNS named as Amazon route 53. 
+
+Aws hotspots
+-----------------
+creates an cloud environment within your building.
+
+Ways to interact with Aws Services
+-----------------------------------------------
+         - AWS Managements Console           -> need to manually create instances and all.
+         - AWS command line interface        -> write commands or queries to interact.
+         - AWS SDKs                                               -> write language based codes to interact.
+         - Manage tools  
+                 - AWS bean Stalk
+                 - AWS Cloud Formation
+
+
+Amazon VPC
+------------------
+A Virtual Private Cloud(VPC) provides us a isolated section of AWS cloud where we can launch our AWS resources in a virtual way.
+VPCs belong to a single region and can span multiple AZs.
+Subnets are used to divide a VPC.
+
+
+Internet Gateway
+----------------------
+It is an scalable component that allows communication between instances in VPC.
+
+
+NAT Gateway
+-----------------
+A Network Address Translation(NAT) gateway enables instance in a private subnet to connect to the internet.
+
+
+Amazon Route53
+---------------------
+It is used for DNS i.e the process of translating an internal name to the corresponding IP address.
+Route53  health checks make sure that the primary site is available.
+
+
+Network ACL
+------------------
+Access Control Lists are used to validate the access to internet gateway such as passport officers validating visa.
+
+
+Amazon Transit  Gateway
+--------------------------------
+It enables customers to connect their VPCs and thier on premise networks to a single centrally managed gateway.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS STORAGES AND DATABASES
+--------------------------------------------
+
+Amazon EBS
+----------------
+Elastic Block stores are used to create virtual hardwares which we can attach to our Ec2 instances to prevent data loss.
+Amazon EBS is a Availability Zone level resource i.e. stores data in single AZ.
+EBS is not auto scalable.
+It is mailnly designed for resource replication to ensure low latency and failure.
+
+
+EBS Snapshots
+-------------------
+EBS Snapshots are used to backup data in an incremental mode. 
+The only new data which is added will be backed up only.
+
+
+Amazon S3
+--------------
+S3 stands for Simple Storage Services which is a simple storage.
+In S3 instead of storing data in a file directory it stores data in the form of buckets.
+Maximum file size is 5 TB.
+The first storage class in S3 is called as 11 nines of durability.
+The second storage class is S3 - IA (Infrequent Access).
+The third class is Amazon S3 glacier which is used for archeive storage and requires quick access.
+
+S3 Storage Classes
+------------------------
+S3 Standard : high availablity, high durability and performance for frequently accessed data.
+S3 Intelligent Tiering : It is designed to minimize costs by automatically moving data to the most cost effective access tier.
+S3 Infrequent Access(IA) : used for data that is accessed less frequnetly, but requires rapid access when needed.
+S3 One Zone IA : Instead of storing data in 3 AZs like S3 IA it stores data only in 1 AZ.
+S 3 Glacier : It is a durable, secure and low cost storage class for data archiving.
+S3 Glacier Deep Archive : lowest cost, used to retrive 7 to 10 years old data.
+
+
+-> If you are doing occassional changes s3 is used or else when we do complex read, write, change functions EBS is used
+
+
+
+EFS
+-----
+Amazon Elastic File System(EFS) is a regional service follows Network File System(NFS).
+EFS is true file system for linux.
+Amazon EFS stores data in multiple AZs.
+EFS is auto scalable.
+Works well for Big data and analytics, media processing workflows, etc.
+
+
+Amazon RDS
+----------------
+Amazon Relational Database Service(RDS)  is  a service that enables you run relational databases on aws cloud.
+It is fully managed by aws i.e all os patches and other are taken care by aws.
+RDS read replica is used when we have a large number of read operations.
+ 
+
+RDS Database Engines
+-----------------------------
+-> Amazon aurora         
+-> MySQL
+-> PostgreSql
+-> MariaDB
+-> Oracle Database
+-> Microsoft Sql Server
+
+
+Amazon Aurora
+--------------------
+Amazon Aurora is a enterprise - class relational database.
+It is compitable with MySQL and PostgreSQL databases.
+It is 5 times faster than MySQL and 3 times faster than PostgreSQL.
+It reduces cost by reducing unnecessary  I/O.
+
+
+DynamoDB
+--------------
+DynamoDB is a serverless, NOSQl, non - relational Database.
+DynmoDB is a key - value database service.
+We need not to take care of under lying architecture.
+It is faster and can not be used for all purposes.
+
+
+Amazon RedShift
+---------------------- 
+Amazon RedShift is a data ware house service.
+It is used for big data analytics.
+It can be used to run queries on petabytes of data.
+
+
+Amazon DMS
+-----------------
+Amazon Data Migration Service(DMS) is a service that enables us to migrate databases
+During migration your source database and destination database stays operational.
+Two types of DMS :
+               -  Homogenous Migration  -> Same kind of databases  -> sql to sql
+               - Heterogenous Migration  -> Different kind of databases  -> two step process  -> sql to postgresql
+
+
+
+Amazon DocumentDB
+----------------------------
+Amazon DocumentDB is a document database service that supports MongoDB workloads.
+
+
+Amazon Neptune
+----------------------
+Amazon Neptune is a graph database service. 
+
+
+Amazon QLDB
+------------------
+Amazon Quantum Ledger Database (Amazon QLDB) is a ledger database service. 
+You can use Amazon QLDB to review a complete history of all the changes that have been made to your application data.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Shared Responsibility Model
+-------------------------------------
+The Shared Responsibility Model divides the responsibilities of security into customers responsibilities and AWS responsibilities.
+
+
+Customers Responsibilities 
+----------------------------------
+-> Responsible for securing every application and dataset that they implement in the cloud
+-> Resonsible for encryption of data at rest and the encryption of data in transit from one system to another.
+-> Responsible for network configuration and security.
+-> Responsible for managing logins and credentials safely.
+-> Responsible for managing the firewall configurations and security of os and application that they run like ec2.
+-> Responsible for securing data.
+-> EC2, EBS, VPC are managed by customer.
+-> Responsible for providing security in the cloud.
+
+AWS Responsibilities
+--------------------------
+-> Responsible for the physical security of data in data centers.
+-> Responsible for maintaining physical insfrastructure.
+-> Responsible for protecting the global infrastructure.
+-> Responsible for physical infrastructure that holds our resources.
+-> Lambda, RDS, BeanStalk are managed by AWS.
+-> AWS is responsible for providing security of the cloud.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS ROOT User
+---------------------
+AWS root user has all the access to resources.
+He can create different IAM users by giving specified permissions.
+It is not  a best practice to use root account for day to day purposes instead it is preferable to use IAM account.
+Changing the support plan can only be done by root user.
+Deleteing the access keys of aws account root user is the first work of root user.
+
+
+AWS IAM
+------------
+ It is a free and a global service.
+Identity and Access Mangement users are created by the root user by enabling some permissions.
+By default the created IAM users have no acsess to anything, they cannot even login also.
+The idea of enabling permissions to an created IAM user is called as IAM policy.
+IAM policy is a json document which specifies what permissions are enabled to an IAM user, groups and roles.
+If you want to give similar policies to multiple IAM users then organize them into a group and provide a single IAM policy to the entire group.
+IAM roles are used to specify what the IAM user is supposed to do.
+IAM roles are temporary which may change based on the requirement.
+
+
+AWS Service Control Policies(SCPs)
+--------------------------------------------
+-> They are used to allow or deny the access to a resource.
+-> It is used to restrict an aws account which cannot be done by aws policies.
+-> It is implemented when you have two or more root acccounts.
+
+
+AWS Organizations
+-------------------------
+AWS Organizations are used to consolidate and manage multiple aws accounts.
+When you create an organization Aws automatically creates an root account which is the centeralized controller for all  accounts.
+Https Query Application Interfaces(API) are used to give the programatic access to the Aws Organizations.
+
+
+AWS Artifact
+----------------
+It is a service that provides on demand access to aws security and compliance reports and select online agreements.
+
+
+AWS Cognito
+----------------
+It is used to add user authentication and access control to your web and mobile apps.
+
+
+AWS Config
+--------------
+It is a service that helps you track your resource inventory and changes.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+DOS Attacks
+----------------
+Denial of Services(DOS) attacks are the attacks that try to make an application or website unavailable to the user.
+DOS is done by a single hacker.
+DOS can be protected by AWS SHIELD which is a managed and protection service.
+
+
+DDOS Attacks
+------------------
+Distributed Denial of  Service attacks are the attacks which are done by a group of  hackers.
+This attacks are mainly performed in two ways
+              - UDP Flood  -> uses standard apps like weather to get over server details.
+              - Http Attacks -> done by sending normal http request which take a long time due to slow network.
+
+AWS prevents us from this attacks without charging any additional price.
+AWS shield is used to protect from this attacks which uses AWS WAF(Web Application Firewall).
+
+
+AWS KMS
+------------
+AWS Key Mangement System(KMS)  enables you to perform encryption operations through the use of cryptographic keys.
+
+
+AWS WAF
+-------------
+AWS WAF(Web Application Firewall) is used to monitor the requests coming to the application.
+
+Amazon GuardDuty
+-------------------------
+Amazon GuardDuty is a service that provides intelligent threat detection for your AWS infrastructure and resources.
+
+
+
+AWS CloudWatch
+----------------------
+CloudWatch allows you to monitor your AWS infrastructure and the applications you run on AWS in real time.
+It works by tracking and monitoring metrics.
+We can implement CloudWatch alarms to notify. Alrams also have notification service.
+We can also use CloudWatch dashboards to visualize our resources.
+
+
+AWS CloudTrail
+--------------------
+It is an API that is used to store the details of each requests made.
+It stores the details like who made the request, what is the IP address, what are the new changes added, etc.
+It is defaultly accessed to all accounts which keeps details of alst 90 days.
+
+AWS Trsusted Advisor
+---------------------------
+It is an automated advisor service that allows you to evaluate your resources against five pillars.
+It helps in reducing monthly expenditure and increases productivity.
+The pillars are cost optimization, performance, security, fault tolerance, and service limits. 
+The trusted advisor uses 3 indicators to evaluate : 
+
+Green check
+----------------
+The green check indicates the number of items for which it detected no problems.
+
+orange triangle
+--------------------
+The orange triangle represents the number of recommended investigations.
+
+Red circle
+------------
+The red circle represents the number of recommended actions.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS Free Tier
+-----------------
+The AWS  Free Tier allows you to access certain services for free such as AWS Lambda, AWS S3, AWS Coginto, etc.
+
+Three Types of Free Tiers
+-------------------------------
+Always Free
+12 Months Free
+Trails(short span of 1 month or  750 hours)
+
+
+AWS Pricing
+---------------
+AWS provides a wide range of resouruces to access with pay as you go pricing model.
+
+
+AWS PRICING CALCULATOR 
+------------------------------------
+It is used to estimate the costs for the resources which we use in aws.
+It helps in naming our estimate and create and name groups of services.
+
+
+AWS BILLING and COST MANAGEMENT DASHBOARD 
+---------------------------------------------------------------------
+It is used to pay bills and monitor your usage and analyze and control your costs.
+
+
+AWS CONSOLIDATED BILLING
+---------------------------------------
+It is used by AWS ORGANIZATIONS to recieve a single bill for all aws accounts.
+
+
+AWS BUDGETS
+--------------------
+They are used to create budget to plan your resource usage, resource cost, etc.
+Using AWS BUDGETS you can create your own budget and you will be notified via mail when you reach your budget.
+
+
+AWS COST EXPLORER
+-----------------------------
+It is a tool that allows you to visualize your costs so that you can understand and manage.
+It provides the graphs for past three months and also forecasts the expenses for upcoming months.
+
+
+AWS  TCO(Total Cost of OwnerShip)
+---------------------------------------------
+It is  a financial estimate which is used to identify direct and indirect costs of  a system.
+It is used to compare the cost estimation between on-premise infrastructure and cloud infrastructure.
+
+
+AWS Bills Page
+-------------------
+It lists the costs that you incured over the past month for each AWS service.
+
+
+AWS  Cost and Usage Reporting
+----------------------------------------
+It is a single location for accessing reports or information about your costs and usage.
+It provides a daily based report which can be associated with s3 bucket.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+AWS Basic Support
+------------------------
+All cutomers have the free access to basic support like 
+                                  -24/7 access to customer service
+                                  -documentation
+                                  -whitepapers 
+                                  -support forums 
+                                  -AWS Trusted Advisor 
+                                  -AWS Personal Health Dashboard
+
+AWS Developer Support
+------------------------------
+All Basic supports are available and in addition an direct email support is available with reponse time of 24 hrs.
+
+AWS Business Support
+----------------------------
+All Basic Supports  and Developer Supports are available and in addition an direct call support is available.
+
+AWS Enterprise Support
+------------------------------
+All Basic supports, Developer Support and Businnes Supports are available and in addition an dediced TAM(Technical Account Manager) is available.
+
+
+-> All the Basic Supports are free but rest are paid versions.
+
+
+AWS MarketPlace
+-----------------------
+AWS Marketplace is a digital catalog that includes thousands of software listings from independent software vendors. 
+You can use AWS Marketplace to find, test, and buy software that runs on AWS.  
+
+
+AWS CAF
+-----------
+AWS Cloud Adoption Framework(CAF) allows you to migrate your on premise environment into cloud environment.
+The AWS Cloud Adoption Framework (AWS CAF) organizes guidance into six areas of focus, called Perspectives.
+In general, the Business, People, and Governance Perspectives focus on business capabilities.
+The Platform, Security, and Operations Perspectives focus on technical capabilities.
+
+-> The BUSINESS Perspective ensures that IT aligns with business needs and that IT investments link to key business results.
+-> The PEOPLE Perspective supports development of an organization-wide change management strategy for successful cloud adoption.
+-> The GOVERNANCE Perspective focuses on the skills and processes to align IT strategy with business strategy.
+-> The PLATFORM Perspective includes principles and patterns for implementing new solutions on the cloud, and migrating on-premises workloads to the cloud.
+-> The SECURITY Perspective ensures that the organization meets security objectives for visibility, auditability, control, and agility. 
+-> The OPERATIONS Perspective helps you to enable, run, use, operate, and recover IT workloads to the level agreed upon with your business stakeholders.
+
+
+Migrating Strategies
+--------------------------
+While migrating applications to the cloud there are six migration strategies also called as 6R's.
+
+-> REHOSTING also known as “lift-and-shift” involves moving applications without changes. 
+-> REPLATFORMING also known as “lift, tinker, and shift,” involves making a few cloud optimizations to realize a tangible benefit.
+-> REFACTORING involves writing of new code.
+-> REPURCHASING involves moving from a traditional license to a software-as-a-service model.
+-> RETAINING consists of keeping applications that are critical for the business in the source environment.
+-> RETIRING is the process of removing applications that are no longer needed.
+
+
+AWS Snow Family
+----------------------
+The AWS Snow Family is a collection of physical devices that help to physically transport of data into and out of AWS.
+AWS Snow Family is composed of AWS Snowcone, AWS Snowball, and AWS Snowmobile.  
+
+-> AWS SNOWCONE  --> 2 CPUs, 4 GB of memory, and 8 TB of usable storage.
+-> AWS SNOWBALL :
+          Snowball Edge Storage Optimized    --> 80 TB of HDD and 1 TB of SSD, 40 vCPUs, and 80 GiB of memory.
+         Snowball Edge Compute Optimized   --> 42 TB of HDD and 7.68 TB of SSD, 52 vCPUs, 208 GiB of memory.
+-> AWS SNOWMOBILE   --> 1oo petabytes of data.
+
+
+Amazon SageMaker
+-------------------------
+It is used to Quickly build, train, and deploy machine learning models at scale. 
+
+
+ Amazon Textract
+----------------------
+Extracting text and data from documents to make them more usable for your enterprise instead of them just being locked away in a repository.
+
+
+AWS DeepRacer
+--------------------
+It is used to put machine learning into the hands of developers.
+
+
+AWS Lex
+-----------
+A service that enables you to build conversational interfaces using voice and text.
+
+
+AWS Well Architected Framework
+------------------------------------------
+The AWS Well-Architected Framework helps you understand how to design and operate reliable, secure, efficient, and cost-effective systems in the AWS Cloud.
+The AWS Well-Architected Framework is based upon six pillars :
+  - operational excelllence
+  - security
+  - reliability
+  - performance efficiency
+  - cost optimization
+  - sustainability
+
+
+Operational Excellence
+-----------------------------
+The operational excellence pillar is used to run and monitor systems to deliver businness value and to continually improve supporting process and procedures.
+
+Key Tasks
+------------
+-> perform operations as code.
+-> Annote documentation.
+-> Make frequent, small and reversible changes.
+-> Refine operations procedures frequently.
+-> Anticipate failure.
+-> Learn from all operational events and failures.
+
+
+
+Security
+-----------
+The security pillar is used to protect information, systems, and assets while delivering business value through risk assessments and mitigation strategies.
+
+Key Tasks
+------------
+-> Implement a strong identity foundation.
+-> Enable traceability.
+-> Apply security to all layers.
+-> protect data by keeping people away from data.
+
+
+Reliability
+------------
+The reliability pillar is the ability to minimize disruptions of the system.
+It obtains computing resources as needed.
+It automatically recovers the system from disruptions.
+
+Key Tasks
+------------
+-> Test recovery procedures.
+-> Stop guessing capacity.
+-> Managing change in automation.
+-> Horizontal Scaling.
+
+
+Performance Efficiency
+-----------------------------
+The performance efficiency pillar determines the use of IT resources efficiently to meet system requirements and to maintain that efficiency as demand changes and technology evolve.
+It satisfies the efficiency on demand.
+
+
+Cost Optimization
+----------------------
+Includes the ability to run systems to deliver business value at the lowest price point.
+
+
+Sustainability
+-----------------
+The sustainability pillar focuses on minimizing the environmental impacts of running cloud workloads.
+
+
+
+Benefits Of Cloud
+----------------------
+
+Trade upfront expense for variable expense.
+-------------------------------------------------------
+Upfront expenses include data centers, physical servers, and other resources that you would need to invest in before using computing resources. 
+
+
+Benefit from massive economies of scale.
+---------------------------------------------------
+By using cloud computing, you can achieve a lower variable cost than you can get on your own.
+
+
+Stop guessing capacity
+-----------------------------
+With cloud computing, you don’t have to predict how much infrastructure capacity you will need before deploying an application. 
+
+
+Increase speed and agility
+--------------------------------
+The flexibility of cloud computing makes it easier for you to develop and deploy applications.
+
+
+Stop spending money running and maintaining data centers
+--------------------------------------------------------------------------
+Cloud computing in data centers often requires you to spend more money and time managing infrastructure and servers.
+
+
+Go global in minutes
+-------------------------
+The AWS Cloud global footprint enables you to quickly deploy applications to customers around the world, while providing them with low latency.

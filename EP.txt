@@ -1,0 +1,5816 @@
+ Enterprise Programming(EP)                                                                                                                  Dt : 06/06/23
+-----------------------------------------                                                                                                           -----------------
+Syllabus
+------------
+Module 1 :
+   - HTML, CSS, JS
+   -> XML
+   -> JDBC
+   - JUnit
+
+
+HTML, CSS & JS
+----------------------
+HTML
+---------
+-> Introduction
+-> Specification / versions
+-> Advantages
+-> HTML Structure
+-> HTML Tag and HTML Element
+-> First HTML / Web program
+-> Basic HTML Tags :
+          1. Text Formatting Tags
+          2. Anchor Tag
+          3. Image Tag
+          4. Audio Tag
+          5. Video Tag
+          6. List
+          7. Table
+          8. Form (Form Elements)
+
+
+CSS
+------
+-> Inline
+-> Internal
+-> External
+
+
+JavaScript
+--------------
+-> Introduction
+-> JS Syntax
+-> JS Placement
+-> JS Example
+-> Variables
+-> DataTypes
+-> Operators
+-> Control Strcure Statements
+-> Functions
+-> JS Objects
+-> JS BOM (Browser Object Model)
+-> JS DOM (Document Object Model)
+-> Form Validation
+
+
+HTML 
+---------
+INTODUCTION
+-----------------------
+-> HTML is a markup language used to create static webpages.
+-> HTML was invented by Tim Berners Lee in 1989.
+-> Internet - Tim Berners Lee(1987).
+-> HTML
+       HT : It refers to linking of all web pages.
+
+       ML : It refers to the strcuture that tells browser how to display.
+
+
+Specifications
+--------------------
+1. HTML 1.0
+2. HTML 2.0
+3. HTML 3.2
+4. HTML 4
+5. HTML 5(Latest Version)
+
+
+Advantages of HTML 5 
+--------------------------------
+-> Easy to understand.
+-> Open Source.
+-> User Friendly.
+-> Flexibilty
+-> TroubleShooting is easy.
+
+
+HTML Structure
+-----------------------
+<html>
+     <head>
+           <title> ----------------</title>
+     </head>
+
+      <body>
+      </body>
+</html>
+
+
+HTML Tag & HTML Element
+----------------------------------------
+HTML Tag 
+---------------
+-> Any word in between < >
+Ex :
+<body>
+
+
+HTML Element
+-----------------------
+<open>
+   content
+<close>
+
+Ex :
+<h1> welcome </h1>
+
+
+First Web/ HTML Program
+-------------------------------------
+<html>
+     <head>
+           <title> First Web Page</title>
+     </head>
+
+      <body>
+        welcome
+      </body>
+</html>
+
+
+Basic HTML Tags
+-----------------------
+1. Text Formatting Tags
+--------------------------------
+a.Heading Tags
+---------------------
+ -> 6 tags -> h1 to h6
+-> Denoted by <h1----6>
+
+Ex : <h1> Welcome</h1>
+
+
+b. Paragraph Tags
+-------------------------
+-> Denoted by <p>
+
+Ex : <p> My name is kalyan
+                 My id is 30959  </p>
+
+
+c. Preformatted Tag(pre)
+------------------------------------
+-> Denoted by <pre>
+
+Ex : <pre> My name is kalyan
+                 My id is 30959  </pre>
+
+
+d. Break Tag
+-----------------
+-> End Tag is not required for Break tag.
+-> Denoted by <br>
+
+Ex : <p> My name is kalyan <br>
+                 My id is 30959  </p>
+
+
+
+e. Bold Tag
+---------------
+-> Denoted by <b>
+
+Ex : <b> My name is kalyan <br>
+                 My id is 30959  </b>
+
+
+f. Italic Tag
+---------------
+-> Denoted by <i>
+
+Ex : <i> My name is kalyan <br>
+                 My id is 30959  </i>
+
+
+
+g. UnderLine Tag
+-----------------------
+-> Denoted by <u>
+
+Ex : <u> My name is kalyan <br>
+                 My id is 30959  </u>
+
+
+h. Big Tag
+-------------
+-> Denoted by <big>
+-> same as <h1>
+
+Ex : <big> My name is kalyan <br>
+                 My id is 30959  </big>
+
+
+i. Small Tag
+-----------------
+-> Denoted by <small>
+-> same as <h6>
+
+Ex : <small> My name is kalyan <br>
+                 My id is 30959  </small>
+
+
+
+j. Delete Tag
+-----------------
+-> Denoted by <del>
+
+Ex : <del> My name is kalyan <br>
+                 My id is 30959  </del>
+
+
+k. Strike Tag
+-----------------
+-> Denoted by <strike>
+
+Ex : <strike> My name is kalyan <br>
+                 My id is 30959  </strike>
+
+
+l. Mark Tag
+-----------------
+-> Denoted by <mark>
+
+Ex : <mark> My name is kalyan <br>
+                 My id is 30959  </mark>
+
+
+
+m. superscript Tag
+--------------------------
+-> Denoted by <sup>
+
+Ex : <h1> My name is kalyan 
+                 <sup>My id is 30959</sup>  </h1>
+ 
+
+
+n. subscript Tag
+----------------------
+-> Denoted by <sub>
+
+Ex : <h1> My name is kalyan 
+                 <sub>My id is 30959</sub>  </h1>
+
+
+
+o. insert Tag
+-----------------
+-> Denoted by <ins>
+
+Ex : <h1> My name is kalyan 
+                 <ins>My id is 30959</ins>  </h1>
+
+
+
+
+p. Horizontal Ruler Tag
+--------------------------------
+-> Denoted by <hr>
+
+Ex : <h1> My name is kalyan 
+                 <hr>My id is 30959</hr>  </h1>
+
+
+
+
+q. Marquee Tag
+---------------------
+-> Denoted by <marquee>
+
+Ex : <marquee bgcolor = "orange"> My name is kalyan 
+                 My id is 30959  </marquee>
+
+
+Note : 
+-> Every tag can have many attributes.
+-> Attribute  specifies the property of a tag.
+-> Attribute consists of name and value.
+
+syntax:
+         <tag attrname = "attrval"> <endtag>
+
+Ex :
+    <h1 textcolor = "blue"> welcome </h1>
+
+
+
+
+2. Anchor Tag
+--------------------
+-> Denoted by <a>
+-> Deafault Attr : href
+
+Ex : <a href = "https://www.google.com">Google </a>
+
+
+3. Image Tag
+-----------------
+-> Denoted by <img>
+-> no end tag is required
+
+Syntax : <img src = "file_name">
+
+Ex:
+<html>
+<head>
+<title> practice </title>
+</head>
+<body>
+<img src = "WhatsApp Image 2023-05-27 at 5.36.38 PM.jpeg">
+</body>
+</html>
+
+
+4. Audio Tag
+-----------------
+-> Denoted by <audio>
+
+Syntax :
+      <audio controls>
+         <source src = "file_name">
+      <audio>
+
+Ex :
+<html>
+<head>
+<title> practice </title>
+</head>
+<body>
+<audio controls>
+<source src ="Jay Shri ram.mp3">
+</audio>
+</body>
+</html>
+ 
+
+
+
+5. Video Tag
+----------------
+-> Denoted by <video>
+
+Ex :
+      <video controls>
+         <source src = "path">
+      <video>
+
+
+6. List Tag
+--------------
+-> List is a collection of items.
+-> denoted by <li>
+-> Differnt types of lists :
+       i. unordered list (ul)
+       ii. ordered list (ol)
+       iii. descriptive list
+
+
+i. Unordered List (ul)
+-------------------------------
+-> denoted by <ul>
+
+Ex :
+<ul type = "circle">
+   <li> CSE </li>
+   <li> ECE </li>
+</ul>
+
+
+ii. Ordered List (ol)
+-------------------------------
+-> denoted by <ol>
+
+Ex :
+<ol type = "a" start = "z">
+   <li> CSE </li>
+   <li> ECE </li>
+</ol>
+
+
+
+iii. Descriptive List (dl)
+--------------------------------
+-> denoted by <dl>
+-> It consists of two components 
+            - descriptive/ definion terms <dt>
+            -  descriptive/ data terms <dd>
+
+Ex :
+<dl>
+   <dt> CSE </dt>
+   <dd> ECE </dd>
+</dl>
+
+
+
+
+
+7. Table Tag
+----------------
+-> denoted by <table>
+
+Ex :
+<table border = 2>
+<th> ID </th>
+<th> Name </th>
+<tr>
+<td> 30959 </td>
+<td> kalyan</td>
+</tr>
+<tr>
+<td> 30976 </td>
+<td> faizaan</td>
+</tr>
+</table>
+
+
+
+8. Form Tag
+----------------
+-> Forms are used to collect the data from the user.
+-> Form is a section of document which consists of different controls like textyFields, radiobuttons, checkboxes, etc.
+-> Forms can be designed using different html form elements.
+-> denoted by <form>
+
+
+Form Elements:
+-> The different form elements are :
+   - input
+   - selection
+   - textarea
+
+
+input
+--------
+The different types of input form elements are :
+     - Textfield
+     - radio
+     - button
+     - checkboxes
+
+
+Ex :
+<form>
+First name : <input type = "text" name = "fn"><br>
+Gender : <input type = "radio" name = "gr"> Male
+<input type = "radio" name = "gr"> FeMale<br>
+Branch :
+<br>
+<input type = "checkbox" value = "cse"> CSE <br>
+<input type = "checkbox" value = "eee">EEE <br>
+<input type = "checkbox" value = "mech">MECH <br>
+<input type = "button" value = "submit">
+<input type = "reset"   value = "reset">
+</form>
+
+
+
+Cascading Style Sheets(CSS)                                                                                                                     Dt : 07/06/23
+---------------------------------------                                                                                                                      -----------------
+-> .css 
+-> It is  a styling language which describes the presentation of an html document.
+-> Css can be added into html by three ways :
+                        - inline css
+                        - internal css
+                        - external css
+
+
+Inline css
+-------------
+-> Inline css can be implemented using style attribute.
+
+Syntax :
+  <tagname style = "property : value">
+    ---------------------
+    ---------------------
+ </tagname>
+
+
+Ex :
+<body  style = "background-color : yellow">
+  Welcome to EP
+</body>
+
+
+
+Internal CSS
+-----------------
+-> Internal css can be implemented using style tag.
+
+Syntax :
+ tagname{property : value}
+
+
+Ex :
+<head>
+<style>
+body{background-color:red}
+h1{color:white}
+</style>
+</head>
+<body >
+  <h1>Welcome to EP</h1>
+</body>
+
+
+
+External CSS
+------------------
+-> It will be implemented using a tag called link tag
+
+Ex : 
+p3.html
+-----------
+<html>
+<head>
+  <link rel = "stylesheet"  href= "p5.css">
+</head>
+<body >
+  <h1>Welcome to EP</h1>
+</body>
+</html>
+
+
+p5.css
+--------
+body{background-color:orange}
+h1{color:white}
+
+
+
+JavaScript (JS)
+-------------------
+-> JS is a scriptin used to create a dynamic web page.
+-> It is platform independent.
+-> JS is an object based scripting language.
+-> JS is a translated language.
+
+
+JS Syntax 
+-------------
+<script>
+   statements
+</script>
+
+
+
+JS Placement
+------------------
+-> JS code can be placed in 3 different locations / places :
+               - within the head tag.
+               - within the body tag.
+               - within both head and body tag.
+
+
+Note
+-------
+JS Attributes
+------------------
+-> The default attributes of JS are :
+              - lang            ->  "javascript"
+              - type            ->  "text/JS"
+
+
+
+
+JS Example
+----------------
+<html>
+<head>
+<script lang = "javascript" type = "text/javascript">
+document.write("hello")
+window.alert("GOOD Morning")
+window.confirm("GM")
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+JS Variables
+----------------
+-> Variable is an entity in a pragram which holds a single value.
+-> Every variable will be referred by its name.
+
+Identifiers 
+----------------
+-> The purpose of identifer is used to name a variable, Array, Functions.
+
+
+Rules :
+1. Should consist of Alphabets,numbers, _, $
+2. It Should not start with digits.
+3. Keywords should not be used.
+4. No spaces are allowed.
+5. x and X are separate.
+
+
+
+Declaration of a variable
+----------------------------------
+Keyword - var
+Syntax :
+               var  variable_name
+
+Ex :
+       var  Id;
+
+
+
+Assigning of a variable
+-------------------------------
+Syntax :
+               var  variable_name = value
+
+
+Ex :
+       var Id = 30959
+
+
+
+
+Types of variables
+-------------------------
+-  local variable
+-  global variable
+
+
+
+ 
+Local variable
+-------------------
+-> variable which is defined within a function or a block and it is valid only in that block.
+
+
+
+Global variable
+---------------------
+-> variable which is defined outside a function or a block and it can be accessed from any function.
+
+
+Ex :
+<html>
+<head>
+<title> JS Practice </title>
+<script lang = "javascript" type = "text/javascript">
+var id= 2100030959
+function localVariable( ){
+   var name = "kalyan"
+   window.sec = 4
+   document.writeln(name);
+}
+function globalVariable(){
+var dept = "cse"
+document.writeln(dept);
+document.writeln(id);
+document.writeln(sec);
+}
+localVariable()
+globalVariable()
+</script>
+</head>
+<body>
+<body>
+</html>
+
+
+Note :
+window is the keyword which is used to access the variable declared in another function.
+
+
+
+Datatypes 
+---------------
+-> JS provides different datatypes to hold different types of data values.
+-> JS datatypes are classified into two categories :
+           - primitive 
+           - non-primitive
+
+
+
+Primitive Datatype
+---------------------------
+1. number
+2. string
+3. Boolean
+4. undefined
+5. null
+
+
+
+
+Non - Primitive Datatype
+-----------------------------------
+1. object
+2. array
+3. regular expression 
+
+
+
+
+Operators 
+---------------
+-> An operator is a symbol which performs specific operation between the operands.
+-> In general operators are classified into three types :
+             - unary
+             - binary
+             - terenary
+
+
+Unary Opertor
+---------------------
+-> Any operation which performs on single operand.
+
+Ex : a++
+
+
+Binary Opertor
+---------------------
+-> Any operation which performs on two operands.
+
+Ex : a + b
+
+
+Terenary Opertor
+-------------------------
+-> Any operation which performs on more than two operands.
+
+Ex : a + b + c
+
+
+-> In JS operators are classified into 8 types :
+1. Arithemetic
+2. relational
+3. logical
+4. bitwise
+5. assignment
+6. special
+7. new
+8. typeof
+
+
+
+1. Arithemetic Operators
+-----------------------------------
++, -, *, /, %
+
+
+
+2. Relational Operators
+---------------------------------
+==, !=,  <, >, <=, >=
+
+
+3. Logical Operators
+----------------------------
+&&, ||
+
+
+4. Bitwise Operators
+-----------------------------
+&, |, ^, ~
+
+
+5. Assignment Operators
+-----------------------------------
+==
+
+Note
+-------
+Arithmetic Assignment Operator
+-----------------------------------------------
++=, -=, *=, /=, %=
+
+Ex :
+ a = a + b         -->  a += b
+
+
+
+6. Special Operators
+-----------------------------
+Conditional Operator
+-------------------------------
+?, :
+
+Syn : var_name = cond ? Exp1 : Exp2
+
+
+Comma Operator
+-------------------------
+,
+
+
+Delete Operator
+-----------------------
+It is used to delete the properties of a object.
+
+delete  -> keyword
+
+
+
+New Operator
+--------------------
+It is used to create a new instance in scripting language.
+
+new -> keyword
+
+
+Typeof Operator
+------------------------
+typeof  -> keyword
+
+
+
+
+Control Structures
+--------------------------
+-> They are used to alter the flow of execution of a program.
+-> They are classified into two different types :
+        - conditional statements
+        - loops
+
+
+
+Conditional Statements
+----------------------------------
+-> Based on a condition flow of execution of a program will be altered.
+-> Different conditional statements :
+             - if 
+             - if else
+             - else if
+             - nested if
+             - switch
+
+
+
+Loops
+-------
+-> Based on executing the same statement with repeated number of times.
+-> Different loop statements :
+              - for
+              - while
+              - do while
+
+
+
+Conditional Statements
+----------------------------------
+if :
+  syntax  :
+          if(condition){
+           -----------------
+           -----------------
+}
+
+
+
+Loops
+--------
+for :
+ syntax :
+    for(initialization; condition; update expression){
+             -----------------------------------
+             -----------------------------------
+}
+
+
+
+
+
+JS Functions
+----------------
+-> It is a group of statements which is used to perform a specific task.
+-> It can be called/ accessed by its name.
+Syntax :
+ function fun_name(arguments){
+         ---------------------------
+         ---------------------------
+}
+
+
+Ex : 
+function a( ){
+document.write("Hii")
+}
+ a()
+
+
+Adavantages of functions
+-----------------------------------
+-> code reusability.
+-> Less code
+
+
+Classifications of functions
+--------------------------------------
+-> functions are classified into two different categories 
+   - pre - defined / built - in
+   - user defined
+
+
+pre - defined / built - in 
+---------------------------------
+-> The functions which are pre defined in JS.
+
+Ex : sqrt()
+
+
+User - defined 
+--------------------
+->  The functions which are defined by the user.
+
+Ex : previous function (a())
+
+
+
+Different types of functions
+---------------------------------------
+-> Functions with no arguments and no return type.
+-> Functions with no arguments and  return type.
+-> Functions with  arguments and no return type.
+-> Functions with  arguments and return type.
+
+
+Note :
+-> Recursive functions are not allowed in scripting language.
+
+
+
+JS Object
+-------------
+-> Objects in JS can be created in three ways :
+       - by using object literal
+       - by creating object instance	
+       - by using object constructor
+
+
+
+By Using Object Literal
+---------------------------------
+Syntax :
+               Object name : {property : value, property : value}
+
+Ex : 
+ <!-- program to demonstrate object literal in js -->
+<html>
+<head>
+<title> Practice </title>
+<script lang = "javascript" type = "text/javascript">
+ Student = {Id : 2100030959, name : "Reddy venkat Kalyan", Branch : "CSE"}
+document.write(Student.Id+" "+Student.name+" "+Student.Branch);
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+By Creating Object Instance
+---------------------------------------
+Syntax:
+              var_name = new Object( )
+
+Ex :
+<!-- program to demonstrate object instance in js -->
+<html>
+<head>
+<title> Practice </title>
+<script lang = "javascript" type = "text/javascript">
+ var Student =  new Object( )
+Student.Id = 2100030959
+Student.name = "Reddy venkat Kalyan"
+Student.Branch = "CSE"
+document.write(Student.Id+"<br> "+Student.name+"<br> "+Student.Branch);
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+By Using Object Constructor
+----------------------------------------
+Syntax :
+               var_name = new function_name( )
+
+Ex :
+<!-- program to demonstrate object constructor in js -->
+<html>
+<head>
+<title> Practice </title>
+<script lang = "javascript" type = "text/javascript">
+function Student(Id, name, Branch){
+  this.Id = Id;
+  this.name = name;
+  this.Branch  = Branch;
+}
+ obj = new Student(30959, "klayan", "Cse");
+document.write(obj.Id+"<br>"+obj.name+"<br>"+obj.Branch);
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+JS BOM
+-----------
+-> JavaScript Browser Object Model is used to interact with the browser.
+-> The different BOM's are :
+              - window
+              - history
+              - navigate
+              - screen
+
+
+Window 
+------------
+1. alert( )
+2. confirm ( )
+3. prompt( )    -> to take input
+4. open ( )        -> to open a web page
+5. close ( )
+
+
+Ex : 
+<script lang = "javascript" type = "text/javascript">
+window.alert("welcome")
+</script>
+
+Ex :
+<script lang = "javascript" type = "text/javascript">
+window.confirm("welcome")
+</script>
+
+Ex :
+<script lang = "javascript" type = "text/javascript">
+window.prompt("enter  below : ")
+</script>
+
+Ex :
+<script lang = "javascript" type = "text/javascript">
+window.open("https://www.w3schools.com");
+</script>
+
+
+
+
+JS DOM
+------------
+-> JavaScript Document Object Model represents the whole html document.
+-> When html code is loaded into browser it becomes document object.
+-> The different JS DOM's are :
+                - write( )
+                - writeln( )
+                - getElementById( )
+                - getElementByName( )
+                - getElementByTagName( )
+                - inner html and inner text
+
+
+Ex :
+<html>
+<head>
+<title> JS DOM </title>
+<script lang = "javascript" type = "text/javascript">
+function getname(){  
+var name =document.getElementById("nmr").value;  
+confirm("your entered name is"+name);  
+}  
+function resetname(){  
+var name=document.getElementsByName("nm").value;  
+confirm(name+"is resetted successfully");  
+}  
+</script>
+</head>
+<body>
+<form>
+first Name:<input type="text" id="nmr" name="nm"><br/>  
+<input type="button" value="getName" onclick="getname()"/>
+<input type="button" value="remove" onclick="resetname()"/>  
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+XML                                                                                                                                                                          Dt : 08/06/23
+-------                                                                                                                                                                          ------------------
+
+Introduction To XML
+------------------------------
+-> XML stands for Extensible Markup Language.
+-> XML is used to store and transport data.
+-> XML is not a extension of html, XML is specially designed for the purpose of self descriptive.
+-> XML tags are user defind, whereas hTML tags are pre-defined.
+
+
+Why XML
+-------------
+-> XML is platform independent and language independent too.
+
+
+HTML  vs   XML
+---------------------
+HTML                                                                                                                                                     
+---------             
+-> It is used to display data.                       
+-> It is a markup language.
+-> It is also called as presentation language.
+-> It is not a case sensitive.
+-> Pre - defined tags.
+-> It is static.
+-> Closed tags are not mandatory.
+
+
+
+XML
+------   
+-> It is used to store and transport data.                       
+-> It defines a framework to use  a markup language.
+-> It is not a presentation language nor  a programming language.            
+-> It is  a case sensitive.
+-> User - defined tags
+-> It is dynamic.
+-> Closed tags are  mandatory.
+
+
+
+
+Features / Advantages of XML
+-----------------------------------------
+-> separates data from HTml.
+-> simplifies data transport
+-> simplifies data sharing
+-> increases data availability
+
+
+
+XML Syntax
+-----------------
+<root>
+   <child>
+         <subchild> .......... </subchild>
+   </child>
+</root>
+
+
+
+XML Example
+-------------------
+<message>
+<to> AbC </to>
+<from> xyz </from>
+<notice> supplementary </notice>
+<body>
+<lastdate> 21-07-23</lastdate>
+</body>
+</message>
+
+
+
+XML Attributes
+----------------------
+-> Attribute specifies the property of a tag.
+-> Every attribute will have a name and value.
+
+Syntax :
+               <tagname attrname1 = "value"  attrname2 = "value"  attrnamen = "value">
+                  content
+               </tagname>
+
+
+Ex :
+
+Appraoch1
+---------------
+<student>
+<id> 30959 </id>
+<name> kalyan </name>
+<cgpa> 9.46 </cgpa>
+</student>
+
+Appraoch2
+----------------
+<student  id="30959" name="kalyan" cgpa="9.46"> 
+</student>
+
+
+
+XML Validation
+----------------------
+-> You need to validate a XML document that you define.
+-> An XML document can be validated using two ways :
+              - DTD
+              - Schema / (XSD)
+-> An XML document can only be validated only if it is in the form of well formed document.
+
+Note :
+well formed document
+----------------------------------
+A well formed document is an XML document with correct syntax.
+
+
+Rules
+--------
+-> It must have a root element.
+-> It must be case sensitive.
+-> XML attribute values must be quoted.
+-> An XML element should be properly nested.
+
+An well formed document can be validated in two ways :
+  - DTD
+  - Schema / (XSD)
+
+
+
+
+DTD
+------
+-> DTD stands for Document Type Definition.
+-> A DTD is a set of rules which defines the structure of a XML document.
+-> DTD can be implemented in two ways :
+         - internal DTD
+         - external DTD
+
+
+
+Internal DTD 
+-------------------
+-> If the DTD file is declared inside the XMLfile then it refers to internal DTD.
+
+Syntax :
+               <? XML version = "1.0" encoding = "UTF-8"?>   
+    
+               <!DOCTYPE root-element[ 
+               <!ELEMENT root-element(childs)>
+               <!ELEMENT child(#PCDATA)>
+               <!ELEMENT child(#PCDATA)>
+                ]>     
+
+Ex :
+<?xml version="1.0" encoding="UTF-8"?>
+   
+<!DOCTYPE message[
+<!ELEMENT message (to, from, notice, body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT notice (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+]>    
+
+<message>
+<to> AbC </to>
+<from> xyz </from>
+<notice> supplementary </notice>
+<body>
+last-date is 21-07-23
+</body>
+</message>
+
+
+
+External DTD
+-------------------
+ -> If a DTD file is separately declared from an XML file then it refers to a external DTD.
+
+Syntax :
+               filename.dtd
+               ------------------
+                <!ELEMENT root-element(childs)>
+               <!ELEMENT child(#PCDATA)>
+               <!ELEMENT child(#PCDATA)>
+
+
+
+             filename.xml
+             -------------------
+            <!DOCTYPE root-name "filename.dtd">
+            <root>
+               <child>
+               </child>
+            </root>
+                                     
+
+Ex :
+ 
+                 abc.dtd
+               ------------
+                <!ELEMENT message(to, from, notice, body)>
+                <!ELEMENT to(#PCDATA)>
+                <!ELEMENT from(#PCDATA)>
+                <!ELEMENT notice(#PCDATA)>
+                <!ELEMENT body(#PCDATA)>              
+
+
+ 
+            xyz.xml
+            -----------
+            <!DOCTYPE message "abc.dtd">
+            <message>
+            <to> AbC </to>
+            <from> xyz </from>
+            <notice> supplementary </notice>
+           <body>
+           <lastdate> 21-07-23</lastdate>
+           </body>
+           </message>
+
+
+
+Schema / XSD
+-------------------
+-> XSD stands for XML Schema Definition.
+-> XSD defines the structure and content of a document. 
+-> XSD can be implemented in two ways 
+         - simpleType
+                  (dont have attributes)
+         - complexType
+                   (have attributes)
+
+
+simpleType XSD
+----------------------
+Syntax :
+               <? XML version = "1.0" encoding = "UTF-8" ?>
+                <!XS : schema>
+                <!XS : element name= "value">
+                 <!XS :  simpleType>
+                 <!XS : sequence>
+                       <!XS : element name = "value" type = "datatype">
+                       <!XS : element name = "value" type = "datatype">
+                        <!XS : element name = "value" type = "datatype">
+                        <!XS : element name = "value" type = "datatype">
+                  </XS : sequence>
+                 </XS :  simpleType>
+                 </XS : element> 
+                </XS : schema>
+
+
+Ex :
+                <? XML version = "1.0" encoding = "UTF-8" ?>
+                <!XS : schema>
+                <!XS : element name= "message">
+                 <!XS :  simpleType>
+                 <!XS : sequence>
+                       <!XS : element name = "to" type = "XS:string">
+                       <!XS : element name = "from" type = "XS:string">
+                        <!XS : element name = "notice" type = "XS:string">
+                        <!XS : element name = "body" type = "XS:string">
+                  </XS : sequence>
+                 </XS :  simpleType>
+                 </XS : element> 
+                </XS : schema>
+
+
+
+DataTypes in XML
+-------------------------
+-> XML schema have a lot of inbuilt datatypes. some of the most popular datatypes are:
+                    - XS : string
+                    - XS : integer
+                    - XS : boolean
+                    - XS : decimal
+                    - XS : date
+
+
+
+complexType XSD
+-------------------------
+Syntax :
+                <? XML version = "1.0" encoding = "UTF-8" ?>
+                <!XS : schema>
+                <!XS : element name= "value">
+                 <!XS :  complexType>
+                 <!XS : sequence>
+                       <!XS : element name = "value" type = "datatype" .......>
+                       <!XS : element name = "value" type = "datatype" .......>
+                        <!XS : element name = "value" type = "datatype" .......>
+                        <!XS : element name = "value" type = "datatype" .......>
+                  </XS : sequence>
+                 </XS :  simpleType>
+                 </XS : element> 
+                </XS : schema>
+
+  
+Note 
+-------
+...... represents the additional attributes(sub-child elements).
+ 
+
+Ex :
+ <? XML version = "1.0" encoding = "UTF-8" ?>
+                <!XS : schema>
+                <!XS : element name= "value">
+                 <!XS :  complexType>
+                 <!XS : sequence>
+                       <!XS : element name = "to" type = "XS:string">
+                       <!XS : element name = "from" type = "XS:string">
+                        <!XS : element name = "notice" type = "XS:string">
+                        <!XS : element name = "body" type = "XS:string"  lastdate = "21-07-23 ">
+                  </XS : sequence>
+                 </XS :  simpleType>
+                 </XS : element> 
+                </XS : schema>
+
+
+
+
+ Example                                                                                                                                                                    Dt : 09-06-23
+ ------------                                                                                                                                                                    -----------------
+
+Creating maveen project
+----------------------------------
+- Open Eclipse
+         - file -> new -> maveen project
+      
+        -  filter -> maveen-archetype-webapp
+
+        - GroupId -> com.KLU
+
+        - Articraft Id -> demo
+
+        - click on finish
+
+
+Apache Tomcat server + maveen project(demo)
+------------------------------------------------------------------
+- window -> show view -> servers
+- Tomcat v8.0 server
+- Browse -> c : / Programming Files/Apache Software Foundtaion/ TomcatV8.0
+- click on Ok/FINISH
+
+o/p  -> Tomcat v8.0 is avaialable now[stopped]
+
+
+
+
+demo -> src -> webapp ->new -> other -> XML -> xml file -> sample.xml -> finish
+
+
+XSLT
+-------
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+JDBC
+-------
+Introduction
+-------------------
+-> JDBC stands for Java DataBase Connectivity.
+-> JDBC is a Java API(Application Programmable Interface) which is used to connect and execute queries with database(oracle).
+
+
+Why JDBC
+--------------
+-> ODBC               --> ODBC  Drivers                                                              -->  C  language
+
+-> JDBC                -->  JDBC  Drivers                                                                -->   Java
+
+
+
+API
+-----
+-> API is a package which consists of classes and interfaces.
+
+
+
+Java API
+-----------
+API  -> pacakages  -> classes and interface
+
+Package  -> java.sql
+
+
+Some of the popular classes are
+--------------------------------------------
+-> DriverManager
+-> Blob
+-> Clob
+
+
+
+
+Some of the popular interfaces are
+------------------------------------------------
+-> Driver
+-> Connection
+-> Statement
+-> PreparedStatement
+-> Callable
+-> ResultSet
+-> ResultSet Metadata
+-> Database Metadata
+
+
+JDBC Drivers
+------------------
+-> They are helpful in  order to enable your java application.
+
+Type of Drivers
+---------------------
+-> Type - 1 Driver
+-> Type - 2 Driver
+-> Type - 3 Driver
+-> Type - 4 Driver
+
+
+Type - 1 Driver
+--------------------
+-> They are also called as JDBC-ODBC driver.
+
+
+Type - 2 Driver
+--------------------
+-> They are also called as native driver.
+
+
+Type - 3 Driver
+--------------------
+-> They are also called as network protocol driver.
+
+Type - 4 Driver
+--------------------
+-> They are also called as thin driver.
+
+
+
+JDBC Steps
+----------------
+-> It is a seven step process to connect java application with DataBase using JDBC Drivers.
+
+Step - 1
+----------
+Import packages.
+
+
+Step - 2
+----------
+Load all the drivers.
+
+
+Step - 3
+----------
+Connection establishment 
+
+
+Step - 4
+----------
+Create Statement
+
+
+Step - 5
+----------
+Create ResultSet Object
+
+
+Step - 6
+----------
+Execute Queries
+
+
+
+Step - 7
+----------
+Connection close
+
+
+
+
+Ex :
+
+Steps
+-------
+1. import java.sql.*;
+2.Load Drivers
+        -  Using Driver object
+        -  Using  forName( ) method
+
+Using Driver object
+---------------------------
+Driver  drv = new oracle.jdbc.driver.OracleDriver( );
+DriverManager.register(drv);
+
+Using  forName( ) method
+-------------------------------------
+Class.forName("oracle.jdbc.driver.OracleDriver( ));
+
+
+3.Connection Establishment
+----------------------------------------
+Connection con = DriverManager.getConnection("jdbc : oracle : thin : @localhost : 1521 : xe ", "system", "admin")
+
+
+4. Create a Statement
+------------------------------
+Statement stmt = conn.createStatement( )
+
+
+5. Create ResultSet Object
+-------------------------------------
+ResultSet rs = stmt.executeQuery("only select")
+
+
+6. Execute Queries
+--------------------------
+stmt.executeUpdate("Any queries")
+
+
+7. Close the Connection
+---------------------------------
+conn.close( )
+
+ 
+
+
+Ex :
+import java.sql.*;
+Class DBConnection{
+public static void main(String args[]) throws Exception{
+         Driver  drv = new oracle.jdbc.driver.OracleDriver( );
+         DriverManager.registerDriver(drv);
+         Connection con = DriverManager.getConnection("jdbc : oracle : thin : @localhost : 1521 : xe ", "system", "admin");
+                if(con != NULL)
+                    System.out.println("Successfull");
+               else
+                 System.out.println("fail");
+         con.close( )
+}
+}
+
+
+Note : Connectivity with different databases
+---------------------------------------------------------------
+Oracle
+---------
+ Driver  drv = new oracle.jdbc.driver.OracleDriver( );
+ DriverManager.register(drv);
+ Connection con = DriverManager.getConnection("jdbc : oracle : thin : @localhost : 1521 : xe ", "SYSTEM", "admin");
+ username : SYSTEM
+ pwd : admin
+
+ 
+                                                                                                  (or)
+Class.forName("oracle.jdbc.driver.Oracledriver");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+
+
+
+MySQL
+----------
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection conn = DriverManager.getConnection("jdbc:mysql://@localhost:3306/klu","root","Kalyan959@");
+
+
+                                                                                                                                                                                              Dt : 11-03-23
+                                                                                                                                                                                              ----------------
+
+Classes
+-----------
+DriverManager Class
+-----------------------------
+-> It is a class which acts as an interface between user and database.
+
+Methods
+------------
+a. registerDriver( )          --> to load the drivers
+b. deregisterDriver( )     --> to remove already loaded drivers
+c. getConnection( )          --> to create a connection between Java application and database
+
+ 
+a.
+Driver drv = oracle.jdbc.driver.OracleDriver( );
+DriverManager.registerDriver(drv)
+
+
+b. 
+DriverManager.deregisterDriver( );
+
+c.
+Connection conn = DriverManager.getConnection("jdbc : oracle : thin : @localhost : 1521 : xe", "system", "admin");
+                                                                                 or
+Connection conn = DriverManager.getConnection("jdbc : mysql://localhost:3306/db")
+
+
+
+Interfaces
+--------------
+a. Driver Interface
+--------------------------
+-> It is an interface which helps us to define the drivers which you want to load.
+
+Ex :
+      Driver drv = com.mysql.jdbc.driver
+                                    or
+     Driver drv = oracle.jdbc.driver.OracleDriver( );
+
+
+
+b. Connection
+--------------------
+-> It acts as an session between java application and database.
+
+Methods :
+          i. createStatement( )
+          ii. setAutoCommit( )
+          iii. commit( )
+          iv. rollback( )
+          v. close( )
+
+i.
+Statement stmt = conn.createStatement( )
+
+ii.
+stmt.setAutoCommit( )
+
+iii.
+stmt.commit( )
+
+iv.
+stmt.rollback( )
+
+v.
+conn.close( )
+
+
+
+c. Statement
+------------------
+-> This methods to execute queries with database.
+
+Methods
+------------
+    i. executeQuery( )
+   ii. executeUpdate( )
+
+
+i.
+ResultSet rs = stmt.executeQuery("select query")
+
+
+ii.
+stmt.executeUdate("other than select")
+
+
+
+d.PreparedStatement
+-------------------------------
+-> It is a sub interface of Statement interface.
+
+Methods
+------------
+i. setInt( )
+ii. setString( )
+iii. setFloat( )
+iv. setDouble( )
+v. executeQuery( )
+vi. executeUpdate( )
+
+
+Ex : 
+PreparedStatement ps = conn.prepareStatement("query(?, ?, ?)");
+
+ps.setInt(1,30959)
+ps.setString(2, "kalyan")
+ps.setFloat(3,9.46)
+ps.execute();
+
+
+e. ResultSet
+-----------------
+-> It maintains a cursor to the before top row of a table(heading of a table).
+-> It is mandatory to use executeQuery( ) for result set instead of execute( ).
+
+Methods
+------------
+i.    next( )
+ii.  previous( )
+iii. first( )
+iv.  last( )
+v.   getInt( )
+vi. getString( )
+vii.getDouble( )
+viii. absolute( )
+
+
+Ex :
+ResultSet rs = stmt.executeQuery("select sid from student")
+while(rs.next( )){
+ ---------------
+}
+
+
+f. ResultSetMetaData
+------------------------------
+-> MetaData refers to data of data i.e. where we can get further information from existing data or available data.
+
+Methods
+------------
+i. getColumnCount( )
+ii. getColumnName( )
+iii. getColumnTypeName( )
+iv. getTableName( )
+
+
+
+
+g. DatabaseMetaData
+-------------------------------
+-> MetaData refers to data of data i.e. where we can get further information about database.
+
+Methods
+------------
+i. getDriverName( )
+ii. getDatabaseProductName( )
+iii. getDatabaseProductVersion( )
+iv. getDriverVersion( )
+v. getUserName( )
+
+
+h. Callable  Interface
+-----------------------------
+-> Callable interfaces are used to call functions and stored procedures(kind of functions).
+
+Methods
+------------
+i. prepareCall( )
+
+
+                                                                                                                                                                               Dt : 12-06-23
+                                                                                                                                                                                ---------------
+Example  for Table Creation :
+import java.sql.*;
+Class DBConnection{
+public static void main(String args[]) throws Exception{
+          Class.forName("oracle.jdbc.driver.OracleDriver);
+          Connection conn = DriverManger.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+         Statement stmt = conn.createStatement( );
+         stmt.executeUpdate("create table student(sid number(10), sname varchar(40), sgpa number(5)");
+                                                             or
+         String s1 = "create table student(sid number(10), sname varchar(40), sgpa number(5)";
+        stmt.executeUpdate(s1);
+
+        conn.close( )
+}
+}
+ 
+
+Example :  Insertion of data into table(using statement)
+
+import java.util.*;
+class Insert{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"SYSTEM","admin")
+Statement stmt = conn.createStatement();
+stmt.execute("insert into student values(30959,"kalyan",9.46)");
+                                or
+String s1 = "insert into student values(30959,"kalyan",9.46)";
+stmt.execute(s1);
+
+conn.close;
+}
+}
+
+
+
+Example :  Insertion of data into table(using prepared statement)
+
+import java.util.*;
+class Insert{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"SYSTEM","admin")
+Statement stmt = conn.createStatement();
+PreparedStatement ps = conn.prepareStatement("insert into student values(?, ?, ?)");
+ps.setInt(1,30976);
+ps.setString(2,"faizaan");
+ps.setFloat(3,9.5);
+ps.execute();
+                                        (or)
+String s1 = "insert into student values(?, ?, ?)";
+PreparedStatement ps = conn.prepareStatement(s1);
+ps.setInt(1,30976);
+ps.setString(2,"faizaan");
+ps.setFloat(3,9.5);
+ps.execute();
+conn.close;
+}
+}
+
+
+Example : delete
+
+import java.util.*;
+class Delete{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver()");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"SYSTEM","admin")
+Statement stmt = conn.createStatement();
+stmt.execute("delete from student where id = 30976 ");
+conn.close;
+
+
+Example : update 
+
+import java.util.*;
+class Update{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver()");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin")
+Statement stmt = conn.createStatement();
+stmt.execute("update  student  set name = "azam"  where id = 30976");
+conn.close;
+}
+}
+
+
+
+Example : select
+
+import java.util.*;
+class Update{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver()");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"SYSTEM","admin")
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("select * from student");
+while(rs.next( ))
+{
+int id = rs.getInt(1);
+String name = rs.getString(2);
+float cgpa = rs.getFloat(3);
+System.out.println(id+" "+name+" "+cgpa);
+}
+conn.close;
+}
+}
+
+
+Note : The above programs refers to JDBC CRUD operations.
+
+
+Example : Prepared Statement(Read values during run time)
+
+import java.util.*;
+class Update{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver()");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin")
+Statement stmt = conn.createStatement();
+Scanner sc = new Scanner(System.in);
+int id = sc.nextInt( );
+String name = sc.next( );
+float cgpa = sc.nextFloat( );
+PreparedStatement ps = stmt.prepareStatement("insert into student values(?,?,?)");
+ps.setInt(1,id);
+ps.setString(2,name);
+ps.setFloat(3,cgpa);
+stmt.execute( );
+conn.close( )
+}
+}
+
+
+
+Ex : ResultSetMetaData
+
+//program to demonstrate ResultsetMetaData interface and its methods
+
+package com.KLU.jdbc;
+import java.sql.*;
+public class ResultSetMD {
+
+	public static void main(String[] args) throws Exception {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery("select * from student");
+		ResultSetMetaData rsmd = rs.getMetaData();
+		System.out.println("Total columns : "+rsmd.getColumnCount());
+		System.out.println("Table name :"+rsmd.getTableName(0));
+  		System.out.println("data type of 2nd column is "+rsmd.getColumnTypeName(2));
+                                           conn.close();
+  		
+	}
+}
+
+
+
+
+
+Ex : DataBaseMetaData
+
+//program to demonstrate DatabaseMetaData interface and its applications
+
+package com.KLU.jdbc;
+import java.sql.*;
+public class DataBaseMD {
+
+	public static void main(String[] args) throws Exception {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		DatabaseMetaData dbmd = conn.getMetaData();
+		System.out.println("Datbase name is : "+dbmd.getDatabaseProductName());
+		System.out.println("Databse version is :"+dbmd.getDatabaseProductVersion());
+		System.out.println("Database username is : "+dbmd.getUserName());
+		conn.close();
+	}
+}
+
+
+
+Ex : Program to demonstrate CRUD operations through JDBC using Oracle Database.
+
+//JDBC Crud opearations
+
+package com.KLU.jdbc;
+import java.sql.*;
+import java.util.Scanner;
+public class TableCreation {
+
+	public static void main(String[] args) throws Exception {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		Statement stmt = conn.createStatement();
+		
+//                                       Table creation(creation)
+//		stmt.execute("create table student(sid number(5), sname varchar(20), scgpa number(5))");
+		
+		
+//		Data insertion(Insertion)
+//		stmt.execute("insert into student(sid, sname, scgpa) values (30976, 'faizaan', 9.51)");
+//		stmt.execute("insert into student(sid, sname, scgpa) values (31090, 'sai', 9.2)");
+		
+
+//		Delete()
+//		stmt.execute("delete from student where sid = 30976 ");
+		
+		
+//		update()
+//                                      stmt.execute("update student set sname = 'sai kiran' where sid = 31090");		
+//                                      conn.close();
+
+        
+        
+//		retrive()
+//		ResultSet rs = stmt.executeQuery("select * from student");
+//		while(rs.next()) {
+//			int id = rs.getInt(1);
+//			String name = rs.getString(2);
+//			float cgpa = rs.getFloat(3);
+//			System.out.println("ID : "+id+"\t"+"NAME : "+name+"\t"+"CGPA : "+cgpa);
+//		}
+		
+		
+		
+//		insertion using preparestatement()
+//		PreparedStatement ps = conn.prepareStatement("insert into student values(?, ?, ?)");
+//		ps.setInt(1, 30965);
+//		ps.setString(2, "satya");
+//		ps.setDouble(3, 9.1);
+//		ps.execute();
+		
+		
+//		insertion using prepareStatement() using Scanner class
+//		Scanner ip = new Scanner(System.in);
+//		System.out.println("enter id, name , cgpa :\n");
+//		int id = ip.nextInt();
+//		String name = ip.next();
+//		double cgpa = ip.nextDouble();
+//		PreparedStatement ps = conn.prepareStatement("insert into student values(?, ?, ?)");
+//		ps.setInt(1, id);
+//		ps.setString(2, name);
+//		ps.setDouble(3, cgpa);
+//		ps.execute();
+//		
+		
+		        
+        
+	}
+
+}
+
+
+
+Ex : Program to demonstrate CRUD operations through JDBC using mysql Database.
+
+//program to demonstrate jdbc crud opearions using mysql database
+
+package com.KLU.jdbc;
+import java.sql.*;
+public class JDBC_Crud_Mysql {
+
+	public static void main(String[] args) throws Exception {
+//		Driver loading
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+//		Connection establishment
+		Connection conn = DriverManager.getConnection("jdbc:mysql://@localhost:3306/klu","root","Kalyan959@");
+		
+//		Statement creation
+		Statement stmt = conn.createStatement();
+		
+//		Table creation
+//		stmt.execute("create table student(sid int, sname varchar(20), scgpa float(3,2))");
+		
+//		Insertion of data into table
+//		stmt.execute("insert into student(sid, sname, scgpa) values(30959,'kalyan', 9.46)");
+//		stmt.execute("insert into student values(30976,'faizaan', 9.51)");
+//		stmt.execute("insert into student values(31090,'sai', 9.3)");
+		
+//		Updation of data
+//		stmt.execute("update student set sname = 'venkat' where sid = 30959");
+		
+//		deletion of data
+//		stmt.execute("delete from student where sid = 30976");
+		
+//		retrival of data
+		ResultSet rs = stmt.executeQuery("select * from student");
+		
+		while(rs.next()) {
+			int id = rs.getInt(1);
+			String name = rs.getString(2);
+			float cgpa = rs.getFloat(3);
+			System.out.println(id+ " "+name+" "+cgpa);
+		}
+		
+//		close the conn object
+		conn.close();
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                               Dt : 13-06-23
+                                                                                                                                                                                                ---------------
+Blob  class
+--------------
+-> Blob is used to store and retrive an image from a database.
+
+store : 
+     class -> FileInputStream
+     method ->  setBinaryStream( )
+
+ret :
+  class -> FileOutputStream
+  method -> getByte( )
+
+
+package com.KLU.jdbc;
+import java.io.FileInputStream;
+import java.io.*;
+import java.sql.*;
+public class Blob_Class {
+
+	public static void main(String[] args) throws Exception {
+//		loading drivers
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+//		Connection establishment
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		
+//		Statement creation
+		Statement stmt = conn.createStatement();
+		
+//		Table creation
+//		stmt.execute("create table imageTab(sid int, sname varchar(20), simg BLOB)");
+		
+//		 Insertion
+//		PreparedStatement ps = conn.prepareStatement("insert into imageTab values(?, ?, ?)");
+//		
+//		ps.setInt(1, 30959);
+//		ps.setString(2, "kalyan");
+//		FileInputStream fis = new FileInputStream("C:\\Users\\DELL\\Downloads\\ss.png");
+//		ps.setBinaryStream(3, fis, fis.available());
+//		ps.execute();
+		
+//		retrive
+		PreparedStatement ps = conn.prepareStatement("select * from imageTab");
+		
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			Blob b = rs.getBlob(3);
+			FileOutputStream fos = new FileOutputStream("C:\\Users\\DELL\\Desktop\\abc.png");
+			byte[] barr = b.getBytes(1, (int) b.length());
+			fos.write(barr);
+;		}
+
+		conn.close();
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clob Class
+--------------
+-> Clob is used to store and retrive a file from a database.
+
+store : 
+     class -> FileReader
+     method ->  setCharacterStream( )
+
+ret :
+  class -> FileWriter
+  method -> getCharacterStream( )
+
+
+Ex : 
+package com.KLU.jdbc;
+
+import java.io.*;
+import java.io.FileInputStream;
+import java.sql.*;
+
+public class Clob_Class {
+
+	public static void main(String[] args) throws Exception{
+//		loading drivers
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+//		Connection establishment
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		
+//		Statement creation
+		Statement stmt = conn.createStatement();
+		
+		
+//		Table creation
+//		stmt.execute("create table fileTab(sid int, sname varchar(20), sfile CLOB)");
+//		
+//		PreparedStatement ps = conn.prepareStatement("insert into fileTab values(?, ?, ?)");
+//		
+//		ps.setInt(1, 30959);
+//		ps.setString(2, "kalyan");
+//		File f = new File("C:\\Users\\DELL\\Desktop\\c++.txt");
+//		FileReader fr = new FileReader(f);
+//		ps.setCharacterStream(3, fr,(int)f.length());
+//		ps.execute();
+
+//		retrive
+		PreparedStatement ps = conn.prepareStatement("select * from fileTab");
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			Clob c = rs.getClob(3);
+			FileWriter fw = new FileWriter("C:\\Users\\DELL\\Desktop\\sample.txt");
+			Reader r = c.getCharacterStream();
+                                                            int i;
+			while((i=r.read()) != -1) {
+				fw.write((char)i);
+//				System.out.println((char)i);
+				
+			}
+		}
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Callable Interface
+-------------------------
+-> It is a interface which is used to CALL a stored procedure or a function.
+
+Methods : prepareCall( )
+
+How to create a Stored Procedure : (Oracle)
+------------------------------------------------------------
+create or replace procedure  INSERT
+(sid IN NUMBER, sname IN VARCHAR)
+is
+begin
+insert into student values(sid, name)
+end;
+
+
+EX : Stored_Procedures.java
+
+//program to demonstrate insertion of details into student table using callable interafce
+
+package com.KLU.jdbc;
+import java.sql.*;
+public class Stored_procedures {
+
+	public static void main(String[] args) throws Exception {
+//		loading drivers
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+//		Connection establishment
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		
+//		Statement creation
+//		Statement stmt = conn.createStatement();
+		
+		// Creating stored procedure
+        String createProcedureSql = "CREATE OR REPLACE PROCEDURE INSERT_PROCEDURE"
+                + "(sid IN NUMBER, sname IN VARCHAR2, scgpa IN NUMBER) IS "
+                + "BEGIN INSERT INTO student VALUES (sid, sname, scgpa); END;";
+        CallableStatement createProcedureStmt = conn.prepareCall(createProcedureSql);
+        createProcedureStmt.executeUpdate();
+
+        // Executing stored procedure
+        String executeProcedureSql = "{call INSERT_PROCEDURE(?, ?, ?)}";
+        CallableStatement executeProcedureStmt = conn.prepareCall(executeProcedureSql);
+        executeProcedureStmt.setInt(1, 757);
+        executeProcedureStmt.setString(2, "priya");
+        executeProcedureStmt.setDouble(3, 9.35);
+        executeProcedureStmt.execute();
+
+		
+		conn.close();
+
+	}
+
+}
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+JUNIT
+--------
+- Introduction
+- Types of unit testing
+- Annotations
+- Assert class
+      - assertEquals( )
+      - assertTrue( )
+      - assertFalse( )
+      - assertNull( )
+      - assertNotNull( )
+      - assertNotEquals( )       -> recently added
+
+
+Introduction
+------------------
+-> open source testing frame for java developers.
+-> Java programmer can create a test case of his/ her own code in order to test a java program.
+-> current version of JUnit is 4.
+-> In order to perform a JUnit testing we need to create test cases.
+-> test case is a code which ensures the program logic works as expected.
+-> package : org.junit  -> it consists of many classes and interfaces to perform JUnit testing.
+
+
+Types of Unit Testing
+-----------------------------
+-> Two types 
+        - Manual 
+        - Autoamated( hackerrank, codechef)
+
+
+Manual Testing
+---------------------
+-> If we execute the test case manually without any tool support  then it is referred to Manual Testing.
+-> Time Consuming.
+-> Less reliable.
+
+
+
+Automated Testing
+-----------------------------
+-> If we execute the testcase by a tool support then it is called as automated testing.
+-> Less Time consuming(fast).
+-> More reliable.
+
+
+
+Annotations for JUnit Testing
+-----------------------------------------
+1. @Test 
+-> It specifes that the method is a test method.
+
+2. @Test(timeout = 1000)
+-> It specifes that the method will be failed if it takes more that 1000 miliseconds.\
+
+3. @Before
+-> It specifes that the method is invoked before each test.
+
+4. @BeforeClass
+-> It specifes that the method is invoked only once before start of all tests.
+
+5. @After
+-> It specifes that the method is invoked after each test.
+
+6. @AfterClass
+-> It specifes that the method is invoked only once after finishing all the tests.
+
+
+Assert  Class
+-----------------
+-> This class provides different methods to assert the program logic.
+
+Methods :
+1. assertEquals( )
+-> Checks that two objects are equals or not.
+
+2. assertTrue( )
+-> checks that a condition is true.
+
+3. assertFalse( )
+-> checks that a condition is false.
+
+4.assertNull( )
+-> checks that a object is Null.
+
+5. assertNotNull( )
+-> checks that a object is  not Null.
+
+6.assertNotEquals( )
+-> Checks that two objects are  not equal.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+                                                                                                                                                                                         Dt : 14-06-23
+                                                                                                                                                                                         -----------------
+CO - 2
+--------
+  - Servelets
+  - JSP
+
+ 
+Topics
+---------
+  - Introduction
+  - Why servelet
+  - Advantages
+  - Servelet API
+  - Servlet Life Cycle
+  - Servelt Examples( 3 ways)
+  - init param and context param
+  - Servlet DataBase Connectivity
+  - create a html file in Servlet
+  - Servlet chaining / colloboration 
+
+
+Servelets
+-------------
+Web Application
+------------------------
+-> The applications which are accessed through a web refers to a web application.
+-> Every  web  application that you design will be associated with a url in order to access the web application.
+-> Every web application is composed of different web components / technologies like servelet, jsp, filters, ejb, js,  etc.
+
+Ex : redbus, abhibus, irctc, etc
+
+
+Servelet
+------------
+-> It is a technology which is used to create a web application (dynamic web application).
+-> Servelet is defined in many number of ways :
+       - Servelet is an API which consists of classes and interfaces.
+       - Servelet is a web component that is deployed on the server side to create a dynamic webpage.
+       - Servelet is an interface that must be implemented for creating a web application.
+
+
+Why Servelet
+------------------ 
+user  -------->   web application
+         (request)         (server)
+
+         home   <-----------
+                         (response)
+
+
+  CGI(common gateway interface)
+       request  -> process
+
+  Servelet
+        reuest   -> thread
+
+
+-> Execution of thread is much faster than process.
+
+
+
+Advantages of servelet
+-------------------------------
+-> Better performance over CGI.
+-> secure
+-> portability
+
+
+Servelet API
+-----------------
+-> This API consists of many number of classes and interfaces.
+-> All this classes and interfaces of servelet API are available in  package
+                         - javax.Servelet
+                         - javax.Servelet.http
+
+javax.Servelet
+-------------------
+-> Some of the popular  interfaces and classes which are available in this package are :
+
+Interfaces
+--------------
+1. Servelet
+--------------
+-> It needs to be implemented to create a Servelet.
+-> It defines some standard methods to be implemented.
+           1. init( )
+                  - It initializes the Serverlet.
+
+           2. service( )
+                  - To provide all the services.
+
+           3.destroy( )
+                 - To destroy the Servelet.
+
+           4. getServeletConfig( )
+                 - To get servelet configuration.
+
+           5. getServeletInfo( ) 
+                 - To get servelet information.
+
+
+2. ServeletRequest
+3. ServeletResponse
+4. RequestDispatcher
+
+
+Classes
+----------
+1. GenericServelet
+--------------------------
+-> GenericServelet is a Class which implements Servelet interace.
+-> It provides all the methods  of Servlet interface except service( ) method.
+
+Methods :
+                - init ( )
+                - destroy( )
+                - getServeletConfig( )
+                - getServeletInfo( )
+                - getServeletName( )
+                - getServeletContext ( )
+                - getInitParameter( )
+
+HttpServelet
+------------------
+-> It is a class which extends GenericServelet class and provides http specific methods.
+
+Methods :
+                   - service( )
+                   - doGet( )
+                   - doPost( )
+                   - doDelete( )
+                   - doTrace( )
+                   - doOptions( )
+2. ServeletInputStream
+3. ServeletOutputdStream
+
+
+javax.Servelet.http
+--------------------------
+-> Some of the popular  interfaces and classes which are available in this package are :
+
+
+Interfaces
+--------------
+-> HttpServeletRequest
+-> HttpServeletResponse
+-> HttpSession
+
+
+Classes
+----------
+-> HttpServelet
+-> Cookie
+-> HttpSessionEvent
+
+
+LifeCycle of a Servelet
+-------------------------------
+- Servelet class is loaded.
+- Servelet instance is created.
+-  init( ) method is invoked.
+- service( ) method is invoked.
+- destroy( ) method is invoked.
+
+
+
+** Servelet can be implemented in 3 ways
+---------------------------------------------------------
+-> Implementing Servelet interface.
+-> By inheriting GenericServelet  Class.
+-> By inheriting HttpServelet Class.
+
+
+
+
+Steps to create a Java Servelet (using Servelet interface)
+-----------------------------------------------------------------------------
+-> create a maven project by choosing  -> maven-archetype-webapp- 1.4
+-> move to web -app  -> delete index.jsp
+-> pom.xml  -> properties -> 1.7 -> 1.8
+-> search maven repository in google  -> java servelet api -> copy dependencies -> add copied dependencies to pom.xml
+-> Built path -> src -> main -> new -> folder -> java
+-> /src/main/java  -> new  -> package -> com.servelet -> new class -> ServeletExample.java
+-> web.xml -> define servelet properties
+           <display-name>
+ 
+           </display - name>
+  
+            <servlet>
+                <servlet-name>------------------ </servlet-name>
+                <servlet-class>-------------------  </servlet-class>
+            </servlet>
+
+            <servlet-mapping>
+                <servlet-name>------------------ </servlet-name>
+                <url-pattern>---------------------</url-pattern>
+            </servelet-mapping>
+
+-> Run as  -> run on web server
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ex : Servelet_Example1.java
+--------------------------------------
+
+//program to demonstrate Servlet creation by implementinf Servlet interface
+
+package com.servlet;
+import java.io.*;
+import javax.servlet.*;
+
+public class Servlet_Example1 implements Servlet{
+
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ServletConfig getServletConfig() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getServletInfo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void init(ServletConfig arg0) throws ServletException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		PrintWriter pw = response.getWriter();
+		pw.write("<html>Welcome</html>");
+		
+	}
+
+}
+
+
+web.xml
+------------
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  <servlet-name>demo</servlet-name>
+  <servlet-class>com.servlet.Servlet_Example1 </servlet-class>     
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>demo</servlet-name>
+      <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+</web-app>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                     Dt : 15-06-23
+                                                                                                                                                                                      ------------------
+Ex : ServeletExample2.java
+--------------------------------------
+//program to demonstrate Servlet creation by inheriting HttpServlet Class
+
+package com.servlet;
+
+import java.io.*;
+import javax.servlet.http.*;
+
+
+public class Servlet_Example3 extends HttpServlet {
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		PrintWriter pw = res.getWriter();
+		pw.write("<html>hello</html>");
+	}
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		doGet(req, res);
+	}
+}
+
+
+web.xml
+------------
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  <servlet-name>Servlet_Example1</servlet-name>
+  <servlet-class>com.servlet.Servlet_Example1 </servlet-class>     
+  </servlet>
+  
+  <servlet>
+  <servlet-name>ServletExample2</servlet-name>
+  <servlet-class>com.servlet.ServletExample2 </servlet-class>     
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>Servlet_Example1</servlet-name>
+      <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+      <servlet-name>ServletExample2</servlet-name>
+      <url-pattern>/home2</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ex : Servelet_Example3.java
+---------------------------------------
+//program to demonstrate Servlet creation by inheriting HttpServlet Class
+
+package com.servlet;
+
+import java.io.*;
+import javax.servlet.http.*;
+
+
+public class Servlet_Example3 extends HttpServlet {
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		PrintWriter pw = res.getWriter();
+		pw.write("<html>hello</html>");
+	}
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		doGet(req, res);
+	}
+}
+
+
+
+web.xml
+------------
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  <servlet-name>Servlet_Example1</servlet-name>
+  <servlet-class>com.servlet.Servlet_Example1 </servlet-class>     
+  </servlet>
+  
+  <servlet>
+  <servlet-name>ServletExample2</servlet-name>
+  <servlet-class>com.servlet.ServletExample2 </servlet-class>     
+  </servlet>
+  
+  <servlet>
+  <servlet-name>Servlet_Example3</servlet-name>
+  <servlet-class>com.servlet.Servlet_Example3 </servlet-class>     
+  </servlet>
+  
+
+  <servlet-mapping>
+      <servlet-name>Servlet_Example1</servlet-name>
+      <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+      <servlet-name>ServletExample2</servlet-name>
+      <url-pattern>/home2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+      <servlet-name>Servlet_Example3</servlet-name>
+      <url-pattern>/home3</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+init param and context param
+------------------------------------------
+-> to store the data in a database through a servlet.
+-> these are defined in web.xml
+
+init param
+---------------
+-> when you store the data from a specific servlet through database.
+->  Scope of init param is within a servlet.
+
+Syntax :
+---------
+<web-app>
+<display-name> -------- </dispaly-name>
+<servlet>
+<servlet- name>  ----   </servlet-name>
+<servlet-class>  -----  </servlet-class>
+<init-param>
+<param-name> ----- </param-name>
+<param- value> -----</param-value>
+</init-param>
+<init-param>
+<param-name> ----- </param-name>
+<param- value> -----</param-value>
+</init-param>
+</servlet>
+<servlet-mapping>
+<servlet-name>---------</servlet-name>
+ <url-pattern>-----------</url-pattern>
+</servlet-mapping>
+</web-app>
+
+
+
+Ex :
+<web-app>
+<display-name> -------- </dispaly-name>
+<servlet>
+<servlet- name>ServletDB</servlet-name>
+<servlet-class>com.servlet.ServletDataBase </servlet-class>
+<init-param>
+<param-name> driver </param-name>
+<param- value> oracle.jdbc.driver.OracleDriver</param-value>
+</init-param>
+<init-param>
+<param-name> url</param-name>
+<param- value> jdbc:oracle:thin:@loclahost:1521:xe</param-value>
+</init-param>
+</servlet>
+<servlet-mapping>
+<servlet-name>ServletDB</servlet-name>
+ <url-pattern>/DB_Servlet</url-pattern>
+</servlet-mapping>
+</web-app>
+
+
+
+context param
+--------------------
+-> when you store the data from a specific application through database.
+->  Scope of context param is within a application.
+
+Syntax :
+---------
+<web-app>
+<display-name> -------- </dispaly-name>
+<servlet>
+<servlet- name>  ----   </servlet-name>
+<servlet-class>  -----  </servlet-class>
+</servlet>
+<context-param>
+<param-name> ----- </param-name>
+<param- value> -----</param-value>
+</context-param>
+<context-param>
+<param-name> ----- </param-name>
+<param- value> -----</param-value>
+</context-param>
+<servlet-mapping>
+<servlet-name>---------</servlet-name>
+ <url-pattern>-----------</url-pattern>
+</servlet-mapping>
+</web-app>
+
+
+
+Ex :
+<web-app>
+<display-name> -------- </dispaly-name>
+<servlet>
+<servlet- name>ServletDB</servlet-name>
+<servlet-class>com.servlet.ServletDataBase </servlet-class>
+</servlet>
+<context-param>
+<param-name> driver </param-name>
+<param- value> oracle.jdbc.driver.OracleDriver</param-value>
+</context-param>
+<context-param>
+<param-name> url</param-name>
+<param- value> jdbc:oracle:thin:@loclahost:1521:xe</param-value>
+</context-param>
+<servlet-mapping>
+<servlet-name>ServletDB</servlet-name>
+ <url-pattern>/DB_Servlet</url-pattern>
+</servlet-mapping>
+</web-app>
+
+
+
+Ex : ServletExample4.java
+------------------------------------
+//program to demonstrate jdbc using Servlet through inheriting GenericServlet Class
+
+package com.servlet;
+
+import java.io.*;
+import javax.servlet.*;
+import java.sql.*;
+
+public class ServletExample4 extends GenericServlet {
+
+	@Override
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+			Statement stmt = conn.createStatement();
+//			stmt.execute("create table teamMates(sid number(5), sname varchar(20), scgpa number(5))");
+//			stmt.execute("insert into teamMates(sid, sname, scgpa) values (30976, 'faizaan', 9.51)");
+//			stmt.execute(query);
+			PreparedStatement ps = conn.prepareStatement("insert into teamMates values(?, ?, ?)");
+			ps.setInt(1, 30959);
+			ps.setString(2, "kalyan");
+			ps.setFloat(3, (float) 9.46);
+			ps.execute();
+			}
+			catch(Exception e) {
+				System.out.println(e);
+			}
+			PrintWriter pw = response.getWriter();
+			pw.write("<htmL>Insertion of team memebers data into teamMates table is successfull</html>");
+		
+	}
+
+}
+
+
+web.xml
+-----------
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  <servlet-name>Servlet_Example1</servlet-name>
+  <servlet-class>com.servlet.Servlet_Example1 </servlet-class>     
+  </servlet>
+  
+  <servlet>
+  <servlet-name>ServletExample2</servlet-name>
+  <servlet-class>com.servlet.ServletExample2 </servlet-class>     
+  </servlet>
+  
+  <servlet>
+  <servlet-name>Servlet_Example3</servlet-name>
+  <servlet-class>com.servlet.Servlet_Example3 </servlet-class>     
+  </servlet>
+  
+  <servlet>
+  <servlet-name>ServletExample4</servlet-name>
+  <servlet-class>com.servlet.ServletExample4</servlet-class>
+  <init-param>
+  <param-name> driver</param-name>
+  <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  </init-param>
+  <init-param>
+  <param-name>url</param-name>
+  <param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+  </init-param>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>Servlet_Example1</servlet-name>
+      <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+      <servlet-name>ServletExample2</servlet-name>
+      <url-pattern>/home2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+      <servlet-name>Servlet_Example3</servlet-name>
+      <url-pattern>/home3</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>ServletExample4</servlet-name>
+  <url-pattern>/insert</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+                                                                                                                                                                                         Dt : 16-06-23
+                                                                                                                                                                                          ---------------
+Creation of HTML file in Servlets                                
+-----------------------------------------------
+Steps to create a HTML file
+       - open project directory -> go to web-app -> right click -> new -> HTML file
+
+Ex :
+index1.html
+-----------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action = "insert">
+Id : <input type = "number" name = "sid"><br>
+name : <input type = "text" name = "sname"><br>
+cgpa : <input type = "number" name = "scgpa"><br>
+<input type = "submit" value = "SAVE">
+</form>
+</body>
+</html>
+
+
+ServeltExample4. java
+-------------------------------
+//program to demonstrate jdbc using Servlet through inheriting GenericServlet Class
+
+package com.servlet;
+
+import java.io.*;
+import javax.servlet.*;
+import java.sql.*;
+
+public class ServletExample4 extends GenericServlet {
+
+	@Override
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		int id = Integer.parseInt(request.getParameter("sid"));
+		String name = request.getParameter("sname");
+		float cgpa = Float.parseFloat(request.getParameter("scgpa"));
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+			Statement stmt = conn.createStatement();
+//			stmt.execute("create table teamMates(sid number(5), sname varchar(20), scgpa number(5))");
+//			stmt.execute("insert into teamMates(sid, sname, scgpa) values (30976, 'faizaan', 9.51)");
+//			stmt.execute(query);
+			PreparedStatement ps = conn.prepareStatement("insert into teamMates values(?, ?, ?)");
+			ps.setInt(1, id);
+			ps.setString(2, name);
+			ps.setFloat(3, cgpa);
+			ps.execute();
+			}
+			catch(Exception e) {
+				System.out.println(e);
+			}
+			PrintWriter pw = response.getWriter();
+			pw.write("<htmL>Insertion of team memebers data into teamMates table is successfull</html>");
+		
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+LoginForm Validation Example
+-------------------------------------------
+Login.java
+--------------
+package com.servlet;
+
+import java.io.*;
+import java.sql.*;
+import javax.servlet.*;
+
+
+public class Login extends GenericServlet {
+	@Override
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String uName = request.getParameter("uname");
+		String pwd1 = request.getParameter("passwrd");
+		try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+			Statement stmt = conn.createStatement();
+			PreparedStatement ps = conn.prepareStatement("select * from UserDetails where username =? AND password =?");
+			ps.setString(1, uName);
+			ps.setString(2, pwd1);
+			ResultSet rs = ps.executeQuery();
+			PrintWriter pw = response.getWriter();
+			if(rs.next()) {
+				pw.write("<b>Login Successfull </b>");
+			}
+			else {
+				pw.write("<b>Login Fail </b>");
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		
+	}
+
+}
+
+
+Register.java
+------------------
+package com.servlet;
+
+import java.io.*;
+import java.sql.*;
+import javax.servlet.*;
+
+public class Register extends GenericServlet {
+	@Override
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		
+		String fName = request.getParameter("fname");
+		String lName = request.getParameter("lname");
+		String uName = request.getParameter("uname");
+		String pwd = request.getParameter("pwd");
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		
+		    Statement stmt = conn.createStatement();
+		
+//		    stmt.execute("create table UserDetails(firstname varchar(15), lastname varchar(20), username varchar(20), password varchar(20))");
+		
+		PreparedStatement ps = conn.prepareStatement("insert into UserDetails values(?, ?, ?, ?)");
+		ps.setString(1, fName);
+		ps.setString(2, lName);
+		ps.setString(3, uName);
+		ps.setString(4, pwd);
+		ps.execute();
+		
+		conn.close();
+		
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		PrintWriter pw = response.getWriter();
+		pw.write("<b>Registeration Successfull </b>");
+		
+	}
+}
+
+
+Login.html
+----------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+<form action = login>
+<input type = "text" name = "uname" placeholder = "enter usernmae"/> <br>
+<input type = "password" name = "passwrd" placeholder = "enter your password"/><br>
+<input type = "submit" value = "login">
+</form>
+</body>
+</html>
+
+
+Register.html
+--------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+<form action = "register">
+<input type = "text" name = "fname" placeholder = "enter  first name"/><br>
+<input type = "text" name = "lname" placeholder = "enter  last name"/><br>
+<input type = "text" name = "uname" placeholder = "enter  user name"/><br>
+<input type = "password" name = "pwd" placeholder = "enter password"/><br>
+<input type = "submit" value = "register">
+</form>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Servlet Chaining
+------------------------
+-> The excahnge of information among servlets of a particular  java application is called as Servlet Colloboration or Servlet Chaining.
+-> This enables passing or sharing information from one servlet to another  i.e. the output of one Servlet can act as input to the other Servlet.
+-> In order to achieve Servlet colloboration, the Servlet api provides two interfaces namely 
+                                      - RequestDispatcher         -> javax.servlet
+                                      - HttpServletResponse    -> javax.servlet.http
+
+
+RequestDispatcher   Interface
+------------------------------------------
+-> This interface provides the option of dispatching clients request to another web reserce, HTML page, Servlet, JSP, etc.
+-> The methods of this interface are : 
+             - forward( )
+             - include( )
+
+
+forward( )
+--------------
+-> This method is used to transfer the client request to another resource(HTML file, Servlet, JSP).
+
+include( )
+-------------
+-> This method is used to include the contents of  calling resource to a called resource.
+
+
+HttpServletResponse Interface
+--------------------------------------------
+-> This interface is used to manage all Http responses.
+-> To acheive Servlet chaining it uses the following method :
+                  - sendRedirect( )
+        
+sendRedirect ( )
+----------------------
+-> This method is used to redirect the responses to another resource(HTML, Servlet, JSP, etc)
+
+
+Ex : 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                                                  Dt : 17-06-23
+                                                                                                                                                                                                   ----------------
+JSP
+----
+-> JSP stands for Java Server Pages.
+-> It is a technology toc create a web application like Servlet.
+-> It is used to bulid a web application by inserting a java code into html with the help of JSP tags.
+
+Syntax :
+           <% JAVA Code %>      -> JSP Tag
+
+
+Why JSP
+-----------
+-> In JSP the execution is much faster than any other dynammic programming languages including Servlet.
+-> It is much better than CGI.
+
+
+Advantages of JSP over Servlet
+------------------------------------------
+-> Easy to maintain.
+-> Fast development.
+-> Less code.
+
+
+
+JSP API
+-----------
+-> It consists of many classes and interfaces which are availabale in a package called as :
+                                                                  javax.servlet.jsp
+-> The javax.servlet.jsp package consists of classes and interfaces in order to create a web application using JSP.
+-> Some of the popular interfaces of JSP are : 
+                           - JspPage
+                           - HttpJspPage
+-> Some of the popular Classes are :
+                         - JspWriter
+                         - JspException
+                         - JspError
+                         - JspContext
+                         - JspFactory
+
+JspPage Interface
+-----------------------
+-> It is an interface which extends the Servlet interface.
+
+Methods : 
+      - JspInit( )
+      - JspDestroy( )
+
+
+HttpJspPage Interface
+----------------------------
+-> It is an interface which extends the JspPage interface.
+
+Methods :
+      - JspService( )
+
+
+Jsp Life Cycle
+-----------------
+-> JSP Life Cycle is defined as translation of a JSP page into a Servlet, as JSP page needs to conerted into Servlet first in order to process the user request.
+-> JSP lifecycle consists of 7 phases : 
+ 
+1. Translation     => (JSP  -> Servlet)  -> (demo.jsp  -> demo.java)
+2. Compilation   => (demo.java  ->  demo.class)
+3. Class Loading    => (demo.class needs to be loaded)
+4. Instantation      => (Object will be generated for Servlets)
+5. Initiallization               => (JspInit( ) method will be invoked)
+6. Request Processing    => (JspService( ) will be invoked)
+7. Destroy                          =>(JspDestroy( ) will be invoked)      
+
+
+Example  : sample.jsp
+---------------------------
+
+<html>
+<head>
+    <title> First </title>
+</head>
+<body>
+<% 
+      out.println("welcome to jsp");
+%>
+</body>
+</html>
+
+
+
+JSP Elements
+-----------------
+-> JSP elements will provide an ability to insert java code into jsp (jsp tags).
+-> There are four different types of JSP elements : 
+            - scriplet Tag
+            - expression Tag
+            - declaration Tag
+            - template Tag
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+scriplet Tag
+--------------
+-> scriplet tag is defined as the standard tag of jsp.
+
+Syntax :
+              <% Java code %>
+
+Ex-1: 
+       <body>
+       <% 
+            out.println("welcome to jsp");
+      %>
+      </body>
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ex-2  :
+
+form.html
+-------------
+<form action = "first.jsp">
+User Name : <input type = "text" name = "uname">
+<input type = "submit" value = "click here">
+</form>
+
+
+fisrt.jsp
+---------
+<body>
+<%
+String name = request.getParameter("uname")
+out.println("welcome" +  name);
+%>
+</body>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Expression Tag
+------------------
+-> This tag is used to print the values which are stored either in a variable or a method.
+
+Syntax :
+                <%= expression %>
+
+
+Ex -1 :
+
+<body>
+<%= "Hello" %>
+</body>
+
+
+Ex - 2 :
+
+form.html
+-------------
+<form action = "second.jsp">
+User Name : <input type = "text" name = "uname">
+<input type = "submit" value = "click here">
+</form>
+
+
+second.jsp
+-------------
+<body>
+<%= "welcome" + request.getParameter("uname")%>
+</body>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Declaration Tag
+--------------------
+-> This tag is used to declare a field or a method.
+
+Syntax : 
+              <%!   field or method  %>
+
+
+Ex - 1 :
+
+<body>
+<%!  int a = 5; %>
+<%= "result :" +a>
+<% out.println("a :" + a); %>
+</body>
+
+
+Ex - 2 : third.jsp
+
+<body>
+<%!  
+   int cube(int n){
+       return n *n *n;
+}
+%>
+<%= "cube of 5 is  :" +cube(5) %>
+</body>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Template Tag
+-----------------
+-> Any tag other than scriplet, expression, declaration tag is called as template tag.
+
+Ex : 
+      <h1>  Hello  </h1>
+      <pre>  HII    </pre>
+
+
+-> Any HTML tag or XML tag will come under Template tag.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example : JSP sample (Sample.jsp)
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+  out.println("Welcome to JSp");
+%>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example : (JSP Tags) (Registration and Login Example)
+
+
+Register.html
+-----------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+<form action = Registration.jsp>
+<input type = "text" name = "fname" placeholder = "enter  first name"/><br>
+<input type = "text" name = "lname" placeholder = "enter  last name"/><br>
+<input type = "text" name = "uname" placeholder = "enter  user name"/><br>
+<input type = "password" name = "pwd" placeholder = "enter password"/><br>
+<input type = "submit" value = "register">
+</form>
+</body>
+</html>
+
+
+
+Registration.jsp
+---------------------
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <%@ page import="java.sql.Connection, java.sql.DriverManager, java.sql.Statement, java.sql.PreparedStatement" %>
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%!
+Connection conn;
+Statement stmt;
+%>
+
+<%
+String fn = request.getParameter("fname");
+String ln = request.getParameter("lname");
+String un = request.getParameter("uname");
+String pd = request.getParameter("pwd");
+try{
+Class.forName("oracle.jdbc.driver.OracleDriver");
+conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+stmt = conn.createStatement( );
+stmt.execute("create table RegDetails(firstname varchar(15), lastname varchar(20), username varchar(20), password varchar(20))");	
+PreparedStatement ps = conn.prepareStatement("insert into RegDetails values(?, ?, ?, ?)");
+ps.setString(1, fn);
+ps.setString(2, ln);
+ps.setString(3, un);
+ps.setString(4, pd);
+ps.execute();
+conn.close();
+out.println("Insertion successfull");
+}
+catch(Exception e){
+System.out.println(e);
+}
+
+%>
+</body>
+</html>
+
+
+
+Login.html
+--------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+<form action = LoginValidation.jsp>
+<input type = "text" name = "uname" placeholder = "enter usernmae"/> <br>
+<input type = "password" name = "pwd" placeholder = "enter your password"/><br>
+<input type = "submit" value = "login">
+</form>
+</body>
+</html>
+
+
+LoginValidation.jsp
+-------------------------
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.Connection, java.sql.DriverManager, java.sql.Statement, java.sql.PreparedStatement, java.sql.*" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Validation</title>
+</head>
+<body>
+
+<%!
+Connection conn;
+Statement stmt;
+PreparedStatement ps;
+ResultSet rs;
+%>
+
+<%
+String uName = request.getParameter("uname");
+String pwd1 = request.getParameter("pwd");
+try {
+    Class.forName("oracle.jdbc.driver.OracleDriver");
+	
+    conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+	stmt = conn.createStatement();
+    ps = conn.prepareStatement("select * from UserDetails where username =? AND password =?");
+	ps.setString(1, uName);
+	ps.setString(2, pwd1);
+	rs = ps.executeQuery();
+	if(rs.next()) {
+		out.println("Login Successfull");
+	}
+	else {
+		out.println("Login Fail");
+	}
+}
+catch(Exception e) {
+	System.out.println(e);
+}
+%>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                                Dt : 19-06-23
+                                                                                                                                                                                ----------------
+
+Note :
+In the similar way we can perform all the operations on a database which refers to jsp crud operations.
+
+
+JSP Action Tags
+--------------------
+JSP action tags are used to perform a specific action.
+The different JSP tags are : 
+          a. JSP Forward
+          b. JSP include
+          c. JSP param
+          d. JSP setProperty
+          e. JSP getProperty
+          
+
+ JSP Forward
+-----------------
+-> It is used to forward the request from one resource to another resource, it may be  jsp, html, or any other file.
+
+Syntax : 
+       <jsp : forward page = "relative URL"/>
+
+
+Example
+-----------
+              
+abc.jsp
+---------
+<body>
+<%  out.println("Index page"); %>
+<jsp : forward page = "xyz.jsp"/>
+</body>
+
+
+xyz.jsp
+---------
+<body>
+<%  out.println("welcome page"); %>
+</body>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+JSP include
+--------------
+It is used to include the content of another resource, it may be an html file, jsp file or any other resource.
+
+Syntax :
+               <jsp : inlcude page = "relative URL"/>
+
+Example
+-----------
+              
+abc.jsp
+---------
+<body>
+<%  out.println("Index page"); %>
+<jsp : include page = "xyz.jsp"/>
+</body>
+
+
+xyz.jsp
+---------
+<body>
+<%  out.println("welcome page"); %>
+</body>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+JSP param
+-------------
+It is an action tag which is used to refer to a parameter name and parameter value.
+
+Syntax :
+            <jsp : param name =  " "  value  = " "/>
+
+
+Example
+-----------
+              
+abc.jsp
+---------
+<body>
+<jsp : forward  = "xyz.jsp" />
+<jsp : param name = "pname" value = "https://www.google.com"/>
+</body>
+
+
+xyz.jsp
+---------
+<body>
+<%=  response.getParameter("pname") %>
+</body>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+NOTE
+-------
+-> Jsp : param along with jsp : forward is referred to forward tag along with parameter.
+-> Jsp : param along with out jsp : forward is referred to forward tag along with no parameter.
+-> Jsp : param along with jsp : include is referred to include tag along with parameter.
+-> Jsp : param along with out jsp : include is referred to include tag along with no parameter.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Jsp Setproperty and Jsp getProperty
+---------------------------------------------
+-> The setProperty and getProperty are used in mvc architecture either to set a property or to get a property which is already set.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+JSP Implict Objects
+-------------------------
+Jsp implict object are object which are alredy defined in jsp.
+The different Jsp implict objects are :
+      - out
+      - request
+      - response
+      - config
+      - application
+      - session
+      - page
+      - pageContext
+      - exception
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+out implict object
+-----------------------
+Ex : <% out.println("Hi"); %>
+
+
+request implict object
+---------------------------
+Example :  
+
+sample.html
+----------------
+<body>
+<form action = "index.jsp">
+<input type = "text" name = "fname" placeholder = "enter your name">
+<input type = "submit" value = "click"> 
+</form>
+</body>
+
+
+index.jsp
+-----------
+<%= request.getParameter("fname") %>
+
+
+response implict object
+---------------------------
+Example :  
+
+sample.html
+----------------
+<body>
+<form action = "index.jsp">
+<input type = "text" name = "fname" placeholder = "enter your name">
+<input type = "submit" value = "click"> 
+</form>
+</body>
+
+
+index.jsp
+-----------
+<%= response.sendRedirect("www.google.com") %>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+config  implict object
+--------------------------
+
+Example : 
+
+web.xml
+-----------
+<init-param>
+<param-name> driver </param-name>
+<param-value> oracle.jdbc.driver.OracleDriver</param-value>
+</init-param>
+
+
+demo.jsp
+-----------
+<%= config.getInitParam("driver") %>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+JSP Directives
+------------------
+-> JSP Directives are the messages that tells the browsers how to translate a jsp page into a servlet page.
+
+Syntax : 
+              <%@ directive attribute = "value"   %>
+
+-> The different directives are :
+          - page directive
+          - include directive
+          - taglib
+
+page directive
+------------------
+
+Syntax : 
+               <%@ page attribute = "values"  %>
+
+-> The different attributes of page directive are :
+                 - import
+                 - contentType
+                 - extends
+                 - errorPage
+                 - isErrorPage
+                 - session
+                 - buffer
+
+import
+--------
+
+Ex : 
+       <%@ page import = "java.sql.*" %>
+
+Ex :
+       <%@ page import = "java.util.Date" %>
+  
+  <%= "new Date( )" %>
+
+
+
+errorPage
+------------
+
+Ex :
+        error.jsp
+        ----------
+       <%@ page errorPage = "errorHandle.jsp" %>
+
+       <%= "100/0" %>
+
+
+isErrorPage
+---------------
+
+Ex : 
+        errorHandle.jsp
+        --------------------
+       <%@ page isErrorPage = "TRUE" %>
+         <h1> ERROR OCCURED </h1>
+        <%= exception %>
+
+Note 
+------
+The above two examples together are called jsp error handling.
+
+include directives
+----------------------
+
+Syn : 
+         <%@ include attribute = "value" >
+
+
+-> The different attributes of include directive is :
+                 - file       
+
+
+Ex : 
+        abc.jsp
+         --------
+          <%@ include file = "xyz.jsp">
+
+
+      xyz.jsp
+      --------
+      <%= "hello, welcome to include direcrive" %>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+MVC
+------
+MVC stands for Model view Controller.
+MVC is a  design pattern which consists of bussiness logic where it will be called as (Model), presentation logic called as (View), and an interaface which connects model and view called as (Controller).
+
+Model
+--------
+It represents the state of the application data, i.e. bussiness logic
+
+View
+------
+It represents the presentation of a web application (frontend).
+
+Controller
+------------
+It acts as an interface between Model and View.
+
+
+Advantages of MVC
+-------------------------
+-> Easy to maintain a large application.
+-> Navigation control is easy.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example
+-----------
+
+Register.html
+------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+<form action = "controller.jsp">
+<input type = "text" name = "fname" placeholder = "enter  first name"/><br>
+<input type = "text" name = "lname" placeholder = "enter  last name"/><br>
+<input type = "text" name = "uname" placeholder = "enter  user name"/><br>
+<input type = "password" name = "pwd" placeholder = "enter password"/><br>
+<input type = "submit" value = "register">
+</form>
+</body>
+</html>
+
+
+
+view.jsp
+---------
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<jsp:useBean id="e" class="com.servlet.Employee" scope="request" />
+<jsp:page forward = "controller.jsp"/>
+</body>
+</html>
+
+
+
+controller.jsp
+----------------
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<jsp:useBean id="e" class="com.servlet.Employee" scope="request" />
+<jsp:setProperty property="*" name="e"/>
+<jsp:setProperty property = "storeData" name = "e" value = "v"/>
+<h1>The details are :</h1>
+<jsp:getProperty property="fname" name="e"/>
+<jsp:getProperty property="lname" name="e"/>
+<jsp:getProperty property="uname" name="e"/>
+<jsp:getProperty property="pwd" name="e"/>
+</body>
+</html>
+
+
+
+Employee.java
+------------------
+package com.servlet;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+public class Employee {
+	private String fname;
+	private String lname;
+	private String uname;
+	private String pwd;
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public String getUname() {
+		return uname;
+	}
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	
+	public void setstoreData(String x) throws Exception{
+		
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		Statement stmt = conn.createStatement( );
+
+			
+		PreparedStatement ps = conn.prepareStatement("insert into RegDetails values(?, ?, ?, ?)");
+		
+		ps.setString(1, fname);
+		ps.setString(2, lname);
+		ps.setString(3, uname);
+		ps.setString(4, pwd);
+		ps.execute();
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note 
+------
+
+Pagination 
+--------------
+-> Pagination refers to accessing the contents of a specific page in a web application  by its number.
+-> We implement pagination using bootstrap.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+co - 3                                                                                                                                                                          Dt : 21-06-23
+------                                                                                                                                                                           ----------------
+
+Topics
+--------
+-> Comparing Java EE with Java SE
+-> JSF (Java Server Faces)
+-> JNDI (Java Naming and Declaration Interface)
+-> Session Bean
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Comparing Java EE with Java SE
+-----------------------------------------
+
+
+
+
+JSF
+----
+-> JSF stands for Java Server Faces.
+-> It is a server side UI framework to develop a web application.
+-> It consists of popular API and tag libraries.
+-> JSF API provides several UI components(15 - 20), provide server side validation, data conversion,  page navigation, etc.
+-> JSF tag libraries are used to add componenets on a web page and connect components with the server.
+-> The latest version of JSF is JSF 2.3
+
+
+Why JSF
+----------
+-> JSF provides a good security over JSP.
+
+
+Advantages of JSF
+-----------------------
+-> It provides a clean and clear separation between the behaviour and presentation of a web application.
+-> JSF API provides creating your own components through a class called component.
+-> JSF includes facelet technology which provides a massive advantage to it.
+
+
+Features of JSF
+-------------------
+-> Ease and rapid application development.
+-> UI based framework.
+-> Supports HTML 5.
+-> Default Exception handling.
+-> Security.
+-> Templating
+-> Implements facelet technology.
+
+
+JSF LifeCycle
+-----------------
+-> JSF application framework manages lifecycle phases automatically for small applications and also manually too.
+-> The lifecycle of a JSF begins whenever a client makes an http request for a page and ends when an server responses to it.
+->  The lifecycle of a JSF is divided into two main phases 
+                   - execute phase
+                   - render phase
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                                Dt : 22-06-23
+                                                                                                                                                                                ----------------
+JSF UI Elements (.xhtml)
+-------------------------------
+-> Any tag with an extension of .xhtml
+
+1. <h:outputText>
+----------------------
+-> It is used to display content on a web browser.
+
+Syntax : 
+               <h:outputText value = "content">
+
+Ex : 
+       <h:outputText value = "Hello! Good Afternoon">
+
+
+Attributes  : 
+                      id, style, class
+
+
+2. <h:inputText>
+---------------------
+-> It allows a user to input a String.
+
+Syntax :
+               <h : inputText id = "it" value = "#{BeanClassObject.VariableName}"/>
+
+Ex : 
+       <h : inputText id = "it" value = "#{FirstBean.vn}"/>
+
+
+Attributes : 
+                     id, style, class, readOnly
+
+
+3. <h : form>
+----------------
+-> It is used to create a form which consists of many form elements.
+
+Syntax : 
+               <h : form>
+                     <h : inputText id = "it" value = "#{BeanClassObject.VariableName}"/>
+              </h : form>
+
+
+Ex :
+       <h : form>
+          <h : inputText id = "fn" value = "#{bcob.vn}"/>
+        </h : form>
+
+
+Attributes : 
+                     id, onsubmit, onclick, class
+
+
+4. <h : commandButton>
+--------------------------------
+-> It is used to create a button.
+
+Syntax :  
+               <h : commandButton id = "name" value = "buttonName" action = "url / file extension "/>
+
+Ex : 
+       <h : commandButton id = "cb" value = "click here" action = "sample.xhtml "/>
+
+
+5. <h : inputTextarea>
+----------------------------
+-> It is used to create an area to enter a larger texts.
+
+Syntax : 
+               <h : inputTextarea id  = "name" value = "#{BeanClassObject.VariableName}"/>
+
+Ex : 
+
+
+Attributes : 
+                     disabled, onclick, onselect, readonly
+
+6.<h : commandLink>
+----------------------------
+-> It is used to create a link on a web application which performs an action.
+
+Syntax : 
+                <h : commandLink id = "name" action = "url" >
+                <h : outputText value = "link name" />
+                </h : commandLink>
+
+Ex : 
+                 <h : commandLink id = "cli" action = "https://www.google.com />
+                <h : outputText value = "Google" />
+                </h : commandLink>
+
+
+Attributes : 
+                    rel, disabled
+
+
+7.<h : inputSecret>
+------------------------
+-> It is used to create a password.
+
+Syntax : 
+               <h : inputSecret value = "#{BeanClassObject.VariableName}"/>
+
+Ex :
+        <h : inputSecret value = "#{bcob.vn}"/>
+
+Attributes : 
+                     maxlength,minlength, required, requiredMessage
+
+Ex : 
+       <h:inputSecret value="#{bcob.vn}" maxlength="10"    
+            required="true" requiredMessage="Password is required">
+      </h:inputSecret>  
+
+
+
+8. <h : inputHidden>
+--------------------------
+-> It is used to create a password filed  but the difference between inputSecret and inpuHidden is in inputSecret the characters will be represented as .. characters where as in inputHidden nothing is visible.
+
+Syntax : 
+               <h : inpurHidden id = "name" value = #{BeanClassObject.VariableName}"/>
+
+Ex : 
+       <h : inpurHidden id = "pwd" value = #{bcob.vn"/>
+
+Attributes :
+                     required, requiredMessage
+
+
+9. <h : inputFile>
+---------------------
+-> this tag is used to provide file as an input.
+
+Syntax : 
+               <h : inputFile id = "name" value = "#{BeanClassObject.FileLocation}"/>
+
+Ex : 
+        <h : inputFile id = "fid" value = "#{bcob.Filepath}"/>
+
+
+Attributes :
+                     alt, required, requiredMessage, disabled
+
+
+10. <h : graphicImage>
+----------------------------
+-> It is used top display an image on a web page.
+
+Syntax : 
+               <h : graphicImage id = "name" value = "Image Location"/>
+
+Ex : 
+        <h : graphicImage id = "gimg" value = "Image Path"/>
+
+Attributes :
+                     alt, width, height
+
+
+
+11. <h : message>
+----------------------
+-> It is used to display a single message for a particular component.
+
+Syntax : 
+               <h:message for="name" style="style"/>
+
+Ex : 
+      <h:form id="form">  
+      <h:outputLabel for="username">User Name</h:outputLabel>  
+      <h:inputText id="name-id" value="#{user.name}"/>  
+      <h:message for="name-id" style="color: red"/>  
+      </h:form>
+
+
+12. <h : messages>
+-----------------------
+-> It is used to displays all messages that were stored in the faces context during the course of the JSF life cycle.
+
+Syntax : 
+               <h:messages style="color: red"></h:messages>
+
+Ex :
+       <h:form id="form">  
+       <h:outputLabel for="username">User Name</h:outputLabel>  
+       <h:inputText id="name-id" value="#{user.name}"/><br/>  
+       <h:outputLabel for="mobile">Mobile No.</h:outputLabel>  
+       <h:inputText id="mobile-id" value="#{user.mobile}"/><br/>  
+       <h:commandButton value="OK" action="response.xhtml"></h:commandButton>  
+       <!-- Here, we are single tag to display all the errors. -->  
+       <h:messages style="color: red"></h:messages>  
+       </h:form>  
+
+
+13. <h : datatable>
+-----------------------
+It is used to create a data table
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bean Class
+-------------
+-> Any class having a setter and a getter method is called a bean class.
+-> It is also called as POJO(Plain Old Java Object) class or Entity class.
+-> JSF Implementation   -> Manage Bean Class   -> Annaotation  -> @ManagedBean
+
+
+Syntax: 
+ 
+@ManagedBean(name =  " " , eager = true )
+public class Student{
+priavate int id;
+-> source -> generate getters and setters
+} 
+
+Ex : 
+
+package com.jsfSample;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean(name = "Calc", eager = true)
+public class Calculator {
+     private int num1;
+     private int num2;
+     private int calculatedVal;
+     
+	public int getNum1() {
+		return num1;
+	}
+	public void setNum1(int num1) {
+		this.num1 = num1;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2(int num2) {
+		this.num2 = num2;
+	}
+	public int getCalculatedVal() {
+		return calculatedVal;
+	}
+	public void setCalculatedVal(int calculatedVal) {
+		this.calculatedVal = calculatedVal;
+	}
+     
+	public void add() {
+		calculatedVal = num1 + num2;
+	}
+	
+	public void sub() {
+		calculatedVal = num1 - num2;
+	}
+	
+	public void mul() {
+		calculatedVal = num1 * num2;
+	}
+	
+	public void division() {
+		calculatedVal = num1 / num2;
+	}
+	
+	
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Steps to run an XHTML file
+----------------------------------
+
+-> file -> new -> maven-archetype-quickstart
+-> right click on project  -> properties -> Project Facets  -> convert to faceted form..  -> select the below listed by changing version
+-> Dynamic web module -> 3.1, java -> 1.8 , javascript -> 1.0, java server faces  -> 2.2  
+-> further configuration available  -> select generate web.xml -> click next ->   type : -> Disable Library Configuration
+-> Add url mapping pattern  -> *.jsf   -> click ok  -> click apply and close
+-> change properties of pom.xml  -> 1.7 to 1.8
+-> Add dependecies from maven repository  : 
+         - jboss jsf api(2.2)
+         - java servlet api
+         - jdbc oracle  (not mandatory if database operations are not performed)
+-> window  -> show view -> search for markers  -> delete default class path
+-> remove the already created package availble in src/main/java
+-> src/main/java  -> new package -> new class
+-> web-app  -> new xhtml file -> filename -> next ->  select use xhtml template  -> finish
+-> right click on XHTML file  -> run as -> run on server
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ex : Sample Calculator using JSF and XHTML
+---------------------------------------------------------
+
+Calculator.java
+--------------------
+// sample calculator
+package com.jsfSample;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean(name = "Calc", eager = true)
+public class Calculator {
+     private int num1;
+     private int num2;
+     private int calculatedVal;
+     
+	public int getNum1() {
+		return num1;
+	}
+	public void setNum1(int num1) {
+		this.num1 = num1;
+	}
+	public int getNum2() {
+		return num2;
+	}
+	public void setNum2(int num2) {
+		this.num2 = num2;
+	}
+	public int getCalculatedVal() {
+		return calculatedVal;
+	}
+	public void setCalculatedVal(int calculatedVal) {
+		this.calculatedVal = calculatedVal;
+	}
+     
+	public void add() {
+		calculatedVal = num1 + num2;
+	}
+	
+	public void sub() {
+		calculatedVal = num1 - num2;
+	}
+	
+	public void mul() {
+		calculatedVal = num1 * num2;
+	}
+	
+	public void division() {
+		calculatedVal = num1 / num2;
+	}
+	
+	
+}
+
+
+
+CalcSample.xhtml
+------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+
+	<head>
+	 <title>Calculator</title>
+	</head>
+	
+	<body>
+	  <h1><i>Calculator</i></h1>
+	  <h:form>
+	    First Number : <h:inputText value = "#{Calc.num1}"/>
+	    Second Number : <h:inputText value = "#{Calc.num2}"/>
+	     <div> 
+	    <h:commandButton value = "+" action = "#{Calc.add()}"/>
+	    <h:commandButton value = "-" action = "#{Calc.sub()}"/>
+	    <h:commandButton value = "*" action = "#{Calc.mul()}"/>
+	    <h:commandButton value = "/" action = "#{Calc.division()}" />
+	    </div>
+         Calculated Value : #{Calc.calculatedVal}
+	  </h:form>
+	</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                       
+                                                                                                                                                                                   Dt : 23 - 06 - 23
+                                                                                                                                                                                   -------------------
+JSF Validations
+-------------------
+->  Validation refers to validating the data provided by a user.
+-> It is used to check whether the value entered in a component  is with in a certain range or not.
+-> JSF provides set of classes and related tags which helps in validating the data elements.
+-> We will see how to validate the data fields : 
+                                (Built - in Validations or Standard Validations)
+                                                                          &
+                                (how to Validate Bean Class(Bean Validation))
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Built - in Validataions
+---------------------------
+
+1. Length Validation 
+--------------------------
+-> <f : validateLength>
+-> It is used to validate the minimum and maximum length of a string.
+-> It is consisting of two attributes (maximum and minimum).
+
+Syntax : 
+                <h:inputText id = "name" value = "#{BeanClassObject.VariableName}">
+                <f: validateLength minimum = "length" maximum = "length"/>
+                </h:inputText>
+
+Ex : 
+                <h:inputText id = "fname" value = "#{bcob.vn}">
+                <f: validateLength minimum = "3" maximum = "10"/>
+                </h:inputText>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Required Validation (Field)
+-------------------------------------
+-> <f:validateRequired>
+-> It is used to ensure that the value should not be empty for that particular field.
+
+Syntax : 
+                <h:inputText id = "name" value = "#{BeanClassObject.VariableName}">
+                <f:validateRequired/>
+                </h:inputText>     
+
+Ex :
+                <h:inputText id = "fname" value = "#{bcob.vn}">
+                 <f:validateRequired/>
+                <f: validateLength minimum = "3" maximum = "10"/>
+                </h:inputText>         
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Regular Expression Validation
+-----------------------------------------
+-> <f:validateRegex>
+-> This is to validate any field based on a regular expression.
+
+Syntax : 
+                <h:inputSecret id = "pwd" value = "#{BeanClassObject.VariableName}">
+                <f:validateRegex pattern = "RE"/>
+                </h:inputSecret>
+
+Ex :
+                <h:inputSecret id = "pwd" value = "#{bcob.vn}">
+                <f: validateRegex pattern = "^[A-za-z0-9]+$-@"/>
+                </h:inputSecret>       
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note
+------
+4.<f:validateDoubleRange>
+5. <f:validateLongRange>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bean Class Validation
+---------------------------
+-> JSF provides validation constraints for a bean model in the form of annotations.
+-> An annotation can be placed on a field, method, class of a bean model.
+-> The different validations are :
+
+1.@NotNull
+----------------
+-> It is used to set a NotNull constraint to a field or a property in a class.
+
+Ex : 
+        @NotNull String name;
+
+
+2. @Null
+-----------
+-> It is used to set a Null constraint to a field or a property in a class.
+
+Ex : 
+       @Null String name;
+
+
+3. @Size
+-----------
+-> It is used to specify the size of a field or a property in a class.
+
+Ex : 
+       @Size(min = 2, max = 240)
+        String briefMessage;
+
+
+4. @Digits
+--------------
+-> It is used to set the constraint that the value of the field or property must be a number within a specified range.
+
+Ex : 
+       @Digits(integer = 1, fraction = 2)
+        double cgpa;
+
+
+5. @Max
+------------
+-> It is used to set the value of the field or property which must be an integer value lower than or equal to the number in the value element.
+
+Ex : 
+        @Max(10) int quantity;
+
+
+
+6. @Min
+------------
+-> It is used to set the value of the field or property which must be an integer value greater than or equal to the number in the value element.
+
+Ex : 
+        @Min(10) int quantity; 
+
+
+
+7. @DecimalMax
+----------------------
+-> It is used to specify that the value of the field or property must be a decimal value lower than or equal to the number in the value element.
+
+Ex : 
+      @DecimalMax("10.00")
+       double cgpa;
+
+
+
+8. @DecimalMax
+----------------------
+-> It is used to specify that the value of the field or property must be a decimal value greater than or equal to the number in the value element.
+
+Ex : 
+      @DecimalMin("2.00")
+       double cgpa;
+
+
+
+9. @Pattern
+----------------
+-> It is used to set patter which must match the regular expression defined in the regex pattern element.
+
+Ex : 
+      @Pattern(regexp="re-pattern") 
+      String phoneNumber;
+
+
+
+10. @Past
+--------------
+-> It is used to set the value of the field or property which must be a date in the past.
+
+Ex : 
+      @Past
+       Date birthDay;
+
+
+
+11. @Future
+----------------
+-> It is used to set the value of the field or property which must be a date in the future.
+
+Ex : 
+      @Future
+       Date eventDate;
+
+
+12. @AssertTrue
+---------------------
+-> It is used to set the value of the field or property which must be true.
+
+Ex :
+      @AssertTrue
+       boolaen  isAlive;
+
+
+
+13. @AssertFalse
+----------------------
+-> It is used to set the value of the field or property which must be false.
+
+Ex :
+      @AssertFalse
+       boolaen  isAlive;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+JSF Converters
+-------------------
+-> JSF provides a set of converters which can be used to convert the data.
+-> JSF Converters will convert the String type(default) to its repective converter.
+-> The javax.faces.convert package which contains all the converters.
+-> Tag to be used in order to implement converters are  <f:converter>.
+
+Standard Converters
+---------------------------
+-> Every standard converter should be specified by its tag name and its attribute name called converter id.
+-> Tag to be used in order to implement converters are <f:converter convertId = "javax.faces.Integer'/>.
+-> Some popular ConverterId are :
+              - javax.faces.Integer
+              - javax.faces.Double
+              - javax.faces.Float
+              - javax.faces.Number
+              
+
+1. IntegerConverter
+------------------------
+-> used to convert into Integer.
+
+Syntax : 
+   <h:inputText id = "name" value = "#{BeanClassObject.VariableName}">
+   <f:converter convertId = "value">
+   </h:inputText>
+
+
+Ex : 
+ ID :  <h:inputText id = "sid" value = "#{bcob.vn}">
+         <f:converter convertId = "javax.faces.Integer">
+         </h:inputText>
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Other Converters
+----------------------
+
+1. DateTime
+---------------
+-> It is used to convert into datetime format.
+-> <f:convertDateTime>
+
+Syntax : 
+   <h:inputText id = "name" value = "#{BeanClassObject.VariableName}">
+   <f:convertDateTime pattern = "value"/>
+   </h:inputText>
+
+Ex :
+DOB :   <h:inputText id = "dob" value = "#{bcob.vn}">
+             <f:convertDateTime pattern = "dd/mm/yyyy"/>
+             </h:inputText>
+
+
+2. NumberConverter
+--------------------------
+-> It is used to convert string into number.
+-> <f: convertNumber>
+
+
+Syntax :
+   <h:inputText id = "name" value = "#{BeanClassObject.VariableName}">
+   <f:convertNumber type = "value" currencySymbol = "value"/>
+   </h:inputText>
+
+Ex :
+    Currency :  <h:inputText id = "curr" value = "#{bcob.vn}">
+   <f:convertNumber type = "currency" currencySymbol = "$"/>
+   </h:inputText>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Page Navigation
+--------------------- 
+->  In simple language navigation means flow of application from one page to another.
+-> A navigation rule can be defined in jsf file configuration faces - config.xml or in managed bean.
+
+Note
+------
+-> JSF 2 framework provides the facility of implicit navigation(One type of Navigation) for which no need to define any navigation rule.
+
+Types of Navigations
+---------------------------
+1. JSF Implicit  Navigation
+2. JSF conditional Navigation
+3. JSF form-action Navigation
+4. JSF page redirection Navigation
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                      Dt : 24-06-23
+                                                                                                                                                                      ----------------
+
+1. JSF Implicit  Navigation
+---------------------------------
+-> An action can directly return a String or can call a managed bean method which returns a String. 
+
+
+Ex : implicit1.xhtml
+-------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <body>
+	<h:form>
+	<h1>Welcome to Implicit Navigation..</h1>
+	<h:commandButton value = "navigate" action = "implicit2"/>
+	</h:form>
+	</body>
+</html>
+
+
+Ex : implicit2.xhtml
+------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<body>
+	<h1>You are navigated here using Implicit Navigation...</h1>
+	</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.JSF Conditional Navigation
+--------------------------------------
+-> To navigate based on a condition.
+-> Navigation condition can be handled in Bean Class.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.JSF form-action Navigation
+--------------------------------------
+-> Navigation takes place based on the action provided to a form and also by defining navigation rules.
+
+Syntax : 
+<navigation - rule>
+<navigation-case>
+
+</navigation-case>
+</navigation-rule>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. page redirection Naviagation
+----------------------------------------
+-> Navigation takes place in a direct way by just providing its page name appended with face-redirect = true.
+
+Syntax : 
+               PageName?faces-redirect=true
+
+Ex :  pageRedirection1.xhtml
+-------------------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<body>
+	<h1>Welcome to Page Redirection Navigation..</h1>
+	<h:form>
+	<h:commandLink value = "navigate" action = "pageRedirection2?faces-redirect=true"/>
+	</h:form>
+	</body>
+</html>
+
+
+Ex : pageRedirection2.xhtml
+------------------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<body>
+	<h1>You are Navigated here using Page Redirection Navigation..</h1>
+	</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+ JSF Facelets
+----------------
+-> It is a language which is useb to build facelet views (.xhtml file)  by using HTML styles.
+-> It includes the followinng features :
+         - It uses xhtml for creating web pages.
+         - It supports facelets tag libraries.
+         - It supports expressional language.
+         - It uses templating for components and pages.
+
+
+Adavantages of Facelets
+-------------------------------
+-> Faster Compilation.
+-> Code reusability.
+-> High pergormance Navigation.
+
+
+Facelets Views (.xhtml)
+------------------------------
+-> Facelets views are XHTML pages. you can create a web page or a view by adding UI components to web page.
+-> The XHTML web page serves as a frontend.
+-> The first page of your application by default will be index.xhtml.
+-> In xhtml page we have the following sections : 
+                - First Section       -> content type for the web page.
+               - Second Section  -> language of the xhtml page.
+              - Third Section       -> Logic of the web page (user creates)
+
+
+Facelets Template
+-----------------------
+-> Template is a powerful facelet feature that allows you to create a web page that acts as a base page to all the pages available in the application.
+-> By Templates : 
+               - we can reuse the code
+               - we can avoid creating similar pages again and again.
+-> Templates are also helpful in order to maintain a standard look and feel for web applications.
+-> Facelet tags that are used to create a template are :
+              - <ui : insert>
+              - <ui : define>
+              - <ui : include>
+              - <ui : composition>
+              - <ui : param>
+
+
+<ui : insert>
+---------------
+-> It defines contents to be placed in a template.
+
+
+<ui : define>
+---------------
+-> It defines contents to be inserted in a template.
+
+
+<ui : include>
+----------------
+-> It includes the contents of an XHTML page into another XHTML page.
+
+
+
+<ui : composition>
+-----------------------
+-> It loads a template using template attribute.
+-> It can also define a group of components to be inserted in an XHTML page.
+
+
+<ui:param>
+---------------
+-> It is used to pass a value(parameter)  to the template.
+
+
+Ex : Creating a Template
+-------------------------------
+
+Step - 1 Header.xhtml
+----------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <body>
+	<h1>Welcome to <i>Header</i> section created using <mark>JSF Templating</mark></h1><br />
+	<hr />
+	</body>
+</html> 
+
+
+
+Step - 2 : Components.xhtml
+-------------------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<body>
+	<h1>Welcome to <i>Component</i> section created using <mark>JSF Templating</mark></h1><br />
+	<hr />
+	</body>
+</html>      
+ 
+
+Step - 3 Footer.xhtml
+---------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+	<h1>Welcome to <i>Footer</i> section created using <mark>JSF Templating</mark></h1><br />
+	<hr />
+	</body>
+</html> 
+
+
+Step - 4 Common.xhtml
+-------------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition>
+	
+	<ui:insert name = "header">
+	<ui:include src = "/Header.xhtml"/>
+	</ui:insert>
+	
+	<ui:insert name = "component">
+	<ui:include src = "/Components.xhtml"/>
+	</ui:insert>
+	
+	<ui:insert name = "footer">
+	<ui:include src = "/Footer.xhtml"/>
+	</ui:insert>	
+	
+	</ui:composition>
+</html>
+
+
+Step : 5 Use Template (Home.xhtml)
+---------------------------------------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="/Common.xhtml">
+	</ui:composition>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tag Libraries
+----------------
+-> To implement JSF tags, we need to know the different tag libraries. 
+-> Some of the popular tag libraries are : 
+              - <h: >
+              - <ui: >
+              - <f: >
+
+<h: >
+------
+-> The "h" tag library provides HTML-related tags for JSF components. 
+-> Some commonly used tags from this library include:
+                - <h: inputText />
+                - <h: outputText />
+
+
+<ui: >
+-------
+-> The "ui" tag library, also known as the Facelets library, provides more advanced tags for creating component trees and defining reusable templates.
+-> Some commonly used tags from this library include:
+                 - <ui: insert />
+                 - <ui: include/>
+
+
+
+<f: >
+------
+-> It stands for faces and it is refered as the core tag of JSF.
+-> This tag library provides essential functionality for managing form data, handling events, and performing validation. 
+-> Some commonly used tags from the "f" tag library:
+                 - <f: facet />
+                 - <f:converter />
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                Dt : 26-06-23
+                                                                                                                                                                                ----------------
+JNDI
+------
+-> JNDI stands for Java Naming and Directory Interface.
+-> It is an API that provides naming and directory functionality to the application which you create using Java programming language.
+-> It is used only by EJB(Enterprise Java Bean) to find remote objects.
+-> With this api you can access many types of data like objects, devices, files of naming and directory services.
+-> You can use this  JNDI API to perform naming operations which include read operations and operations for updating the name spaces.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Session Bean
+-----------------
+-> It is a part of EJB.
+
+
+EJB
+----
+-> EJB stands for Enterprise Java Bean.
+-> EJB provides an architecture to develop scalable and secured web applications.
+-> EJB applications will also be deployed in a server side, so it can also be called as server side component.
+-> The current version of EJB is EJB 3.2.
+
+Types of EJB
+----------------
+-> EJB is divided into 3 categories :
+           - Session Bean (co - 3)
+           - Entity Bean (JPA  from 3.x) -> (co - 4)
+           - Message Driven (JMS) -> (co - 4)
+
+
+Session Bean
+-----------------
+-> Session Bean maintains or stores a data of a particular user for a single session.
+-> It is divided into two types : 
+             - Stateless Session Bean
+             - Statefull Session Bean
+
+
+Stateless Session Bean
+-----------------------------
+-> It maintains a state (data).
+-> It is used to perform dependent opeartions.
+-> In other words, conversational state between multiple method calls is  maintained in case of Stateless Session Bean.
+-> Annotations used for Statless Session Bean are :
+                    - @Stateless
+                    - @PostConstruct
+                    - @PreDestroy
+
+
+Ex : 
+
+
+
+Statefull Session Bean
+----------------------------
+-> It does not maintain a state (data).
+-> It is used to perform independent opeartions.
+-> In other words, conversational state between multiple method calls is not maintained in case of Statefull Session Bean.
+-> Annotations used for Statlfull Session Bean are :
+                    - @Statefull
+                    - @PostConstruct
+                    - @PreDestroy
+                    - @PrePassivate
+                    - @PostActivate
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+STEPS
+--------
+-> file -> new -> maven-archetype-quickstart
+-> right click on project  -> properties -> Project Facets  -> convert to faceted form..  -> select the below listed by changing version
+-> Dynamic web module -> 3.1, java -> 1.8 , javascript -> 1.0, java server faces  -> 2.2  
+-> further configuration available  -> select generate web.xml -> click next ->   type : -> Disable Library Configuration
+-> Add url mapping pattern  -> *.jsf   -> click ok  -> click apply and close
+-> change properties of pom.xml  -> 1.7 to 1.8
+-> Add dependecies from maven repository  : 
+         - jboss jsf api(2.2)
+         - Enterprise JavaBeans
+-> window  -> show view -> search for markers  -> quickfix default class path
+-> remove the already created package availble in src/main/java
+-> src/main/java  -> new package (1 class and 1 interaface)  => com.models  -> new Interface  => CalculatorInterface.java
+                                                                                                                  => com.models  -> new Calss         =>  CalculatorOperations.java
+-> src/main/java  -> new package  => com.controllers  -> new Class  =>  CalculatorBean.java
+-> add @Remote annotaion to the cretaed interface(CalculatorInterface.java)
+-> add @Stateless  / @Stateful annotation to the implemented class(CalculatorOperations.java)
+-> add @ManagedBean annotaion to the created bean class(CalculatorBean.java)
+-> add @EJB annotaion above the object creation to interface line.
+-> refer to example shown below to have clear idea about annotations.
+
+NOTE
+-------
+-> If you are not creating a .xhtml file which should be runned first and if it is named as "index.xhtml", then add changes:
+                                   
+Default web.xml    -> <welcome file - list>
+----------------------------------------------------
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+           
+          
+Updated web.xml   -> <welcome file - list>
+-----------------------------------------------------
+ <welcome-file-list>
+    <welcome-file>index.xhtml</welcome-file>
+ </welcome-file-list>
+
+-> As my file name is index.xhtml I have added this <welcome-file>index.xhtml</welcome-file>.
+-> Similarly we need to change web.xml based upon created xhtml files.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ex : 
+-----
+
+CalculatedOpeartions.java (stateful class)
+-------------------------------------------------------
+package com.models;
+
+import javax.ejb.Stateless;
+
+@Stateful
+public class CalculatorOperations implements CalaculatorInterface {
+
+	@Override
+	public int add(int a, int b) {
+		// TODO Auto-generated method stub
+		return a + b;
+	}
+
+	@Override
+	public int sub(int a, int b) {
+		// TODO Auto-generated method stub
+		return a - b;
+	}
+
+	@Override
+	public int mul(int a, int b) {
+		// TODO Auto-generated method stub
+		return a * b;
+	}
+	
+}
+
+
+
+CalculatorInterface.java
+-------------------------------
+package com.models;
+
+import javax.ejb.Remote;
+
+@Remote
+public interface CalaculatorInterface {
+          int add(int a, int b);
+          int sub(int a,int b);
+          int mul(int a,int b);
+}
+
+
+
+CalculatorBean.java
+--------------------------
+package com.controllers;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+
+import com.models.CalaculatorInterface;
+
+@ManagedBean(name = "Calc", eager = true)
+public class CalculatorBean {
+	
+	private int a;
+	private int b;
+	private int res;
+	public int getRes() {
+		return res;
+	}
+	public void setRes(int res) {
+		this.res = res;
+	}
+	public int getA() {
+		return a;
+	}
+	public void setA(int a) {
+		this.a = a;
+	}
+	public int getB() {
+		return b;
+	}
+	public void setB(int b) {
+		this.b = b;
+	}
+	
+	@EJB(lookup = "java:global/SessionBean/CalculatorOperations!com.models.CalaculatorInterface")
+	CalaculatorInterface ci;
+	
+	public void ejbAdd() {
+		res = ci.add(a, b);
+		
+	}
+	
+	public void ejbSub() {
+		res = ci.sub(a, b);
+	}
+	
+	public void ejbMul() {
+		res = ci.mul(a, b);
+	}
+}
+
+
+
+index.xhtml
+----------------
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+     
+	  <head>
+	  <title>Calculator</title>
+	  </head>
+	
+	   <body>
+	   <h:form>
+	     Value1 : <h:inputText name = "v1" value="#{Calc.a}" />
+	     Value2 : <h:inputText name = "v2" value="#{Calc.b}" /><br />
+	     <h:commandButton action="#{Calc.ejbAdd()}" value="+" /><br></br>
+	     <h:commandButton action="#{Calc.ejbSub()}" value="-" /><br />
+	     <h:commandButton action="#{Calc.ejbMul()}" value="*" /><br></br>
+	     CalculatedValue : #{Calc.res}
+	   </h:form>
+	   </body>
+</html>
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Entity Bean
+---------------
+-> Entity Bean represents the persistent data stored in a database.
+-> Since EJB 3.x, Entity Bean is depreciated and replaced by JPA(Java Persistance API).
+
+
+JPA
+-----
+-> It provides a platform to work directly with java object instead of SQL queries.
+-> It is used to presist data between java object and relational database.
+-> JPA acts as an bridge between object oriented domain models and relational databases.
+-> The first version of JPA is 1.0 was released into market int the year 2006 and the current version of JPA is 3.1.
+-> JPA follows a standard tool called as JPA ORM.
+
+ORM
+------
+-> ORM stands for Object Relational Mapping.
+-> It is a functionality which is used to develop and maintain a  relationship between object and database (table -> column).
+-> It is capable of handling different operations on database like CRUD operations.
+-> ORM diagram :
+
+                                                                         ORM
+                             Java Object        ----------------------->    Database(column)
+
+
+ORM Frameworks
+----------------------
+-> Some of the popular frameworks are :
+          - Hibernate
+          - TopLink
+          - ibatis
+          - ORMLite
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Mapping Directions                                                                                                                                               Dt : 27-06-23
+-------------------------                                                                                                                                               ----------------
+-> Mapping Directions are two : 
+            - Unidirectional Mapping
+            - Bidrectional Mapping
+
+
+Unidirectional Mapping
+------------------------------
+-> In this relationship only one entity can refer to another entity.
+
+
+Bidrectional Mapping
+------------------------------
+-> In this relationship every entity has an relationship field are refer to the property of another entity.
+
+
+Types of Mappings
+-------------------------
+-> One to One
+-> One to Many
+-> Many to One
+-> Many to Many
+
+
+One to One
+--------------
+-> This mapping is represented by using an annotation @OneToOne.
+-> In this relationship an instance of one entity is related to one instance of another entity.
+
+
+One to Many
+----------------
+-> This mapping is represented by using an annotation @OneToMany.
+-> In this relationship an instance of one entity is related to more than one intance of other entity.
+
+
+Many to One
+----------------
+-> This mapping is represented by using an annotation @ManyToOne.
+-> In this relationship an multiple instances of an entity is related to only one intance of another entity.
+
+
+Many to Many
+----------------
+-> This mapping is represented by using an annotation @ManyToMany.
+-> In this relationship an multiple instances of an entity is related to many intances of another entity.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+EntityManager
+-------------------
+-> It is a interface which implements the Java Persistance API (JPA).
+-> It is used to read, delete and write an entity.
+
+
+Entity Operations
+-----------------------
+-> We will perform various operations on a entity such as 
+          - Inserting an Entity.
+          - Updating an Entity.
+          - Finding an Entity.
+          - Deleting an Entity.
+
+
+Inserting an Entity
+------------------------
+-> In JPA, we can easily insert data into database through a entity.
+-> The EntityManager class provides persist( ) method in order to insert the data.
+
+
+Updating an Entity
+------------------------
+-> In JPA, we can easily update data in database through a entity.
+-> The EntityManager class provides set( ) method in order to update the data.
+
+
+Finding an Entity
+----------------------
+-> In JPA, we can easily find data from database through a entity.
+-> The EntityManager class provides find( ) method in order to find the data.
+
+
+Deleting an Entity
+----------------------
+-> In JPA, we can easily delete data from database through a entity.
+-> The EntityManager class provides remove( ) method in order to delete the data.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Collection Mapping
+------------------------
+-> Collection is a java framework that groups multiple objects into a single unit.
+-> The reason why we use Collections is it is used to store, retrive, manipulate the data.
+-> Collection Types :
+           - List
+           - Set
+           - Map
+
+
+List
+-----
+-> A list is an interface which is used to insert  and delete the elements on the basis of index.
+
+Syntax : 
+               List<ClassName>  ObjectName = new ArrayList< >( );
+
+Ex :
+        List<Employee>  al = new ArrayList< >( );
+
+
+
+Set
+----
+-> A Set is an interface that contains unique elements.
+-> This elements do not maintain any spefic order.
+-> A Set can be used when their is a requirement of retriving unique elements in an unorder way.
+
+Syntax : 
+               Set<ClassName>  ObjectName = new HashSet< >( );
+
+Ex :
+        Set<Employee>  hs = new HashSet< >( ); 
+
+
+Map
+-----
+Syntax : 
+               Map<ClassName, index>  ObjectName = new HashMap< >( );
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Example : EJB Database Access
+----------------------------------------
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+JPQL
+------
+-> JPQL Java Persistence Query Language.
+-> It is an object oriented query language which is used to perform database operations on entities.
+-> Instead of database table JPQL uses entity object model to operate sql queries.
+-> The role of JPA is to convert JPQL into SQL
+
+
+JPQL Features
+------------------
+-> It is a platform independent query language.
+-> It is simple.
+-> It can be used with any database such as MYSQL or Oracle.
+
+
+Creating queries in JPQL
+-------------------------------
+-> JPQL provides two methods that can be used to access database records.
+                     - Query createQuery(String name)
+                     - Query createNamedQuery(String name)
+
+
+Query createQuery(String name)
+-----------------------------------------
+-> The createQuery is a method of EntityManager interface which is used to create an instance of query interface for executing a jpql statement.
+
+Syntax : 
+Query q = em.createQuery("JPQL")
+
+Ex :
+Query q = em.createQuery("select ename from Employee e ");
+
+
+Query createNamedQuery(String name)
+---------------------------------------------------
+-> The createNamedQuery is a method of EntityManager interface which is used to create an instance of query interface for executing named queries.
+
+Syntax : 
+Query q = em.createNamedQuery("JPQL")
+
+Ex :
+Query q = em.createNamedQuery("select ename from Employee e ");
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Steps to Configure JPA(mysql) with Jboss Server
+------------------------------------------------------------
+-> Set path JBOSS_HOME in Environment variables.
+-> Open CRS server -> double click on server  -> click on run time environment -> copy the path : "C:\Users\DELL\jboss-eap-7.3".
+-> Search for edit environment variables -> edit -> System variables -> new -> name : JBOSS_HOME  ,path : C:\Users\DELL\jboss-eap-7.3.
+-> Open CRS server -> right click on server -> show in -> file browser  -> click on jboss-eap-7.3 -> bin -> jboss-cli.bat -> double click (a cmd window will open).
+-> Open CRS Server -> start the server and minimize the CRS.
+-> Open your batch file (cmd).
+-> enter connect  :  [disconnected /] connect  -> [standalone@localhost:9990 /] 
+-> open c drive -> users -> dell -> .m2 -> repository -> com -> mysql ->mysql-connector-j -> 8.0.33 -> copy mysql jar path
+-> STEP6:
+------
+open your batch file 
+ module add --name=com.mysql --resources="C:\Users\srina\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar" --dependencies=javax.api,javax.transaction.api
+
+STEP7:
+go to jboss eap 7.3
+  -standalone(folder)
+    -configutation
+      -standalonehtml xmlfile
+        -right click and open with notepad
+
+StEP8:
+-------
+on notepad search for Drivers keyword
+ -after <driver> tag write the following
+<driver name="mysql" module="com.mysql">
+     </driver>
+                        <drivers>
+      <driver name="mysql" module="com.mysql">
+                <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+                 </driver>
+
+
+STEP 9:
+-------
+Verify module is created or not
+
+  go to jboss-eap-7.2(floder)
+  -modules
+  -com
+   -mysql
+    -mysql-connector-j-8.0.33 file()
+
+STEP 10:
+--------
+go to jboss-eap-7.2(folder)
+ -bin
+  -add user.bat(batchfile)
+   -a
+   -username: srinadh
+   -password: admin or anything you provide
+    click yes until yoour batch files gets closed
+
+STEP 11:
+-------
+start server
+  http://127.0.0.1.9990 copy and paste in browser
+
+ -open this in browser
+   enter username and password 
+ -web application
+  -configuration
+   -subsystems
+    -Datasourse and drivers
+     -data source
+       click on + symbol
+         -add datasource
+           -template with multiple options ->select mysql
+           -JNDI (take screenshot) JNDI:java:/MySqlDS
+            -Driver Class Name: update com.mysql.cj.jdbc.Driver
+           -connection url: 3306/klu(remove mysql)
+
+
+STEP12:
+--------
+
+oncce test connection is successfully
+next
+next
+web page(connection is established)
+
+
+pwd : java:/MySqlDS
+-test connection
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                                   Dt : 29-06-23
+                                                                                                                                                                                   -----------------
+Note 
+------
+Message Driven Bean is the one which contains the business logic but it is invoked by sending a message through JMS.
+
+
+
+JMS
+-----
+-> JMS stands for Java Messaging Services.
+-> JMS was developed by sun microsystems and the first version of JMS(1.0.2b) was released in the year 2001.
+-> The latest version of JMS is 2.0
+-> JMS is  a messaging service which provides reliabled and asynchronous communication between the java applications.
+-> JMS is an API which provides a set of interfaces for a specific application to create, send, receive and read messages. It also exchanges the information between different systems.
+-> If you develop the messaging system by using JMS API then you can deploy this application in JMS providers.
+-> Some of the popular JMS providers are:
+                        - Websphere MQ                 -> IBM
+                        - Websphere Messaging   -> Oracle
+                        - Active MQ                         -> Apache Foundation
+                        - HornetQ                            -> Jboss  
+
+
+
+JMS Messaging Domain
+------------------------------
+JMS provides two types of messaging domains:
+      - Point to Point Messaging Domain
+      - Publish/ Subsrcibe Messaging Domain
+
+
+
+Point to Point Messaging Domain
+------------------------------------------
+-> In this type, it includes a sender, a receiver and a queue in which one message will be sent to only one receiver through a queue.
+-> Each message will communicate to a specific queue.
+-> The queue will carry the messages until the receiver is free.
+
+
+Publish/ Subsrcibe Messaging Domain 
+------------------------------------------------
+-> In this type, it includes multiple producer(publishers), multiple consumers and a topic in which one message will be sent to multiple consumers through a topic.
+-> This approach includes multiple producers and consumers, a single producer can include multiple consumers.
+-> A message can be delivered to an object called topic which is responsible for a delivery of message to consumer.
+
+
+
+JMS Message Components
+----------------------------------
+-> JMS message consists of three components:
+              - Message Header
+              - Message Properties
+              - Message Body
+    
+
+Message Header
+---------------------
+-> The JMS Message Header will include the following fields which are used by sender and publisher to indicate and send messages to receiver.
+
+JMSDestination
+JMSDeliveryMode
+JMSTimeStamp
+JMSMessageID
+JMSReplyTo
+JMSRedelivered
+JMSExpiration
+JMSPriority
+
+
+
+Message Properties
+-------------------------
+-> Properties can be created and set for the message by using custom name value pairs.
+
+
+
+Message Body
+------------------
+-> JMS API provides following message body formats which are used to send and recieves the information between two java applications.
+-> The message body formats are:
+             - Text  Message
+             - Object Message
+             - Byte Message
+             - Stream Message
+             - Map Message
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+RESTfull Services
+---------------------
+-> REST stands for REpresentation State Transefer.
+
+
+Web Service
+---------------
+-> Web Service is a collection of protocols which are used for exchanging data between applications or systems.
+-> Web Servics based on REST architecture are called RESTfull services.
+-> RESTfull Web Services are fast and platform independent.
+-> The Web Services uses Http Methods to implement the concept of REST.
+
+
+Http Methods
+-----------------
+-> The following Http methods are commonly used in REST based architecture.
+                              - GET
+                              - POST
+                              - DELETE
+                              - PUT
+
+
+GET
+-----
+-> It provides a read only access to a resource.
+
+
+POST
+-------
+-> It is used to create a resource.
+
+
+DELETE
+----------
+-> It is used to remove a resource. 
+
+
+PUT
+-----
+-> It is used to update an existing resource or you can also create a new resource.    
+
+
+Note
+------
+-> REST is an API too.
+-> A class can act as a REST class using 2 annotations :
+                            - @Path 
+                            - @ApplicationPath
+-> REST metod returns only JSON objects which will be in the form of String.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ex : RESTFull Services to implement Calculator Operations

@@ -1,0 +1,55 @@
+ Render Simple Spring Boot App Deployment Guide
+
+Key Points about Render:
+- Render is a modern serverless platform designed for easy deployment and scaling of web applications, including Spring Boot applications.
+- Render simplifies the deployment process by allowing applications to be deployed directly from a Git repository, eliminating the need for manual infrastructure management.
+- Automatic scaling ensures optimal performance and resource utilization based on application demand, with high availability and reliability.
+- Built-in monitoring and logging capabilities help developers track application performance and troubleshoot errors effectively.
+- Render supports custom domain integration and provides automatic SSL certificate management for secure HTTPS encryption.
+- Collaborative features include access control, environment variables management, and Git integration for streamlined team collaboration.
+- Render offers competitive pricing models tailored to different use cases, with comprehensive documentation, tutorials, and community forums for support.
+
+Deployment Steps:
+1. Create a simple spring project using Spring Initializr.
+2. Create a controller class and required HTML pages.
+3. Run the application in localhost to verify your output.
+4. After verification, package your application into a JAR:
+   - In Eclipse: Right-click on APP_NAME -> Run As -> Maven Build.
+   - In the Goals field, enter `clean package` and run.
+5. Wait until a JAR snapshot is created successfully and refresh the entire project once.
+6. Verify whether you have a file like this: `APP_NAME.0.0.01-SNAPSHOT.jar` under your target folder.
+7. Open terminal or CMD, navigate to your app's target folder using `cd`:
+   cd C:\Users\DELL\Downloads\APP_NAME\target
+8. Enter the below command:
+   java -jar APP_NAME.0.0.01-SNAPSHOT.jar
+   Wait for some time until you get something like: "Started your application."
+9. Create a file named "Dockerfile" and add the following lines:
+   FROM eclipse-temurin:17-jdk-alpine
+   VOLUME /tmp
+   COPY target/*.jar app.jar
+   ENTRYPOINT ["java", "-jar", "/app.jar"]
+   EXPOSE 8080
+10. Navigate to your project root directory:
+    cd C:\Users\DELL\Downloads\APP_NAME
+11. Initialize an empty Git repository:
+    git init
+12. A README file will be generated. Remove the following lines from it:
+    target/
+    !.mvn/wrapper/maven-wrapper.jar
+    !**/src/main/**/target/
+    !**/src/test/**/target/
+--> If you don't remove them, your target folder will not be added to GitHub.
+13. Enter the following commands one after another to push your app to Git:
+    - git add .
+    - git commit -m "SOME COMMIT NAME"
+    - git remote add origin https://github.com/username/repository
+    - git push -u origin master
+14. For a clearer understanding of Git, refer to this document: 
+	https://github.com/R-Venkat-Kalyan/Notes/blob/master/Git.txt
+15. After successfully uploading the file to Git, open Render, login, and create a new web service. Select upload from Git.
+16. Wait until it gets deployed. It may take some time.
+17. Verify your deployment.
+
+
+Youtube reference video:
+https://www.youtube.com/watch?v=ek-kOz6kJbU
