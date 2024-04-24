@@ -215,9 +215,13 @@ Note-3
 			Steps to Delete / Clear folder from Repository
 			---------------------------------------------------------
 -> Navigate to the project directory using "cd" command: cd C:\Users\DELL\Desktop\SDP\Portfolio
--> Enter this command: rmdir /s /q .git
--> "rmdir /s /q .git" command is used to remove the intialized git repository from our folder.
--> After that open GitHub.com and go to settings of your project and scroll down to last, you will find a button to delete repository.
+-> Enter anyone of below command based on your utility: 
+	Remove-Item -Path .git -Recurse -Force (For Windows PowerShell)
+	rmdir /s /q .git (For Command Prompt)
+	rm -rf .git (For bash)
+-> This command is used to remove the intialized git repository from our folder.
+-> After that open GitHub.com and go to settings of your project and scroll down to last, 
+    you will find a button to delete repository.
 
 
 			Steps to update new changes to an existing Repository
