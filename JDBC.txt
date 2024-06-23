@@ -1,0 +1,865 @@
+JDBC
+-------
+Introduction
+-------------------
+-> JDBC stands for Java DataBase Connectivity.
+-> JDBC is a Java API(Application Programmable Interface) which is used to connect and execute queries with database(oracle).
+
+
+Why JDBC
+--------------
+-> ODBC               --> ODBC  Drivers                                                              -->  C  language
+
+-> JDBC                -->  JDBC  Drivers                                                                -->   Java
+
+
+
+API
+-----
+-> It is essentially a set of rules and protocols which transfers data between different software applications and 
+allow different software applications to communicate with each other. 
+-> Through an API one application can request information or perform a function from another application
+without having direct access to it’s underlying code or the application data.
+
+
+
+Java API
+-----------
+API  -> pacakages  -> classes and interface
+
+Package  -> java.sql
+
+
+Some of the popular classes are
+--------------------------------------------
+-> DriverManager
+-> Blob
+-> Clob
+
+
+
+
+Some of the popular interfaces are
+------------------------------------------------
+-> Driver
+-> Connection
+-> Statement
+-> PreparedStatement
+-> Callable
+-> ResultSet
+-> ResultSet Metadata
+-> Database Metadata
+
+
+JDBC Drivers
+------------------
+-> They are helpful in  order to enable your java application.
+
+Type of Drivers
+---------------------
+-> Type - 1 Driver
+-> Type - 2 Driver
+-> Type - 3 Driver
+-> Type - 4 Driver
+
+
+Type - 1 Driver
+--------------------
+-> They are also called as JDBC-ODBC driver.
+
+
+Type - 2 Driver
+--------------------
+-> They are also called as native driver.
+
+
+Type - 3 Driver
+--------------------
+-> They are also called as network protocol driver.
+
+Type - 4 Driver
+--------------------
+-> They are also called as thin driver.
+
+
+
+JDBC Steps
+----------------
+-> It is a seven step process to connect java application with DataBase using JDBC Drivers.
+
+Step - 1
+----------
+Import packages.
+
+
+Step - 2
+----------
+Load all the drivers.
+
+
+Step - 3
+----------
+Connection establishment 
+
+
+Step - 4
+----------
+Create Statement
+
+
+Step - 5
+----------
+Create ResultSet Object
+
+
+Step - 6
+----------
+Execute Queries
+
+
+
+Step - 7
+----------
+Connection close
+
+
+
+
+Ex :
+
+Steps
+-------
+1. import java.sql.*;
+2.Load Drivers
+        -  Using Driver object
+        -  Using  forName( ) method
+
+Using Driver object
+---------------------------
+Driver  drv = new oracle.jdbc.driver.OracleDriver( );
+DriverManager.register(drv);
+
+Using  forName( ) method
+-------------------------------------
+Class.forName("oracle.jdbc.driver.OracleDriver( ));
+
+
+3.Connection Establishment
+----------------------------------------
+Connection con = DriverManager.getConnection("jdbc : oracle : thin : @localhost : 1521 : xe ", "system", "admin")
+
+
+4. Create a Statement
+------------------------------
+Statement stmt = conn.createStatement( )
+
+
+5. Create ResultSet Object
+-------------------------------------
+ResultSet rs = stmt.executeQuery("only select")
+
+
+6. Execute Queries
+--------------------------
+stmt.executeUpdate("Any queries")
+
+
+7. Close the Connection
+---------------------------------
+conn.close( )
+
+ 
+
+
+Ex :
+import java.sql.*;
+Class DBConnection{
+public static void main(String args[]) throws Exception{
+         Driver  drv = new oracle.jdbc.driver.OracleDriver( );
+         DriverManager.registerDriver(drv);
+         Connection con = DriverManager.getConnection("jdbc : oracle : thin : @localhost : 1521 : xe ", "system", "admin");
+                if(con != NULL)
+                    System.out.println("Successfull");
+               else
+                 System.out.println("fail");
+         con.close( )
+}
+}
+
+
+Note : Connectivity with different databases
+---------------------------------------------------------------
+Oracle
+---------
+ Driver  drv = new oracle.jdbc.driver.OracleDriver( );
+ DriverManager.register(drv);
+ Connection con = DriverManager.getConnection("jdbc : oracle : thin : @localhost : 1521 : xe ", "SYSTEM", "admin");
+ username : SYSTEM
+ pwd : admin
+
+ 
+                                                                                                  (or)
+Class.forName("oracle.jdbc.driver.Oracledriver");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+
+
+
+MySQL
+----------
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection conn = DriverManager.getConnection("jdbc:mysql://@localhost:3306/klu","root","Kalyan959@");
+
+
+                                                                                                                                                                                              Dt : 11-03-23
+                                                                                                                                                                                              ----------------
+
+Classes
+-----------
+DriverManager Class
+-----------------------------
+-> It is a class which acts as an interface between user and database.
+
+Methods
+------------
+a. registerDriver( )          --> to load the drivers
+b. deregisterDriver( )     --> to remove already loaded drivers
+c. getConnection( )          --> to create a connection between Java application and database
+
+ 
+a.
+Driver drv = oracle.jdbc.driver.OracleDriver( );
+DriverManager.registerDriver(drv)
+
+
+b. 
+DriverManager.deregisterDriver( );
+
+c.
+Connection conn = DriverManager.getConnection("jdbc : oracle : thin : @localhost : 1521 : xe", "system", "admin");
+                                                                                 or
+Connection conn = DriverManager.getConnection("jdbc : mysql://localhost:3306/db")
+
+
+
+Interfaces
+--------------
+a. Driver Interface
+--------------------------
+-> It is an interface which helps us to define the drivers which you want to load.
+
+Ex :
+      Driver drv = com.mysql.jdbc.driver
+                                    or
+     Driver drv = oracle.jdbc.driver.OracleDriver( );
+
+
+
+b. Connection
+--------------------
+-> It acts as an session between java application and database.
+
+Methods :
+          i. createStatement( )
+          ii. setAutoCommit( )
+          iii. commit( )
+          iv. rollback( )
+          v. close( )
+
+-> Statement stmt = conn.createStatement( )
+-> stmt.setAutoCommit( )
+-> stmt.commit( )
+-> stmt.rollback( )
+-> conn.close( )
+
+
+
+c. Statement
+------------------
+-> This methods to execute queries with database.
+
+Methods
+------------
+    i. executeQuery( )
+   ii. executeUpdate( )
+
+-> ResultSet rs = stmt.executeQuery("select query")
+-> stmt.executeUdate("other than select")
+
+
+
+d.PreparedStatement
+-------------------------------
+-> It is a sub interface of Statement interface.
+
+Methods
+------------
+i. setInt( )
+ii. setString( )
+iii. setFloat( )
+iv. setDouble( )
+v. executeQuery( )
+vi. executeUpdate( )
+
+
+Ex : 
+PreparedStatement ps = conn.prepareStatement("query(?, ?, ?)");
+
+ps.setInt(1,30959)
+ps.setString(2, "kalyan")
+ps.setFloat(3,9.46)
+ps.execute();
+
+
+e. ResultSet
+-----------------
+-> It maintains a cursor to the before top row of a table(heading of a table).
+-> It is mandatory to use executeQuery( ) for result set instead of execute( ).
+
+Methods
+------------
+i.    next( )
+ii.  previous( )
+iii. first( )
+iv.  last( )
+v.   getInt( )
+vi. getString( )
+vii.getDouble( )
+viii. absolute( )
+
+
+Ex :
+ResultSet rs = stmt.executeQuery("select sid from student")
+while(rs.next( )){
+ ---------------
+}
+
+
+f. ResultSetMetaData
+------------------------------
+-> MetaData refers to data of data i.e. where we can get further information from existing data or available data.
+
+Methods
+------------
+i. getColumnCount( )
+ii. getColumnName( )
+iii. getColumnTypeName( )
+iv. getTableName( )
+
+
+
+
+g. DatabaseMetaData
+-------------------------------
+-> MetaData refers to data of data i.e. where we can get further information about database.
+
+Methods
+------------
+i. getDriverName( )
+ii. getDatabaseProductName( )
+iii. getDatabaseProductVersion( )
+iv. getDriverVersion( )
+v. getUserName( )
+
+
+h. Callable  Interface
+-----------------------------
+-> Callable interfaces are used to call functions and stored procedures(kind of functions).
+
+Methods
+------------
+i. prepareCall( )
+
+
+                                                                                                                                                                               Dt : 12-06-23
+                                                                                                                                                                                ---------------
+Example  for Table Creation :
+import java.sql.*;
+Class DBConnection{
+public static void main(String args[]) throws Exception{
+          Class.forName("oracle.jdbc.driver.OracleDriver);
+          Connection conn = DriverManger.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+         Statement stmt = conn.createStatement( );
+         stmt.executeUpdate("create table student(sid number(10), sname varchar(40), sgpa number(5)");
+                                                             or
+         String s1 = "create table student(sid number(10), sname varchar(40), sgpa number(5)";
+        stmt.executeUpdate(s1);
+
+        conn.close( )
+}
+}
+ 
+
+Example :  Insertion of data into table(using statement)
+
+import java.util.*;
+class Insert{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"SYSTEM","admin")
+Statement stmt = conn.createStatement();
+stmt.execute("insert into student values(30959,"kalyan",9.46)");
+                                or
+String s1 = "insert into student values(30959,"kalyan",9.46)";
+stmt.execute(s1);
+
+conn.close;
+}
+}
+
+
+
+Example :  Insertion of data into table(using prepared statement)
+
+import java.util.*;
+class Insert{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"SYSTEM","admin")
+Statement stmt = conn.createStatement();
+PreparedStatement ps = conn.prepareStatement("insert into student values(?, ?, ?)");
+ps.setInt(1,30976);
+ps.setString(2,"faizaan");
+ps.setFloat(3,9.5);
+ps.execute();
+                                        (or)
+String s1 = "insert into student values(?, ?, ?)";
+PreparedStatement ps = conn.prepareStatement(s1);
+ps.setInt(1,30976);
+ps.setString(2,"faizaan");
+ps.setFloat(3,9.5);
+ps.execute();
+conn.close;
+}
+}
+
+
+Example : delete
+
+import java.util.*;
+class Delete{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver()");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"SYSTEM","admin")
+Statement stmt = conn.createStatement();
+stmt.execute("delete from student where id = 30976 ");
+conn.close;
+
+
+Example : update 
+
+import java.util.*;
+class Update{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver()");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin")
+Statement stmt = conn.createStatement();
+stmt.execute("update  student  set name = "azam"  where id = 30976");
+conn.close;
+}
+}
+
+
+
+Example : select
+
+import java.util.*;
+class Update{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver()");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:"SYSTEM","admin")
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("select * from student");
+while(rs.next( ))
+{
+int id = rs.getInt(1);
+String name = rs.getString(2);
+float cgpa = rs.getFloat(3);
+System.out.println(id+" "+name+" "+cgpa);
+}
+conn.close;
+}
+}
+
+
+Note : The above programs refers to JDBC CRUD operations.
+
+
+Example : Prepared Statement(Read values during run time)
+
+import java.util.*;
+class Update{
+public static void main(String args[]) throws Exception{
+Class.forname("oracle.jdbc.driver.OracleDriver()");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin")
+Statement stmt = conn.createStatement();
+Scanner sc = new Scanner(System.in);
+int id = sc.nextInt( );
+String name = sc.next( );
+float cgpa = sc.nextFloat( );
+PreparedStatement ps = stmt.prepareStatement("insert into student values(?,?,?)");
+ps.setInt(1,id);
+ps.setString(2,name);
+ps.setFloat(3,cgpa);
+stmt.execute( );
+conn.close( )
+}
+}
+
+
+
+Ex : ResultSetMetaData
+
+//program to demonstrate ResultsetMetaData interface and its methods
+
+package com.KLU.jdbc;
+import java.sql.*;
+public class ResultSetMD {
+
+	public static void main(String[] args) throws Exception {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery("select * from student");
+		ResultSetMetaData rsmd = rs.getMetaData();
+		System.out.println("Total columns : "+rsmd.getColumnCount());
+		System.out.println("Table name :"+rsmd.getTableName(0));
+  		System.out.println("data type of 2nd column is "+rsmd.getColumnTypeName(2));
+                                           conn.close();
+  		
+	}
+}
+
+
+
+
+
+Ex : DataBaseMetaData
+
+//program to demonstrate DatabaseMetaData interface and its applications
+
+package com.KLU.jdbc;
+import java.sql.*;
+public class DataBaseMD {
+
+	public static void main(String[] args) throws Exception {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		DatabaseMetaData dbmd = conn.getMetaData();
+		System.out.println("Datbase name is : "+dbmd.getDatabaseProductName());
+		System.out.println("Databse version is :"+dbmd.getDatabaseProductVersion());
+		System.out.println("Database username is : "+dbmd.getUserName());
+		conn.close();
+	}
+}
+
+
+
+Ex : Program to demonstrate CRUD operations through JDBC using Oracle Database.
+
+//JDBC Crud opearations
+
+package com.KLU.jdbc;
+import java.sql.*;
+import java.util.Scanner;
+public class TableCreation {
+
+	public static void main(String[] args) throws Exception {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		Statement stmt = conn.createStatement();
+		
+//                                       Table creation(creation)
+//		stmt.execute("create table student(sid number(5), sname varchar(20), scgpa number(5))");
+		
+		
+//		Data insertion(Insertion)
+//		stmt.execute("insert into student(sid, sname, scgpa) values (30976, 'faizaan', 9.51)");
+//		stmt.execute("insert into student(sid, sname, scgpa) values (31090, 'sai', 9.2)");
+		
+
+//		Delete()
+//		stmt.execute("delete from student where sid = 30976 ");
+		
+		
+//		update()
+//                                      stmt.execute("update student set sname = 'sai kiran' where sid = 31090");		
+//                                      conn.close();
+
+        
+        
+//		retrive()
+//		ResultSet rs = stmt.executeQuery("select * from student");
+//		while(rs.next()) {
+//			int id = rs.getInt(1);
+//			String name = rs.getString(2);
+//			float cgpa = rs.getFloat(3);
+//			System.out.println("ID : "+id+"\t"+"NAME : "+name+"\t"+"CGPA : "+cgpa);
+//		}
+		
+		
+		
+//		insertion using preparestatement()
+//		PreparedStatement ps = conn.prepareStatement("insert into student values(?, ?, ?)");
+//		ps.setInt(1, 30965);
+//		ps.setString(2, "satya");
+//		ps.setDouble(3, 9.1);
+//		ps.execute();
+		
+		
+//		insertion using prepareStatement() using Scanner class
+//		Scanner ip = new Scanner(System.in);
+//		System.out.println("enter id, name , cgpa :\n");
+//		int id = ip.nextInt();
+//		String name = ip.next();
+//		double cgpa = ip.nextDouble();
+//		PreparedStatement ps = conn.prepareStatement("insert into student values(?, ?, ?)");
+//		ps.setInt(1, id);
+//		ps.setString(2, name);
+//		ps.setDouble(3, cgpa);
+//		ps.execute();
+//		
+		
+		        
+        
+	}
+
+}
+
+
+
+Ex : Program to demonstrate CRUD operations through JDBC using mysql Database.
+
+//program to demonstrate jdbc crud opearions using mysql database
+
+package com.KLU.jdbc;
+import java.sql.*;
+public class JDBC_Crud_Mysql {
+
+	public static void main(String[] args) throws Exception {
+//		Driver loading
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		
+//		Connection establishment
+		Connection conn = DriverManager.getConnection("jdbc:mysql://@localhost:3306/klu","root","Kalyan959@");
+		
+//		Statement creation
+		Statement stmt = conn.createStatement();
+		
+//		Table creation
+//		stmt.execute("create table student(sid int, sname varchar(20), scgpa float(3,2))");
+		
+//		Insertion of data into table
+//		stmt.execute("insert into student(sid, sname, scgpa) values(30959,'kalyan', 9.46)");
+//		stmt.execute("insert into student values(30976,'faizaan', 9.51)");
+//		stmt.execute("insert into student values(31090,'sai', 9.3)");
+		
+//		Updation of data
+//		stmt.execute("update student set sname = 'venkat' where sid = 30959");
+		
+//		deletion of data
+//		stmt.execute("delete from student where sid = 30976");
+		
+//		retrival of data
+		ResultSet rs = stmt.executeQuery("select * from student");
+		
+		while(rs.next()) {
+			int id = rs.getInt(1);
+			String name = rs.getString(2);
+			float cgpa = rs.getFloat(3);
+			System.out.println(id+ " "+name+" "+cgpa);
+		}
+		
+//		close the conn object
+		conn.close();
+
+	}
+
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                                                                                                                                                               Dt : 13-06-23
+                                                                                                                                                                                                ---------------
+Blob  class
+--------------
+-> Blob is used to store and retrive an image from a database.
+
+store : 
+     class -> FileInputStream
+     method ->  setBinaryStream( )
+
+ret :
+  class -> FileOutputStream
+  method -> getByte( )
+
+
+package com.KLU.jdbc;
+import java.io.FileInputStream;
+import java.io.*;
+import java.sql.*;
+public class Blob_Class {
+
+	public static void main(String[] args) throws Exception {
+//		loading drivers
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+//		Connection establishment
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		
+//		Statement creation
+		Statement stmt = conn.createStatement();
+		
+//		Table creation
+//		stmt.execute("create table imageTab(sid int, sname varchar(20), simg BLOB)");
+		
+//		 Insertion
+//		PreparedStatement ps = conn.prepareStatement("insert into imageTab values(?, ?, ?)");
+//		
+//		ps.setInt(1, 30959);
+//		ps.setString(2, "kalyan");
+//		FileInputStream fis = new FileInputStream("C:\\Users\\DELL\\Downloads\\ss.png");
+//		ps.setBinaryStream(3, fis, fis.available());
+//		ps.execute();
+		
+//		retrive
+		PreparedStatement ps = conn.prepareStatement("select * from imageTab");
+		
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			Blob b = rs.getBlob(3);
+			FileOutputStream fos = new FileOutputStream("C:\\Users\\DELL\\Desktop\\abc.png");
+			byte[] barr = b.getBytes(1, (int) b.length());
+			fos.write(barr);
+;		}
+
+		conn.close();
+
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clob Class
+--------------
+-> Clob is used to store and retrive a file from a database.
+
+store : 
+     class -> FileReader
+     method ->  setCharacterStream( )
+
+ret :
+  class -> FileWriter
+  method -> getCharacterStream( )
+
+
+Ex : 
+package com.KLU.jdbc;
+
+import java.io.*;
+import java.io.FileInputStream;
+import java.sql.*;
+
+public class Clob_Class {
+
+	public static void main(String[] args) throws Exception{
+//		loading drivers
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+//		Connection establishment
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		
+//		Statement creation
+		Statement stmt = conn.createStatement();
+		
+		
+//		Table creation
+//		stmt.execute("create table fileTab(sid int, sname varchar(20), sfile CLOB)");
+//		
+//		PreparedStatement ps = conn.prepareStatement("insert into fileTab values(?, ?, ?)");
+//		
+//		ps.setInt(1, 30959);
+//		ps.setString(2, "kalyan");
+//		File f = new File("C:\\Users\\DELL\\Desktop\\c++.txt");
+//		FileReader fr = new FileReader(f);
+//		ps.setCharacterStream(3, fr,(int)f.length());
+//		ps.execute();
+
+//		retrive
+		PreparedStatement ps = conn.prepareStatement("select * from fileTab");
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			Clob c = rs.getClob(3);
+			FileWriter fw = new FileWriter("C:\\Users\\DELL\\Desktop\\sample.txt");
+			Reader r = c.getCharacterStream();
+                                                            int i;
+			while((i=r.read()) != -1) {
+				fw.write((char)i);
+//				System.out.println((char)i);
+				
+			}
+		}
+	}
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Callable Interface
+-------------------------
+-> It is a interface which is used to CALL a stored procedure or a function.
+
+Methods : prepareCall( )
+
+How to create a Stored Procedure : (Oracle)
+------------------------------------------------------------
+create or replace procedure  INSERT
+(sid IN NUMBER, sname IN VARCHAR)
+is
+begin
+insert into student values(sid, name)
+end;
+
+
+EX : Stored_Procedures.java
+
+//program to demonstrate insertion of details into student table using callable interafce
+
+package com.KLU.jdbc;
+import java.sql.*;
+public class Stored_procedures {
+
+	public static void main(String[] args) throws Exception {
+//		loading drivers
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+//		Connection establishment
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SYSTEM","admin");
+		
+//		Statement creation
+//		Statement stmt = conn.createStatement();
+		
+		// Creating stored procedure
+        String createProcedureSql = "CREATE OR REPLACE PROCEDURE INSERT_PROCEDURE"
+                + "(sid IN NUMBER, sname IN VARCHAR2, scgpa IN NUMBER) IS "
+                + "BEGIN INSERT INTO student VALUES (sid, sname, scgpa); END;";
+        CallableStatement createProcedureStmt = conn.prepareCall(createProcedureSql);
+        createProcedureStmt.executeUpdate();
+
+        // Executing stored procedure
+        String executeProcedureSql = "{call INSERT_PROCEDURE(?, ?, ?)}";
+        CallableStatement executeProcedureStmt = conn.prepareCall(executeProcedureSql);
+        executeProcedureStmt.setInt(1, 757);
+        executeProcedureStmt.setString(2, "priya");
+        executeProcedureStmt.setDouble(3, 9.35);
+        executeProcedureStmt.execute();
+
+		
+		conn.close();
+
+	}
+
+}

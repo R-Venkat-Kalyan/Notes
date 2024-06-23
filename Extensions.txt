@@ -1,0 +1,28 @@
+					Chrome Extensions
+					------------------------
+
+React Developer Tools
+---------------------------
+Adds React debugging tools to the Chrome Developer Tools.
+React Developer Tools is a Chrome DevTools extension for the open-source React JavaScript library. 
+It allows you to inspect the React component hierarchies in the Chrome Developer Tools.
+
+
+					VS Code Extensions
+					-------------------------
+
+Thunder Client
+-------------------
+Thunder Client is a lightweight Rest API Client Extension for VS Code.
+It is used to tesu API end points.
+It is a alternative for Postman.
+
+ES7 React/Redux/GraphQL/React-Native snippets
+---------------------------------------------------------------
+It is used when we work with react library.
+It provides auto suggestions for our codes.
+
+Auto Rename Tag
+----------------------
+It is used to automatically rename tags.
+When we renamed an open tag it automatically renames the closing tag.
