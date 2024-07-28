@@ -1,0 +1,1850 @@
+                                                                             PYTHON
+
+1. python is a general purpose, dynamic and high level programming language.
+2. It supports OOP's approach to design applictaions.
+3. It is not intended to work with particular area, it can be used with web, enterprise, 3CAD, etc.
+4. Python file format - the python file format is .py format.
+5. Links :
+                https://www.python.org/downloads  --> to download ide's and all.
+                https://www.pypi.org --> to download all libraries.
+
+History:
+
+1.  Python was developed by Guido Van Rossum in  the year 1991.
+2. Python is a language that came from a programming language called ABC which was invented by a person called as leo.
+3. Python is the name taken from one of the popular comedy show("Monty Python Flying Circus"). 
+
+
+Why Python/ Features of Python:
+
+1. Open Source.
+2. Easy to use and learn.
+3. Interpreted Language.
+4.Object Oriented Programming Language.
+5. Supports wide range of libraries and frameworks.
+6. Integrated.
+
+Applications/ Areas where python is used:
+
+1. AI
+2. Data Science
+3. ML
+4. Data Mining.
+5. Computer Vision.
+6. Mobile Apllications.
+7. Web Applications.
+8. Interprise Applications.
+9. Desktop Applications.
+10. Software Development.
+
+Applications Built Using Python:
+
+1. Instagram web application.
+2. Linkedin.
+3. Youtube.
+4. Netflix.
+5. Quora.
+6. Mozilla Firefox.
+
+
+Limitations of Python:
+
+1. Very slow in execution(c executes much faster than python). --> python is slow due to its libraries.
+2. Not good for gaming.
+3. Used Libraries.
+
+Note :
+PEP 8 --> style guide for python code
+Dt : 27/12/2022
+
+
+Python Example:
+   Welcome to PFSD course
+
+1. using interactive interpreter command prompt
+     cmd --> python
+
+2.Using script file
+     Notepad --> write a code
+         --> save -->p1.py
+          cmd --> path-->p1.py
+               result
+
+Python Comments:
+Comments are helpful in defining the code and making others in understanding.
+# --> Single line comment.
+""" ______
+_________""" --> Multi Line Comments.
+
+
+Python Variables:
+ 1. variable is an entity in a  program which holds a single value and known by its name.
+2. Variable is also known as identifier.
+3. variable should consist of Alphabets(A-Z,a-Z), Digits, and "_".
+4. It is recommended to name variables in lowercase letters.
+ 
+Identifiers:
+ --> to name a Variable, Array and Function.
+        Var --> a, b,  c, sum, res, etc.
+        Array --> a[5].
+        Function --> sum(), palindrome(), etc.
+
+Rules for Identifiers:
+1. It should consist of Alphabets(A-Z,a-Z), Digits, and "_".
+2. It should not start with digit.
+3. It should not be a keyword.
+4. It should not have empty spaces between two names.
+ Ex : _ab, a, sum(valid)
+       : 8ab(invalid)
+
+Delete Variables:
+
+a = 25
+syntax delete<>
+Ex:
+   --> delete a 
+
+Object Reference:
+  In Python Variables are the symbolic names that is referenced to an object.
+ 
+Ex: a = 25
+     --> a is referneced to an object called 25.
+     : a = b = c = 25
+     --> a, b , c are references of an object 25.
+     : a= 10  b = 20
+     --> a is referenced to object 10 and b is referenced to object 20.
+
+ Python DataTypes:
+
+1. Number
+    --> int, float, complex
+2. Dictionary
+3. Boolean
+4. Set
+5. Sequence Type
+   --> String, list, tuple
+
+
+1. Number:
+     a. int:
+            --> a = 10
+                     print(a)
+                     print(type(a))
+     b. float:
+             --> a = 9.51
+                        print(a)
+                        print(type(a))
+     c. Complex:
+              --> a = 3 + 4j
+                        print(a)
+                        print(type(a))
+
+5. Sequence Type:
+        a. String: 
+                          String is  a collection of characters. 
+                                                   or
+                           String is a sequence of characters.
+          --> strings can  have Alphabets([A - Z],[a - z]), Digits(0 - 9), special characters(~, !, @, #, $, %, etc).
+
+              C language --> c = 'a' and string = "kalyan"
+              python Language --> c = 'a' and string = "kalyan" or 'kalyan' or """kalyan""".
+
+Note :
+--> when we need to print '/' we should print it as '//' as  '/' is an escape sequence.
+--> while printing multiple strings in a same print() we should follow the following syntax:
+      print("Reddy" , "venkat" , "kalyan")
+      output : Reddy  venkat kalyan
+--> '/n' is used to print in next line
+--> print() in python for strings has two  inbuilt arguments:
+        1. end
+        2. sep
+
+1. end example :
+     print("My name is reddy",end = " ")
+     print("venkat kalyan")
+     Output : My name is reddy venkat kalyan.
+
+2. sep example :
+       print("My name is reddy","venkat","kalyan",sep="-")
+       Output : My name is reddy-venkat-kalyan.
+
+Ex :
+print("My", "name", "is", sep="_", end="*")
+print("Monty", "Python.", sep="*", end="*\n")
+
+Output : My_name_is*Monty*Python.*
+
+In - Built String functions :
+1. ord()
+--> The ord() returns the ascii value of the character.
+
+Ex : 
+ch = 'a'
+print(ord(ch))           --> 97
+
+2. chr()
+--> The chr() returns the charcter corresponding to the ascii value.
+
+Ex : 
+print(chr(97))           --> a
+
+3. isalnum() 
+--> Returns true if string contains only alphabets and letters.
+
+4. capitalize()
+--> changes the first character of a string to capital.
+
+5. find()
+--> returns the index if the susbstring is found else returns '-1'.
+
+6. index()
+--> retruns the index of the character.
+
+7. isalpha()
+--> returns true if the string contains all aplhabets.
+
+8. isdigit()
+--> returns true if the string contains all digits.
+
+9. join()
+--> print(" ".join(["omicron", "pi", "rho"]))
+==> omicron pi rho
+
+1o. swapcase()
+--> changes capital to lower and vice-versa.
+
+11. title()
+--> changes every word of the string to capital.
+
+Ex :
+print("I know that I know nothing. Part 1.".title())       --> I Know That I Know Nothing. Part 1.
+
+1. Some of the methods offered by strings are:
+
+capitalize() – changes all string letters to capitals;
+center() – centers the string inside the field of a known length;
+count() – counts the occurrences of a given character;
+join() – joins all items of a tuple/list into one string;
+lower() – converts all the string's letters into lower-case letters;
+lstrip() – removes the white characters from the beginning of the string;
+replace() – replaces a given substring with another;
+rfind() – finds a substring starting from the end of the string;
+rstrip() – removes the trailing white spaces from the end of the string;
+split() – splits the string into a substring using a given delimiter;
+strip() – removes the leading and trailing white spaces;
+swapcase() – swaps the letters' cases (lower to upper and vice versa)
+title() – makes the first letter in each word upper-case;
+upper() – converts all the string's letter into upper-case letters.
+
+2. String content can be determined using the following methods (all of them return Boolean values):
+
+endswith() – does the string end with a given substring?
+isalnum() – does the string consist only of letters and digits?
+isalpha() – does the string consist only of letters?
+islower() – does the string consists only of lower-case letters?
+isspace() – does the string consists only of white spaces?
+isupper() – does the string consists only of upper-case letters?
+startswith() – does the string begin with a given substring?
+
+
+Ex1:
+         s1 = "pfsd"
+          print(s1)
+          print(type(s1))
+
+Ex2: 
+          s1 = "hello"
+          s2 = "welcome to pfsd course"
+        
+        print(s1)                                         ---> hello                          
+        print(type(s1))                               ---> class str
+        print(s2)                                        ---> welcome to python course
+        print(s1[2])                                    ---> l
+        print(s2[9])                                   ---> o
+        print(s2[0:4])                                ---> welc                            
+        print(s2[4:])                                  --->come to python course
+        print(s1  + s2)                                --->hellowelcome to python course
+        print(s1 * 4)                                   --->hellohellohellohello
+
+
+
+Strong Slicing :
+
+Ex :
+alpha = "abdefg"
+
+print(alpha[1:3])                             ---> bd
+print(alpha[3:])                              ---> efg
+print(alpha[:3])                              ---> abd
+print(alpha[3:-2])                           ---> e
+print(alpha[-3:4])                           ---> e
+print(alpha[::2])                             ---> adf
+print(alpha[1::2])                            -->  beg
+Dt : 31/12/2022
+
+      b. List:
+                --> list is a collection of heterogenous / different items.
+                --> list is similar to array, whereas list is a collection of heterogenous / different items but array is a collection of homoogenous / similar items.
+               -->  It is denoted by [].
+
+      Example:
+                     list1 = [7,"kalyan",9.51,45]
+                     print(list1) 
+                     print(list1[2])
+                     print(list1[1:2])
+                     print(list1[2:])
+                    print(list1 * 3)
+                    print(list1 + list1)
+ 
+       b. Tuple:
+                 --> Tuple is a collection of heterogenous / different dataype items.
+                -->  tuple is similar to list, values in the list can be changed but whereas values in  the tuple cannot be changed.
+                -->  It is denoted by ().
+
+Example :
+tuple1 = ("kalyan", 959, 9.51, 2004)
+print(tuple1)
+print(type(tuple1))
+print(tuple1[1:2])
+print(tuple1[2:])
+print(tuple1*3)
+print(tuple1+tuple1)
+
+ 2. Dictionary:
+--> Dictionary is an unordered set of key value per item(key.value).
+--> It is denoted by { }.
+Example:
+dic1 = {1:"Hello",2:2100030959,3:"Good Morning"}
+print(dic1)
+print(type(dic1))
+print(dic1[1])
+print(dic1.keys())
+print(dic1.values())
+print(dic1.pop(2))
+print(dic1)
+print(dic1.clear())
+#del dic1
+#print(dic1)
+Ex : 
+#iterating over  a dictionary and printing
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+for english, french in dictionary.items():
+    print(english, "->", french)
+
+Note :
+--> dictionary_name.items() ==> returns the key value pairs while iterating.
+--> dictionary_name.keys() ==> returns the keys while iterating.
+--> dictionary_name.values() ==> returns the values  associated with the key while iterating.
+--> dictionary_name.get('key') ==> returns the values  associated with the key.
+
+
+3. Boolean:
+--> Boolean is  a datatype which represents a statement stating True or False.
+--> T or 1            and        F or 0.
+
+Note :
+-->The name comes from George Boole (1815-1864), the author of the fundamental work, The Laws of Thought,
+which contains the definition of Boolean algebra - a part of algebra which makes use of only two distinct values: 
+True and False, denoted as 1 and 0.
+
+--> The backslash (\) symbol is used. If you use it in Python code and end a line with it,
+it will tell Python to continue the line of code in the next line of code.
+
+Ex : (\)
+if height < 1.0 or height > 2.5 or \
+    weight < 20 or weight > 200:
+        return None
+
+--> The backslash (\) symbol is also used as a escape character when dealing with strings.
+Ex : (\)
+print('No, it can\'t be a triangle.')
+
+
+Example :
+a = (True == 1)
+print(a)   --> True
+
+Example:
+a = (True == 1)
+b = a + 10
+print(b)    --> 11
+
+4. Set:
+--> Set is a unordered collection of items.
+--> It is denoted by { }
+
+Example:
+set1 = set() --> representation of an empty set in python.
+set2 = {"abc",789,"def",45,9.33}
+print(set1)    --> set()
+print(set2)    
+print(set2.add(9.67))
+print(set2.add("abc"))
+print(set2.remove(7))
+print(set2.clear())
+print(set2)  --> set()
+
+Dt : 04/01/2023
+Python Keywords :
+Keywords are unique/reserved words which are having pre-defined meaning.
+--> In C there were 32 keywords earlier but present they are 48.
+--> In Python there are 35 keywords.
+
+Ex : ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else',
+        'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or',
+        'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+#program to demonstrate keywords:
+a = (True == 1)
+print(a)
+b = a + 10
+print(b)
+c = (False == 19)
+print(c)
+d = c + 10
+print(d)
+
+Python Literals :
+--> Literals are classified into four categories :
+1. String Literals :
+--> whenever we assign a string data to a variable or to  a constant then it is called as a String literal.
+Ex : 
+ s1 = "kalyan"
+--> Strings are of two types :
+                1. Single Line String      --> s1 = "rvk"
+                2. Multi Line String        --> s1 = "reddy\
+                                                                                                venkat kalyan"
+2. Numeric Literals :
+--> whenever we assign a number data to a varaible or to  a constant then it is called as a Numeric literal.
+a. int :
+   Ex : a = 10
+b. float :
+   Ex : a = 9.51
+c . Complex :
+   Ex : a = 3 + 4j
+
+3. Boolean Literals :
+--> whenever we assign a boolean data to a varaible or to  a constant then it is called as a Boolean literal.
+Ex :
+  a = True
+
+4. Special Literals :
+--> whenever we assign a special data to a varaible or to  a constant then it is called as a Special literal.
+Ex :
+ a = None
+
+Python Operators :
+Operators are the symbols which performs the special task with respect to the operands.
+Ex : (a + b) * c
+---> a, b, c are  operands and +, * are operators.
+--> In general operators are classified into three categories :
+1. Unary Operators :
+Any operation having one single operand is called as unary operator.
+Ex : a++
+
+2. Binary Opearotors :
+Any operation having two operands is called as binary operator.
+Ex : a + b
+
+3. Terenary Operators :
+Any operation with three or more operands is called as a terenary operator.
+Ex : (a + b) * c
+
+--> In Python there are seven types of operators :
+1. Arithmetic Operators :
+Ex :  +, -, /, //, %, *
+
+2. Relational Operators :
+Ex :  >, <, >=, <=, ==, !=
+
+3. Logical Operators :
+Ex :  &&, ||
+
+4. Bitwise Operators :
+Ex :  &, ^, <<, >>, ~
+
+5. Assignment Operators :
+Ex :  =
+
+**** Arithmetic operators along with assignment operators is called as arithmetic assignment operators.
+Ex :  +=, -=, /=, %=, *=
+
+6. Membership Opeartors :
+--> in : returns true if the first operand is found in second object.
+--> not in : returns true if the first operand is not found in second object
+
+7. Identity Operators :
+--> is : It returns true if both the first operand and second operand have the same value.
+--> is not :  It returns true if the first operand and second operand  does not have the same value.
+
+Note : opeartors precedence
+
+Priority	Operator	
+1	+, -	
+2	**	
+3	*, /, //, %	
+4	+, -	
+5	<, <=, >, >=	
+6	==, !=	
+
+
+Python Control Structures Statements :
+Control structures are the one that alters/changes the flow of execution of the program.
+
+Python Decision Making Statements :  --> To Skip
+a. if :
+    if condition :
+        Statement
+Ex :
+a = 6
+if a > 6 :
+print(a)
+
+b. elif
+c. nested if
+d. if else
+
+Python Loop  --> To repeat
+a. for
+b. while
+c.  do - while
+
+Dt : 07/01/2023
+
+b. if else :
+   Syntax : if condition:
+                         Statement
+                    else :
+                         Statement
+Ex: p20.py
+a = 10
+if  a % 2 == 0:
+     print("Even Number")
+else:
+     print("not a even number")
+
+c. nested if :
+ Syntax : if condition :
+                      if condition :
+                           if condition :
+                                    statements
+
+Ex : p21 .py  
+a = 8
+if  a <  10 :
+     if  a % 2 == 0 :
+            print("a is less than 8 and is even")
+     else :
+               print("inner if condition fails)
+else :
+        print("outer if condition fails")
+
+d. elif :
+  Syntax :
+       if condition:
+            statements
+      elif condition:
+           statements
+      else:
+             statements
+
+Ex : p22.py
+a = 10
+if a < 10 :
+     print("if condition get executed")
+elif a % 2 == 0 :
+    print("1st elif block get executed")
+else :
+     print("all the conditions failed")
+
+Python Loops  :
+a. for loop :
+ Syntax : 
+                  for var in sequence :
+                          statements
+Note  : sequence  --> set, tuple, dictionary, string
+
+Ex : p23.py
+names = ("kalyan", "venkat", "reddy")
+for x in names :
+    print(x)
+
+
+Ex : p24.py
+for x in "kalyan" :
+    print(x)
+   
+Note : else in for loop 
+
+Ex :  p25.py
+for x in "kalyan" :
+    print(x)
+else :
+        print("for loop executed successfully")
+ 
+Note : builtin function --> range()
+---> it returns a value from a range starting with 0  to range - 1 with increment of 1 at atime.
+
+Ex : p26.py
+for x in range(6):
+     print(x)      --> 0 to 5
+
+Ex : p27.py
+for x in range(6, 25):
+     print(x)       --> 6 to 24
+
+Ex : p28.py
+for x in range(6, 25, 2):
+     print(x)        --> 6, 8, 10 ........................ 24
+
+Note : Nested Loops 
+--> Loop within a loop is called as a nested loop.
+
+Ex : p29.py :
+Vehicles = ["bike","car","plane"]
+date = [2003, 2004, 2005]
+for x in Vehicles:
+     for y in date:
+        print(x,y)
+
+b. While loop
+Syntax :
+     initialization
+     while condition:
+     statements
+     updation
+
+Ex : p30.py
+i  = 1
+while i <= 10:
+         print(i)
+         i = i + 1
+
+Note : else in while loop
+Ex : p31.py
+#program to demonstrate else in while loop
+i = 1
+while i <= 10:
+    print(i)
+    i += 2
+else:
+    print("while loop executed and printed odd numbers till 10 ")
+
+
+c. do while(wrong)
+    Renamed as :
+              --> while with exit() condition 
+              --> while with break statement
+
+Ex : p32.py
+i = 1
+while i <= 10 :
+              print(i)
+              i += 1
+              if  i == 5:
+                   break
+
+Note :
+ break :
+        --> to terminate from the current loop.
+syntax --> break
+
+Ex : p33.py
+names = ("kalyan", "venkat", "reddy")
+for x in names :
+    print(x)
+    if x == "venkat" :
+         break
+
+Continue :
+          --> to skip all the statements after continue but execution remains in the same loop.
+    Syntax : continue
+
+
+Ex : p34.py
+names = ("kalyan", "venkat", "reddy")
+for x in names :
+    if x == "venkat" :
+         continue
+     print(x)  
+
+
+pass :
+    --> to do nothing
+Syntax :
+ pass
+
+Ex :
+names = ("kalyan", "venkat", "reddy")
+for x in names :
+             pass
+
+Ex : p36.py   
+#program to check whether the number is palindrome or not
+num = 121
+x = 0
+r = 0
+z = num
+while num > 0:
+    r = int(num % 10)
+    x = int(x * 10 + r)
+    num = int(num / 10)
+#print(int(x))
+if z == x :
+    print("palindrome")
+else:
+    print("not a palindrome")
+
+
+Ex : p37.py 
+# progrom to print palindrome numbers between 1 to 100
+for i in range(1,100):
+    k = i
+    x = 0
+    while k > 0:
+        r = int(k %10)
+        x = int((x * 10) + r)
+        k = int(k / 10)
+    if i == x:
+         print(i)
+        
+
+Ex : p38.py    
+#program to check whether the given number is prime or not
+n = 5
+x = 0
+for i in range(1, n + 1):
+    if n % i == 0:
+        x += 1
+if x == 2:
+    print("prime")
+else:
+    print("not prime")
+    
+
+Ex : p39.py    
+#program to dispaly all the prime numbers between 1 to 100
+for i in range(1, 100):
+    x = 0;
+    k = i;
+    for j in range(1, k + 1): 
+        if k % j == 0:
+            x += 1
+    if x == 2:
+        print(j)
+    
+     
+Ex : p40.py 
+#program to demonstrate swapping of two numbers
+a = 10
+b = 20
+c = a
+a = b
+b = c
+print(a,b)
+
+
+Dt : 10/01/2023
+
+Python Functions :
+Function is defined as a set of statements or group of statements or block of code which perform a specific task.
+
+Syn : def fn_name(args):
+             stmts
+
+Ex: p41.py
+def add(x,y):
+    return x+y
+a = add(1,2)
+print(a)
+
+Advantages of Python Functions :
+--> Reusability of code.
+--> Reduces the size of the code.
+
+Classification of Functions :
+
+1. User  Defined Functions:
+--> Functions which are created by users are defined as  User  Defined Functions.
+Ex :
+     def square(num):
+            return num*num
+     print(square(5))
+
+2. Pre Defined/ Built-in Functions:
+-->Functions which are predefined in environment are called as pre defined functions.
+Ex : input,abs,range,pow,print,etc.
+
+Ex : 
+x = input("enter any number")
+35
+print(x) --> 35
+
+Ex :
+x = input()
+34
+print(x) --> 34
+
+Ex :
+x = int(input())   --> only accepts a integer value.
+34
+print(x) --> 34
+
+Types of Functions :
+1. Functions with no arguments and no return type.
+2. Functions with no arguments and  return type.
+3. Functions with  arguments and no return type.
+4. Functions with  arguments and  return type.  
+
+1. Functions with no arguments and no return type :
+Ex:
+def add():
+	a = int(input())
+	b = int(input())
+	print(a + b)
+add()
+
+2. Functions with no arguments and  return type :
+Ex:
+def add():
+                  a = int(input())
+	b = int(input())
+	return a + b
+c = add()
+print(c)
+
+3. Functions with  arguments and no return type:
+Ex:
+def add(a,b):
+	print(a +b)
+print(add(2,5))
+
+4. Functions with  arguments and  return type :
+Ex : 
+def add(a:int,b:int)->int:
+	return a + b
+print(add(2,5))
+
+Types of Arguments :
+
+1. Default Arguments :
+
+Ex : p44.py
+def add(a ,b = 10):
+	return a + b
+print(add(10,5))    	--> 15
+print(add(10))           --> 20
+
+Ex : p45.py
+def add(a = 5,b = 10):
+	return a + b
+print(add(10,5))    	--> 15
+print(add(10))          --> 20
+print(add())               --> 15
+
+2. Keyword Arguments :
+
+Ex :
+def stu(name, id,cgpa):
+    print(id,name,cgpa)
+stu("kalyan",2100030959,9.45)
+stu("kalyan",2100030959,cgpa = 9.5)
+stu(name = "venkat",id = 2100030959,cgpa = 9.5)
+
+Note :
+Keyword arguments are also known as named arguments.
+
+3. Required Arguments :
+--> Number of arguments in function call = number of arguments in function definition.
+Ex :
+def stu(name, id,cgpa):
+    print(id,name,cgpa)
+stu("kalyan",2100030959,9.45)
+
+Ex :
+# program to demonstrate types of arguments
+def add(a, b = 5):
+    return a + b
+print(add(1,10))                 --> 11(required)
+print(add(10, b = 20))      --> 30(keyword)
+print(10)                                --> 15(default)
+
+Dt : 21/1/23
+4. Arbitrary Arguments :
+--> It can also be called as Variable length arguments.
+Ex : p49.py
+
+Recursive Fn's:
+---------------
+                The fn which calls by itself is called recursive fn.
+         
+                syn: def function():
+                         stmnt1
+                         stmnt2
+                         function()
+
+                     function()
+
+
+Ex-p49.py
+
+def factorial(x):
+        if x==1:
+           return x
+        else:
+            return (x*factorial(x-1))
+
+print(factorial(3))
+
+
+
+
+
+Lambda fn:
+---------------
+    Lambda fn is a fn which allows multiple args but only one expr.
+  
+    Syn : lambda args : expr.
+
+
+Ex-p50.py
+
+x=lambda a:a*10
+print(x(2))
+
+y=lambda a,b:a+b
+print(y(2,3))
+
+z=lambda a,b,c:a+b+c
+print(z(3,5,5))
+
+ 
+
+
+
+Python Arrays:
+---------------
+                ->Array is a spl var, which can hold more than one value.
+
+                ->it can hold many value under a single name, and can access the values by reffring to its index value.
+                 
+                ->it can store multiple values in single var.
+
+Syn:
+      array_name=[items separated by comma]
+
+Ex: 
+     vehicles=["bike","cycle",900]
+
+
+Note: Arrays in Python are almost same as list.
+
+
+
+Accessing(using) ele of an array:
+
+Ex-p52.py
+            x=vehicles[2]
+               print(x)
+
+
+Length of the array:
+
+Ex-p53.py: 
+  
+            y=len(vehicles)
+              print(y)
+
+
+Looping Array Ele.:
+
+Ex-p54.py
+ 
+        vehicles=["bike","cycle",900]
+       
+        for x in vehicles:
+              print(x)
+
+Adding Array ele.:
+
+Ex: vehicles=["bike","cycle",221]
+     vehicles.append("Car")
+     vehicles.append(2342)
+
+Removing Array ele.:
+
+   -remove
+   -pop
+    
+Ex:
+   vehicles=["bike","cycle",221]
+   vehicles.remove("cycle")
+   vehicles.pop(2)
+
+*To remove all ele of an array:
+-clear()
+
+Ex:
+  vehicles.clear()
+
+*To count the no. of ele. in an array:
+   -count()
+Ex:
+    vehicles.count()
+
+*To sort the ele. in an array:
+
+-sort()
+Ex:
+    vehicles.sort()
+
+*To rev the ele. in an array:
+
+-reverse()
+Ex:
+    vehicles.reverse( )
+
+
+Dt : 24/01/23
+
+
+Python OOP :
+
+--> Python is an object oriented programmong language.
+--> Python uses oop approach to design any applications.
+--> Some of the major principles of oop are:
+
+1. Class
+2. Object
+3. Methods.
+4. Inheritance.
+5. Polymorphism.   
+6. Encapsulation. 
+7. Data Abstraction. 
+
+
+1.
+--> Class is a collection of objects.
+--> Class consists of data members and member functions(methods).
+
+Syntax :
+     class Classname:
+          data members
+  
+data functions
+
+Ex :
+class Student:
+      id = 30959
+      def display(self):
+                 print("Hello")
+
+
+2. Object:
+
+--> object is an instance of a class.
+
+Syntax :
+Objectname = Classname()
+
+Ex :
+ob1 = Student()
+
+Ex : p53.py
+#program to demonstrate object and class.
+class Student:
+    id = 2100030959
+    name = "Kalyan"
+    def printStudentDetails(self):
+        print(self.id,self.name)
+s1 = Student()
+s1.printStudentDetails()
+
+3. Methods :
+--> A member function in a class is known as methods.
+
+Ex:
+def display(self):
+      print("Example of method")
+
+Note :
+=> Special method = Constructor
+--> Constructors are defined to instantiate the instance members of a class.
+--> method_ _init_ _() is used to represent constructor.
+--> constructors are invoked automatically at the time of object creation.
+
+--> Classification of constructors :
+     --> parameterized constructors.
+     --> Non-parameterized constructors.
+
+1. parameterized constructors:
+Ex :
+#program to display parameterized constructors:
+class Student:
+    def __init__(self,id, name):
+        self.id=id
+        self.name=name
+    def display(self):
+            print(self.id,self.name)
+s1 = Student(30959,"kalyan")
+s1.display()
+        
+
+2. Non-parameterized constructors:
+Ex :
+#program to demonstrate the number of objects created.
+class Student:
+    count = 0
+    def __init__(self):
+        Student.count+=1
+s1=Student()
+s2=Student()
+s3=Student()
+s4=Student()
+print(Student.count)  --> 4
+
+
+More than one constructor in a class :
+
+Ex :
+#program to demonstrate multiple constructors:
+class Student:
+    def __init__(self):
+        print("First Constructor")
+    def __init__(self):
+        print("Second Constructor")
+
+obj = Student()
+
+4. Inheritance :
+--> Acquiring the properties from one class to another class is known as inheritance.
+--> The class from which we acquire properties is called as base class.
+--> The class to which we acquire properties is called as derived class.
+
+Note :
+--> Acquiring the properties from base class to derived class is known as inheritance.
+
+Types of Inheritances :
+1. Single Inheritance.
+2. Multiple Inheritance.
+3. Multilevel Inheritance.
+4. Hierarchial Inheritance.
+5. Hybrid Inheritance.
+
+1. Single Inheritance :
+--> Acquiring the properties from one base class to one derived class is known as single Inheritance.
+
+Syntax : 
+class Base:
+   class block
+class Derived(Base):
+   class block  
+
+Ex :p57.py
+#program to demonstrate single inheritance:
+class Base:
+    def fn1(self):
+        print("Base Class")
+class Derived(Base):
+    def fn2(self):
+        print("Derived class")
+obj = Derived()
+obj.fn1()
+obj.fn2()
+
+
+2. Multiple Inheritance :
+--> Acquiring the properties from multiple base classes to one derived class is known as Multiple Inheritance.
+
+Syntax : 
+class Base1:
+   class block
+class Base2:
+   class block
+class Base3:
+   class block
+class derived(Base1,Base2,Base3):
+      class block
+
+Ex :p58.py
+#program to demonstrate multiple inheritance
+class Base1:
+    def fn1(self):
+        print("Base1 class")
+class Base2:
+    def fn2(self):
+        print("Base2 class")
+class Derived(Base1, Base2):
+    def fn3(self):
+        print("Derived class")
+dr = Derived()
+dr.fn1()
+dr.fn2()
+dr.fn3()
+
+
+
+
+3. Multilevel Inheritance :
+--> Acquiring the properties from one class to another class, and then from that class to another class in multiple levels  is known as Multilevel Inheritance.
+
+Syntax :
+class Base1:
+   class block
+class Base2(Base1):
+   class block
+class Base3(Base2):
+   class block
+class derived(Base3):
+      class block
+
+Ex :p59.py
+#program to demonstrate multilevel inheritance
+class Base1:
+    def bfn1(self):
+        print("Base1 class")
+class Base2(Base1):
+    def bfn2(self):
+        print("Base2 class")
+class Base3(Base2):
+    def bfn3(self):
+        print("Base3 class")
+class Derived(Base3):
+    def dfn1(self):
+        print("Derived class")
+obj = Derived()
+obj.bfn1()
+obj.bfn2()
+obj.bfn3()
+obj.dfn1()
+
+
+
+4. Hierarchial Inheritance :
+-->  Acquiring the properties from one base class to multiple derived classes is known as Hierarchial Inheritance.
+
+Syntax :
+class Base:
+   class block
+class Derived1(Base):
+   class bock
+class Derived2(Base):
+   class block
+
+Ex:p60.py:
+#program to demonstrate hierarchial inheritance
+class Base1:
+    def bfn1(self):
+        print("Base1 class")
+class Derived1(Base1):
+    def dfn1(self):
+        print("Derived1 class")
+class Derived2(Base1):
+    def dfn2(self):
+        print("Derived2 class")
+obj1 = Derived2()
+obj1.bfn1()
+obj2 = Derived1()
+obj2.dfn1()
+obj1.dfn2()
+
+
+5. Hybrid Inheritance :
+--> Combination of Hierarchial and Multiple inheritances is known as Hybrid Inheritance.
+
+Syntax :
+class Base:
+   class block
+class Derived1(Base):
+   class bock
+class Derived2(Base):
+   class block
+class NewDerived(Derived1,Derived2):
+   class block
+
+Ex : p61.py
+#program to demonstrate hybrid inheritance:
+class Base():
+    def bfn1(self):
+        print("Base class")
+class Derived1(Base):
+    def dfn1(self):
+        print("Derived1 class")
+class Derived2(Base):
+    def dfn2(self):
+        print("Derived2 class")
+class NewDerived(Derived1,Derived2):
+    def ndfn3(self):
+        print("New Derived Class")
+ob = NewDerived()
+ob.bfn1()
+ob.dfn1()
+ob.dfn2()
+ob.ndfn3()
+
+Dt : 28/01/23
+
+5. PolyMorphism :
+--> PolyMorphism is a greek word where poly means many and morphism means forms. So polymorphism is refered to many forms.
+
+Types of PolyMorphism :
+1. Compile Time PolyMorphism 
+2. Run Time PolyMorphism
+
+1. Compile-Time PolyMorphism :
+--> Method Overloading is an example of  Compile-Time PolyMorphism.
+
+Ex : p62.py
+#program to demonstrate method overloading
+class Addition:
+    def add(self,a=0,b=0,c=0):
+        return a+b+c
+obj = Addition()
+print(obj.add())
+print(obj.add(10))
+print(obj.add(10,20))
+
+2. Run-Time PolyMorphism:
+--> Method Overriding is an example of  Run-Time PolyMorphism.
+
+Ex : p63.py
+#program to demonstrate method overrding
+class Base:
+    def display(self):
+        print("Base class")
+class Derived(Base):
+    def display(self):
+        print("Derived class")
+
+od = Derived()
+od.display()
+
+6. Encapsulation :
+--> Wrapping up of code and data together into a single unit is referred to encapsulation.
+
+7. Data Abstraction :
+--> It refers to providing only essential information to the outside world by hiding all its background details.
+
+Note : Data Hiding
+--> Hiding of the data refers to data hiding.
+--> Data Hiding can ber implemented using  '_ _'  at the start of the data.
+
+Ex :
+class Stu:
+   id = 30959
+   name = "kalyan"
+   __cgpa = 9.35         --> data hiding
+
+
+Popular Built-in Functions in Python :
+--> Some of the popular built-in functions in pyton are as follows :
+1. getattr(object,name)
+2. setattr(object,name,value)
+3. delattr(object,name)
+4. hasattr(object,name)
+
+1. getattr(object,name):
+--> It is used to access the attribute of an object.
+
+2. setattr(object,name,value):
+--> It is used to set the value of attribute of an object.
+
+3. delattr(object,name):
+--> It is used to delete the attribute of an object.
+
+4. hasattr(object,name):
+--> It is used to check whether an attribute of object is found or not.
+--> It returns true if the attribute is found.
+--> It returns false if the attribute is not found.
+
+Ex : p64.py
+#program to demonstrate built-in methods
+class Student:
+    def __init__(self,id,name,cgpa):
+        self.id = id
+        self.name = name
+        self.cgpa = cgpa
+st = Student(30959,"kalyan",9.35)
+print(getattr(st,'cgpa'))
+setattr(st,'cgpa',9.51)
+print(getattr(st,'cgpa'))
+delattr(st,'id')
+print(hasattr(st,'cgpa'))
+print(hasattr(st,'id'))
+
+
+Popular Built-in Attributes in Python :
+--> Some of the popular attributes in python are:
+1. _ _doc_ _();
+--> It contains a string which has class document.
+
+2. _ _dic_ _ ():
+--> It is a dictionary which contains the details about class name spaces.
+
+3. _ _name __ ():
+--> It contains the name of the class.
+
+4. _ _ base _ _() :
+
+
+
+5. _ _module _ _ :
+--> It is used to access the module in which the class is defined.
+
+
+IDE(Integrated Development Environment):
+--> It is an environment where we get everything ready-made.
+--> Some of the popular IDE's for python are :
+1. pycharm
+2. subline
+
+
+Pycharm Installation :
+--> https://www.jetbrains.com/pycharm/download
+
+Python Modules :
+--> Module is a file which consists of definitions and statements.
+--> Module can define functions, classes and variables.
+
+
+Ex :
+def mul(a,b):
+   return a * b
+
+def div(a,b):
+   return a /b
+
+
+How to import a module :
+--> A module can be imported using a keyword import.
+
+Syntax :
+ import module_name
+
+Ex : p65.py
+import calc
+print(calc.add(10,20))      --> 30
+
+
+from import statement :
+--> To import a specific function or a module or a attribute rather than the old module.
+
+Syntax :
+from module_name import specific
+
+Ex : p66.py
+from math import sqrt
+print(math.sqrt(25))        --> 5
+print(sqrt(25))        --> 5
+
+
+Note : from math  import*  = import math
+
+Ex : p67.py
+import calender
+year = 2023
+month = 2 
+print(calender.month(year,month))
+
+Some of the important modules in python are :
+1. datetime
+2. math
+3. re
+4. os
+5. csv
+6. json(java script object notation)
+7. random
+8. platform
+
+
+1. datetime :
+--> It is a module which consists of classes related to date and time.
+
+Ex : p68.py
+import datetime
+a = datetime.datetime.now()
+print(a)
+print(a.year)
+
+
+Ex : p69.py
+import datetime
+a = datetime.MINYEAR
+print(a)
+
+
+
+
+Ex : p70.py
+#program to replace date using datetime module
+import datetime
+today = datetime.date.today()
+a = today.replace(year=2003)
+print(a)
+
+
+
+2. math :
+--> It is a module which consists of different mathematical operations.
+
+Ex : p71.py
+import math
+a = max(10,20,30)      --> 30
+b = min(1,2,3,4)         --> 1
+print(a,b)
+
+Ex : p72.py
+import math
+a = pow(2,2)
+print(a)
+
+
+Ex : p73.py
+import math
+a = -2
+print(abs(a))
+
+Ex :
+from math import factorial
+print(factorial(4))   --> 24
+
+
+3. re :
+--> It is amodule consisting of set of constraints used to find a string getting matched or not.
+
+Ex : p74.py
+import re
+a = "reddy venkat kalyan reddy"
+b = re.findall("reddy",a)
+print(b)
+
+Ex : p75.py
+import re
+a = "reddy venkat kalyan reddy"
+c = re.search("reddy",a)
+print(c)
+
+
+Ex : p76.py
+import re
+a = "reddy venkat kalyan"
+b = re.split("\s",a)
+print(b)
+
+Ex : p77.py
+import re
+a = "reddy venkat kalyan reddy"
+c = re.sub("\s","9",a)
+print(c)
+
+
+
+4. os :
+--> It is a module which consists of all os commands.
+--> The pre-defined methods of os module are :
+
+1. getcwd() --> to know current working directory.
+2. chdir()  --> to change the directory.
+3. listdir() --> to display the number of files in the directory.
+4. help()  --> to know anything about detail.
+
+Ex : p78.py:
+import os
+x = os.getcwd()
+print(x)
+
+Ex : p79.py :
+import os
+y = os.getcwd()
+print(y)
+x = os.chdir(r"C:\Users\DELL\Desktop\PFSD")
+print(x)
+
+Ex : p80.py :
+import os
+y = os.listdir()
+print(y)
+
+Ex : p81.py
+import os
+print(help(print()))
+
+
+5. csv :
+--> csv stands for comma separated values.
+--> This module is used to deal with data which is in tabular form.
+--> Some of the important operations on csv files are :
+1. read()      --> It is used to read the data from a csv file or used for accessing the data .
+2. write()    --> It is used to write data into csv file or to store the data.
+3. update() --> It is used to update the data in csv file.
+4. delete()  --> It is used to delete a data from a csv file.
+
+Ex : p82.py
+# program to demonstrate read() in csv
+import csv
+with open('ABC-ID.csv',newline='')as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+        
+
+
+Ex : p83.py
+# program to demonstrate write() in csv
+import csv
+
+Ex : p84.py
+# program to demonstrate update() in csv
+import csv
+
+Ex : p85.py
+# program to demonstrate delete() in csv
+import csv
+
+7. random
+--> It is a module used to generate random numbers.
+Ex :
+from random import random
+
+for i in range(5):
+    print(random())
+
+OUTPUT :
+0.9535768927411208
+0.5312710096244534
+0.8737691983477731
+0.5896799172452125
+0.02116716297022092
+
+--> default value of random is 0.0 to 0.1 .
+--> Funcions in random module:
+      randrange(end)
+      randrange(beg, end)
+      randrange(beg, end, step)
+      randint(left, right)
+
+8. platform:
+--> The platform module lets you access the underlying platform's data,
+      i.e., hardware, operating system, and interpreter version information.
+
+Ex :
+from platform import machine
+
+print(machine())
+
+
+OUTPUT:
+x86_64   --> machine() returns the processor type in a string format
+
+
+Ex :
+from platform import processor
+
+print(processor())
+
+
+OUTPUT:
+x86  --> processor() returns the processor version.
+
+
+Dt : 04/02/2023
+Exception Handling in Python :
+--> Exception is a python object which represents an error.
+                                             or
+--> It is an event which occurs during the execution of the program which generally disturbs the flow of execution of a program.
+
+Types of errors :
+1. Run Time Error
+2. Compile Time Error
+
+1. Compile Time Error :
+--> The errors which are occured during the compile phase of a program are known as Compile Time Errors.
+--> (Syntax Errors)
+
+program phases :
+--> compilation   => HLL to MLL
+--> execution    => o/p
+
+Ex :
+def add(a,b)
+    print(a+b)                       --> compile time error or syntax error
+
+
+2. Run Time Error  :
+--> The errors which are occured during the execution of a program.
+--> All the run time errors need to be handled by user or programmer.
+--> Exception handling uses the following terminology in order to handle all run time exceptions :
+
+1. try
+2. except
+3. else
+4. finally
+
+1. try :
+--> block of code which contains an exception.
+2. except
+--> This block of code will executes when their is an exception.
+3. else
+--> This block of code will executes when their is no exception.
+4. finally
+--> This block of code always executes irrespective of whether their is an exception or not.
+
+Syntax :
+try:
+     block of code to represent try block.
+except Exception1:
+       block of code to represent except block.
+except Exception2:
+       block of code to represent except block.
+else :
+      block of code to represent else block.
+finally :
+      block of code to represent finally block.
+
+Ex : p89.py
+#program to demonstrate exception handling
+try:
+    a = int(input())
+    b = int(input())
+    c = a/b
+except:
+    print("An Error Occured -- Zerodivision error")
+else:
+    print("No error occured")
+finally:
+    print("Successfully executed an example to demonstrate exception handling")
+    
+Ex : p90.py
+#program to demonstrate exception handling
+try:
+    j = 5.0
+    for i in range(1,1000):
+        j = j**i
+        print(j)
+except:
+    print("An Error Occured -- overflow error")
+else:
+    print("No error occured")
+finally:
+    print("Successfully executed an example to demonstrate exception handling")
+
+Note :
+Types of Exceptions : 
+1. Exception
+2. Arithmetic Error
+3. EOF Error(End of the file)
+4. Import Error
+5. ZeroDivision Error
+
+Dt : 11/02/23
+
+pytest :
+- >It is a testing framework, which is based on Python.       
+- >It is mainly used to write and executes testcases.
+- >It helps you to write simple and scalable tetstcases for databases, API's and UI.
+- >Pytest is mainly used for API's.
+- >It Works based on Unit Testing.
+
+Advantages :
+i. Open Source.
+ii. Pytest can run multiple test in parallel, which can reduce the execution time.
+iii. It is very easy to use, because of its simple syntax.
+
+Installantion :
+- >To work with, we need to install a module called pytest.
+     step-1 pip install pytest
+
+Creating / Identifying test functions and files :
+    
+Functions: test_anyname( )[representation]
+
+        Ex: def test_sample():
+ 
+
+File: To save files, test_filename.py or filename_test.py
+        
+  Ex: test_p91.py or p91_test.py
+
+
+   Ex: test_91.py
+             def fn(x):
+    return x+1
+
+def test_sample():
+    assert fn(4)==5
+
+Ex:test_92.py
+
+
+  def fn(x):
+    return x+1
+
+def test_sample():
+    assert fn(4)==5
+
+def test_sasmple():
+    assert fn(5)==5
+
+
+Ex: test_p93.py
+ 
+  def fn(x):
+    return x+1
+
+def test_sample():
+    assert fn(4)==5} 
+    assert fn(5)==5}
+
+
+
+Note:
+ 1. To run all the files in a folder ->pytest
+ 2. To run a specific file ->pytest filename.py
+ 3. To run a spec. file with details testcases->pytest filename.py -v
+ 4. To run a spec from a file -> pytest filename::methodname
+
+
+
+
+
+Marker:
+-------
+        -Markers are used to set various features or attributes to the test fn's.
+
+        - Itallows you to execute a spec. testcase or a set of testcases.
+   
+   Syntax: @pytest.mark.markername 
+  
+
+Ex: @pytest.mark.marker1
+   
+  def test_sample():
+       assert fn(3)==6
+
+
+
+Fixtures:
+---------
+           -Fixtures are used to provide an input to testcase.
+        Syntax:- @pytest.fixtures
+ 
+ Ex:   @pytest.fixtures
+    def test_sample():
+       assert fn(3)==6
+       
+
+Parameterized Test:
+-------------------
+                    -Calling a test fn for multiple no. of times by changing parameter i/p.
+
+  Syn: @pytest.mark.parameterize
+        
+Ex: def add(a,b):
+       return a+b
+@pytest.mark.parameterize
+ def test_sample( ):
+       assert  add(5,6)==12
+       assert add(4,5)==9
+
+
