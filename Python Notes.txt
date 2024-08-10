@@ -262,13 +262,13 @@ Ex2:
         print(s1[2])                                    ---> l
         print(s2[9])                                   ---> o
         print(s2[0:4])                                ---> welc                            
-        print(s2[4:])                                  --->come to python course
-        print(s1  + s2)                                --->hellowelcome to python course
-        print(s1 * 4)                                   --->hellohellohellohello
+        print(s2[4:])                                  ---> ome to python course
+        print(s1  + s2)                                ---> hellowelcome to python course
+        print(s1 * 4)                                   ---> hellohellohellohello
 
 
 
-Strong Slicing :
+String Slicing :
 
 Ex :
 alpha = "abdefg"
@@ -698,7 +698,7 @@ else:
 
 
 Ex : p37.py 
-# progrom to print palindrome numbers between 1 to 100
+# program to print palindrome numbers between 1 to 100
 for i in range(1,100):
     k = i
     x = 0
