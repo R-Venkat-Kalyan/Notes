@@ -44,7 +44,7 @@ Deployment Steps:
     - git commit -m "SOME COMMIT NAME"
     - git remote add origin https://github.com/username/repository
     - git push -u origin master
-14. For a clearer understanding of Git, refer to this document: 
+14.To understand more about Git, refer to this document: 
 	https://github.com/R-Venkat-Kalyan/Notes/blob/master/Git.txt
 15. After successfully uploading the file to Git, open Render, login, and create a new web service. Select upload from Git.
 16. Wait until it gets deployed. It may take some time.
