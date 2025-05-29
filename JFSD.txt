@@ -102,7 +102,9 @@ Introduction to Full Stack
 Introduction to Maven:
 -----------------------------
 -> Maven is a very popular open source tool build by apache group to build web applications.
--> In normal project, if you want to work on any third apps / or api applications then you need to download the respective jar files and make all these jars filesa are associated to your project manually. Whereas in the case of maven project you define all the third party appps are api applications/ api applications under dependencies in pom file.
+-> In normal project, if you want to work on any third apps / or api applications then you need to download the respective jar files 
+    and make all these jars files associated to your project manually. Whereas in the case of maven project you define all the third party 
+    apps are api applications/ api applications under dependencies in pom file.
 
 
 Java persistance API:
